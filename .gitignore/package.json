@@ -1,0 +1,27 @@
+{
+  "name": "rembotmtg",
+  "version": "1.3.2",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "r!help",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MTGPROD/rembotmtg.git"
+  },
+  "keywords": [
+    "Rem",
+    "bot"
+  ],
+  "author": "MTGPROD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MTGPROD/rembotmtg/issues"
+  },
+  "homepage": "https://github.com/MTGPROD/rembotmtg#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
