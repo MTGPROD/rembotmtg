@@ -70,4 +70,4 @@ client.on('guildDelete', guild => {
   client.channels.get(botStats.totalChannelsID).setName(`Total Channels : ${client.channels.size}`);
 })
 
-/*client.login(process.env.TOKEN)*/
+client.login(process.env.TOKEN)
