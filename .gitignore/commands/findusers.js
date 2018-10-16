@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
     const embed = new Discord.RichEmbed()
     	.setTitle('Results')
     	.setURL('https://google.com/')
-        .setDescription(`**${matches.map(u => u.tag).join("\n")}**`)
+        .setDescription(`\`**${matches.map(u => u.tag).join("\n")}**\``)
         .setTimestamp()
         .setColor('#329FFE')
         .setFooter('Rem 2.0')
