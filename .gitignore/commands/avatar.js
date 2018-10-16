@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const color = '#329FFE';
 
 exports.run = async (client, message, args, tools) => {
     let msg = await message.channel.send("Loading...")
