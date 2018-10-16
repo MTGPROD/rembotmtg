@@ -32,7 +32,7 @@ const db = require('quick.db')
 
 client.on('message', async message => {
 
-    if(message.author.bot) return;
+    /*if(message.author.bot) return;
     if(message.channel.type !== 'text') {
       let active = await db.fetch(`Support_${message.author.id}`);
       let guild = client.guilds.get('guildID');
@@ -125,7 +125,7 @@ client.on('message', async message => {
       embed2.setFooter(`Message Sent -- ${supportUser.tag}`).setDescription(message.content);
 
       return message.channel.send(embed);
-    }
+    }*/
 
 
 
