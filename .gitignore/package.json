@@ -29,5 +29,6 @@
     "opusscript": "0.0.6",
     "yt-search": "^0.2.0",
     "ytdl-core": "^0.26.1"
+    "quick.db": "^7.0.0"
   }
 }
