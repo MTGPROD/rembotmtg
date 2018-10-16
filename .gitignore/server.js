@@ -4,7 +4,6 @@ const client = new Discord.Client();
 const prefix = "r!";
 const ownerID = '234234723314958339';
 const active = new Map();
-const color = '#2C9DDE';
 
 const serverStats = {
   guildID: '489426595166158885',
@@ -19,19 +18,16 @@ const botStats = {
   totalChannelsID:'500718175139266566'
 }
 
+let statuses = ['https://discord.gg/2qJjJcs | For support', `My prefix is ${prefix}`, 'Rem > Emilia', `r!help | serving ${client.users.size} users`, 'Version 2.0']
+
 client.on('ready', () => {
-  let statuses = ['https://discord.gg/2qJjJcs | For support', `My prefix is ${prefix}`, 'Rem > Emilia', `r!help | serving ${client.users.size} users`, 'Version 2.0']
   setInterval(function() {
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setPresence({ game: { name: status}, status: 'online'});
   }, 10000)
 })
 
-const db = require('quick.db')
-
-
 client.on('message', message => {
-
     let args = message.content.slice(prefix.length).trim().split(' ');
     let cmd = args.shift().toLowerCase();
 
@@ -83,6 +79,4 @@ client.on('guildDelete', guild => {
   client.channels.get(botStats.totalChannelsID).setName(`Total Channels : ${client.channels.size}`);
 })
 
-
 client.login(process.env.TOKEN)
-})
