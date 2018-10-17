@@ -1,2 +1,1 @@
-It's my bot 
-If you want, help me !
+It's my bot.  If you want, help me !
