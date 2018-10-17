@@ -1,28 +1,49 @@
 {
-  "name": "rembotpro",
+  "name": "rembotmtg",
   "version": "2.0",
-  "description": "Remuuuu",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "!help"
+    "test": "r!help",
+    "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MTGPROD/rembotmtg.git"
+  },
+  "keywords": [
+    "Rem",
+    "bot"
+  ],
   "author": "MTGPROD",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MTGPROD/rembotmtg/issues"
+  },
+  "homepage": "https://github.com/MTGPROD/rembotmtg#readme",
   "dependencies": {
+    "ascii-art": "^1.4.4",
+    "cheerio": "^1.0.0-rc.2",
     "discord.js": "^11.4.2",
     "ffmpeg-binaries": "^4.0.0",
+    "fortnite": "^4.1.1",
     "fs": "0.0.1-security",
+    "graceful-fs": "^4.1.11",
     "lowdb": "^1.0.0",
+    "mathjs": "^5.2.0",
     "mysql": "^2.16.0",
+    "node-gyp": "^3.8.0",
     "opusscript": "0.0.6",
     "prompt": "^1.0.0",
+    "rebuild": "^0.1.2",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "snekfetch": "^4.0.4",
+    "sqlite3": "^4.0.2",
     "strip-indent": "^2.0.0",
     "urban": "^0.3.2",
     "util": "^0.11.0",
-    "youtube-search": "^1.1.1",
-    "ytdl-core": "^0.25.2"
+    "yt-search": "^0.2.0",
+    "ytdl-core": "^0.26.1"
   }
 }
