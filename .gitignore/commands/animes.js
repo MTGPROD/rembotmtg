@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const malScraper = require('mal-scraper');
 
-module.exports.run = async (client, message, args) => {
+exports.run = async (client, message, args) => {
 
   const search = `${args}`;
 
@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
 
       message.channel.send(malEmbed);
 
-      console.log(data);
+      //console.log(data);
     })
     .catch((err) => console.log(err));
 
