@@ -19,7 +19,7 @@ exports.run = (client, message, args, ops) => {
         .addField('Music', `\`${music}\``)
         .addField('Modération', `\`${modération}\``)
         .setTimestamp()
-        .setFooter(`Rem 2.0`)
+        .setFooter(`Rem 2.1`)
 
     message.channel.send({embed: embed});
 }
