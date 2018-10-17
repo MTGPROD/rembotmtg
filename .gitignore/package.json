@@ -1,6 +1,6 @@
 {
   "name": "rembotmtg",
-  "version": "1.3.2",
+  "version": "2.2.0",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -30,6 +30,7 @@
     "fortnite": "^4.1.1",
     "fs": "0.0.1-security",
     "graceful-fs": "^4.1.11",
+    "js-base64": "^2.4.9",
     "lowdb": "^1.0.0",
     "mal-scraper": "^2.4.5",
     "mathjs": "^5.2.0",
@@ -38,7 +39,7 @@
     "ms": "^2.1.1",
     "mysql": "^2.16.0",
     "node-gyp": "^3.8.0",
-    "opusscript": "0.0.6",
+    "node-opus": "^0.3.0",
     "os": "^0.1.1",
     "prompt": "^1.0.0",
     "rebuild": "^0.1.2",
