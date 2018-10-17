@@ -27,6 +27,4 @@ exports.run = async (client, message, args) => {
 
       //console.log(data);
     })
-    .catch((err) => console.log(err));
-
 }
