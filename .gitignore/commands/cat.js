@@ -1,4 +1,4 @@
-const snek = require("snekfetch");
+const snek = module.require("snekfetch");
 const Discord = require('discord.js')
 const api = "http://aws.random.cat/meow";
 const color = "#329FFE";
