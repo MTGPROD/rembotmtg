@@ -3,7 +3,7 @@ const prefix = 'r!'
 
 let basics = ['ping', 'botstats', 'post', 'purge']
 let fun = ['8ball', 'ascii', 'b64encode', 'b64decode', 'calc', 'fortnite', 'csgo', 'animes', 'cat']
-let specials = ['colors', 'color', 'poll']
+let specials = ['colors', 'color', 'poll', 'roleinfo']
 let music = ['play', 'search', 'leave', 'pause', 'resume', 'volume', 'queue']
 let modération = ['ban', 'unmute', 'mute', 'kick', 'unban']
 
