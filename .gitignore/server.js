@@ -20,10 +20,10 @@ const botStats = {
 
 client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`My prefix is ${prefix}`, 'Rem > Emilia', `r!help | serving ${client.guilds.size} guilds`, 'Version 2.1']
+    let statuses = [`My prefix is ${prefix}`, 'Rem > Emilia', `r!help | serving ${client.guilds.size} guilds`]
     let status = statuses[Math.floor(Math.random()*statuses.length)];
-    client.user.setPresence({ game: { name: status}, status: 'online'});
-  }, 10000)
+    client.user.setGame(status, "https://www.twitch.tv/monstercat");
+  }, 15000)
 })
 
 client.on('message', message => {
