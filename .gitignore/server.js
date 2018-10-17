@@ -18,10 +18,9 @@ const botStats = {
   totalChannelsID:'500718175139266566'
 }
 
-let statuses = ['https://discord.gg/2qJjJcs | For support', `My prefix is ${prefix}`, 'Rem > Emilia', `r!help | serving ${client.users.size} users`, 'Version 2.0']
-
 client.on('ready', () => {
   setInterval(function() {
+    let statuses = [`My prefix is ${prefix}`, 'Rem > Emilia', `r!help | serving ${client.guilds.size} guils`, 'Version 2.0']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setPresence({ game: { name: status}, status: 'online'});
   }, 10000)
