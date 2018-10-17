@@ -20,7 +20,7 @@ function getStatData(location, $) {
     return stat;
 }
 
-module.exports.run = async (bot, message, args) => {
+exports.run = async (client, message, args) => {
 
     var UR_L = "http://csgo.tracker.network/profile/" + args[0];
 
