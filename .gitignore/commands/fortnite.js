@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
-const Fortnite = require("fortnite");
-const ftnApi = new Fortnite('5801bfa3-0784-4d61-b9cb-2976efef21f0');
+const Fortnite = module.require("fortnite");
+const ftnApi = new Fortnite(process.env.TRN);
 //Above, you need to get your api key. Register and generate a TRN-Api-Key at https://fortnitetracker.com/site-api
 const currentSeason = "5";
 
