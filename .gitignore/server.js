@@ -48,7 +48,10 @@ client.on('message', message => {
     }
 });
 
-
+client.on('guildCreate', guild => {
+  let hi = guild.channels.first()
+  hi.send(`Hello i am rem thank U to add me to your server !\n for start, type \`r!help\` :smile:`);
+})
 
 client.on('ready', () => console.log('My body is ready'));
 
@@ -59,7 +62,7 @@ client.on('guildMemberAdd', member => {
   client.channels.get(serverStats.botCountID).setName(`Bot Count: ${member.guild.members.filter(m => m.user.bot).size}`)
 })
 
-client.on('guildMemberAdd', member => {
+client.on('guildMemberRemove', member => {
   if(member.guild.id !== serverStats.guildID) return;
   client.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
   client.channels.get(serverStats.memberCountID).setName(`Member Count: ${member.guild.members.filter(m => !m.user.bot).size}`);
