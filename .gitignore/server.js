@@ -27,6 +27,12 @@ client.on('ready', () => {
 })
 
 client.on('message', message => {
+  if(message.content === '<@488734399509168148>') {
+    message.channel.send('Yes ?\n My prefix is `r!`')
+  }
+})
+
+client.on('message', message => {
     let args = message.content.slice(prefix.length).trim().split(' ');
     let cmd = args.shift().toLowerCase();
 
