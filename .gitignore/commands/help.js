@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const prefix = 'r!'
 
-let basics = ['ping', 'botstats', 'post', 'purge', 'urban', 'animes', 'avatar]
+let basics = ['ping', 'botstats', 'post', 'purge', 'urban', 'animes', 'avatar']
 let fun = ['8ball', 'ascii', 'b64encode', 'b64decode', 'calc', 'fortnite', 'csgo', 'animes', 'cat', 'meme', 'hug', 'kiss']
 let specials = ['colors', 'color', 'poll', 'roleinfo']
 let music = ['play', 'search', 'leave', 'pause', 'resume', 'volume', 'queue']
