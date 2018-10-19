@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const infos = require('./infos.js');
+const infos = require('./infos.json');
 
 exports.run = async (client, message, args, ops) => {
     let colors = message.guild.roles.filter(role => role.name.startsWith("#"));
