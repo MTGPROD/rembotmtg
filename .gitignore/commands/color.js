@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
+const infos = require('./infos.json')
 
 exports.run = async (client, message, args, ops) => {
     let colors = message.guild.roles.filter(role => role.name.startsWith("#"));
     if(colors.size < 1) return message.channel.send({embed: {
             color: 3447003,
-            title: ':x: **Error:**',
+            title: ':x: **Error:** No colors',
             description: "There are no colors in this server. It's so sad ! 😭",
     }});   
 
@@ -13,13 +14,14 @@ exports.run = async (client, message, args, ops) => {
 
     if(!role) return message.channel.send({embed: {
             color: 3447003,
-            title: '**How to use `!color`**',
-            description:':x: **Error: bad/no args** \n\nTo give you a color **TYPE** `r!color colorname`',
+            title: ':x: **Error: bad/no args**',
+            description:'To give you a color **TYPE** `r!color colorname`',
             footer: {
-                text: ` Rem 2.0`
+                text: infos.version,
+                icon: client.user.displayAvatarURL
             }
     }});
-/*':x: **Error201: bad args**,' 'To give you a color **TYPE** `!color colorname`',*/
+
     try {
         await message.member.removeRoles(colors);
         await message.member.addRole(role);
