@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const infos = require('./infos.json');
 
 exports.run = async (client, message, args, tools) => {
     
@@ -14,15 +15,15 @@ exports.run = async (client, message, args, tools) => {
         'I have no idea'
     ]
     
-    // Fetch a random item from the array
+    
     let fetched = responses[Math.floor(Math.random() * responses.length)];
     
-    // Form Embed
+    
     const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
-        .setFooter(fetched);
+        .setDescription(fetched)
+        .setFooter(infos.version, client.user.displayAvatarURL);
     
-    // Send Embed
     message.channel.send(embed);
     
 }
