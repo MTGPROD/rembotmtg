@@ -1,4 +1,6 @@
 const Discord = require("discord.js"); 
+const infos = require('./infos.json');
+
 exports.run = async (client, message, args) => { 
 
   let logs = message.guild.channels.find("name", "logs");
@@ -14,7 +16,7 @@ exports.run = async (client, message, args) => {
 
   let logsEmbed = new Discord.RichEmbed() 
   .setTitle("User Banned")
-  .setFooter("User Ban Logs")
+  .setFooter(`${infos.version} User Ban Logs`, user.displayAvatarURL)
   .setColor("#ff0000")
   .setTimestamp()
   .addField("Banned User:", `${user}, ID: ${user.id}`)
