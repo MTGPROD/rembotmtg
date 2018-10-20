@@ -1,4 +1,9 @@
 {
     "color": "RANDOM",
-    "version": "Rem 2.1"
+    "version": "Rem 2.1",
+    "prefix": "r!",
+    "owners": {
+        "MTG": "234234723314958339",
+        "Xeno": "360457413108695045"
+    }
 }
