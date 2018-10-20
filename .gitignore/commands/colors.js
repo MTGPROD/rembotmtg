@@ -5,7 +5,7 @@ exports.run = async (client, message, args, ops) => {
     let colors = message.guild.roles.filter(role => role.name.startsWith("#"));
     if(colors.size < 1) return message.channel.send({embed: {
             color: 3447003,
-            title: ':x: **Error:**',
+            title: ':x: **Error:** No colors',
             description: 'There are no colors in this server. It\'s so sad ! 😭\n Usage: For me to detect "color" roles it is necessary that the roles start with "#" and to have this role type \n`r!color rolename`',
     }});
 
