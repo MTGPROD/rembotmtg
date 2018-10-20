@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+const infos = require('./infos.json')
 
 const { version } = require("discord.js");
 const moment = require("moment");
@@ -29,7 +30,8 @@ exports.run = (client, message, args) => {
             .addField("• CPU usage", `\`${percent.toFixed(2)}%\``, true)
             .addField("• Arch", `\`${os.arch()}\``, true)
             .addField("• Platform", `\`\`${os.platform()}\`\``, true)
-            .addField("API Latency", `${Math.round(client.ping)}ms`)  
+            .addField("• API Latency", `${Math.round(client.ping)}ms`)  
+            .setFooter(infos.version, client.user.displayAvatarURL)
         message.channel.send(embedStats)
     });
 };
