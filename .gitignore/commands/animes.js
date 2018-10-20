@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
-const malScraper = module.require('mal-scraper');
+const malScraper = require('mal-scraper');
+const infos = require('./infos.json')
 
 module.exports.run = async (client, message, args) => {
 
@@ -17,14 +18,18 @@ module.exports.run = async (client, message, args) => {
       .addField('Episodes', data.episodes, true)
       .addField('Rating', data.rating, true)
       .addField('Aired', data.aired, true)
-      .addField('Score', data.score, true)
+      .addField(':star: Score', data.score, true)
       .addField('Score Stats', data.scoreStats, true)
+      .addField('Synopsis', data.synopsis)
       .addField('Link', data.url)
-      .setImage(data.picture)
+      .setThumbnail(data.picture)
+      .setFooter(infos.version, client.user.displayAvatarURL)
 
 
       message.channel.send(malEmbed);
 
-      //console.log(data);
+      console.log(data);
     })
+    .catch((err) => console.log(err));
+
 }
