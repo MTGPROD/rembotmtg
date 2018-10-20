@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const moment = require("moment");
+const infos = require('./infos');
 
 function convertMS(ms) {
     var d, h, m, s;
@@ -21,11 +22,9 @@ function convertMS(ms) {
 
 
 exports.run = (client, message, args) => {
-
-
-
-    let prefix = 'r!';
-    if (!message.content.startsWith(prefix)) return;
+    if(message.author.id === infos.owners.MTG || infos.owners.Xeno) {
+        
+    if (!message.content.startsWith(infos.prefix)) return;
 
 
 
