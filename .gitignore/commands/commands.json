@@ -1,5 +1,5 @@
 {
-    "Basics": "avatar | help | ping | poll | post | roleinfo | volume",
+    "Basics": "avatar | help | ping | poll | post | roleinfo | volume | nick",
     "Fun": "8ball | animes | ascii | cat | hug | kiss | memes | randomurban | urban", 
     "Music": "leave | pause | play | queue | resume | search | skip | spotify | volume",
     "Games": "csgo | fortnite",
