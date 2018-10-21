@@ -17,7 +17,6 @@ exports.run = async (client, message, args, ops) => {
   client.channels.get(botStats.totalGuildsID).setName(`Total Guilds : ${client.guilds.size}`);
   client.channels.get(botStats.totalUsersID).setName(`Total Users : ${client.guilds.reduce((a, g) => a + g.memberCount, 0)}`);
   client.channels.get(botStats.totalChannelsID).setName(`Total Channels : ${client.channels.size}`);
-  client.channels.get(serverStats.botCountID).setName(`Bot Count: ${member.guild.members.filter(m => m.user.bot).size}`)
   
   message.react('498248476929425409')
 }
