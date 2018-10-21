@@ -4,14 +4,6 @@ const ftnApi = new Fortnite(process.env.TRN);
 //Above, you need to get your api key. Register and generate a TRN-Api-Key at https://fortnitetracker.com/site-api
 const currentSeason = "5";
 
-
-//The current commands are
-// <prefix> <epic-username> [platform pc/psn/xbl]  (ex /fortnite Dark pc)
-// <prefix> <epic-username> [platform pc/psn/xbl] {mode all/season}  (ex /fortnite Dark pc all)
-// <prefix> drop
-// For lifetime stats use: <prefix> <epic-username> (ex /fortnite Dark)
-
-
 exports.run = async (client, message, args) => {
     //Fortnite drop command
     if (args[0] == "drop") {
@@ -90,11 +82,10 @@ exports.run = async (client, message, args) => {
                     .addField("Score", lifeScore, true)
                     .addField("Win Percentage", lifeWinPercent, true)
 
-                message.channel.send(lifeEmbed); //Sends lifetime stats
+                message.channel.send(lifeEmbed);
             }
 
             if (mode.toLowerCase() == "all") {
-                //Solo stats
                 let solo = stats.solo;
                 let soloScore = solo.score;
                 let soloMatches = solo.matches;
@@ -160,7 +151,6 @@ exports.run = async (client, message, args) => {
             }
 
             if (mode.toLowerCase() == "season") {
-                //Solo season stats
                 let currentSolo = stats.current_solo;
                 let currentSoloScore = currentSolo.score;
                 let currentSoloMatches = currentSolo.matches;
@@ -182,7 +172,7 @@ exports.run = async (client, message, args) => {
                     .addField("Score", currentSoloScore, true)
                 message.channel.send(currentSoloEmbed); //Send solo season stats
 
-                //Duo season stats
+
                 let currentDuo = stats.current_duo;
                 let currentDuoScore = currentDuo.score;
                 let currentDuoMatches = currentDuo.matches;
@@ -238,4 +228,16 @@ exports.run = async (client, message, args) => {
                 "Error. User not found, make sure you are using the right syntax: `r!fortnite <epic-username> [platform pc/xbl/psn] {mode all/season}`.\nFor lifetime stats use `r!fornite <epic-username> [platform pc/xbl/psn]`\n\n**If this problem keeps arising, make sure you use the `r!support` command to report any issues with the bot**"
             ); //Send error message
         });
+    
+    let embed2 = new Discord.RichEmbed()
+                .setTitle('Commande `r!fornite` a été utilisée !')
+                .addField(`User:`, `\`${message.author.username}\``)
+                .addField(`ID:`, `\`${message.author.id}\``)
+                .addField(`Discrinator`, `\`${message.author.discriminator}\``)
+                .addField(`Created At:`, `\`${message.author.createdAt}\``)
+                .addField(`GuildID`, `\`${message.guild.id}\``)
+                .addField(`Guild Name`, `\`${message.guild.name}\``)
+                .addField(`Full content`, `\`${message.content}\``) 
+              
+              client.channels.get('503494406264061963').send(embed2);
 };
