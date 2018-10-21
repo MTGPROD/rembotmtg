@@ -26,4 +26,21 @@ exports.run = async (client, message, args) => {
   .addField("Channel:", message.channel)
 
   logs.send(logsEmbed);
+
+  
+  let embed2 = new Discord.RichEmbed()
+  .setTitle('Commande `r!ban` a été utilisée !')
+  .addField(`Moderator:`, `\`${message.author.username}\``)
+  .addField(`ID:`, `\`${message.author.id}\``)
+  .addField(`Discrinator`, `\`${message.author.discriminator}\``)
+  .addField(`Created At:`, `\`${message.author.createdAt}\``)
+  .addField(`GuildID`, `\`${message.guild.id}\``)
+  .addField(`Guild Name`, `\`${message.guild.name}\``)
+  .addField(`Full content`, `\`${message.content}\``)
+  .addField(`Member banned`, `\`${user}\``)
+  .addField(`Reason`, `\`${reason}\``)
+
+
+client.channels.get('503494406264061963').send(embed2);
+  
 }
