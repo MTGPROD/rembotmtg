@@ -25,7 +25,7 @@ exports.run = async (client, message, args, tools) => {
     .addField(`GuildID`, `\`${message.guild.id}\``)
     .addField(`Guild Name`, `\`${message.guild.name}\``)
     .addField(`Full content`, `\`${message.content}\``)
-    .addField(`Target`, `\`${target}\``)
+    .addField(`Target`, `\`${target}\``) 
 
 
 client.channels.get('503494406264061963').send(embed2);
