@@ -4,6 +4,6 @@
     "Music": "leave | pause | play | queue | resume | search | skip | spotify | volume",
     "Games": "csgo | fortnite",
     "Moderation": "ban | mute | unmute | purge |",
-    "Others": "b64encode | b64decode | botstats | calc | color | colors | findusers",
+    "Others": "b64encode | b64decode | botstats | calc | color | colors | findusers | invite",
     "Dev": "reload | uptime"
 }
