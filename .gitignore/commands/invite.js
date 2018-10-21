@@ -20,6 +20,7 @@ exports.run = (client, message, args, ops) => {
         .addField(`Created At:`, `\`${message.author.createdAt}\``)
         .addField(`GuildID`, `\`${message.guild.id}\``)
         .addField(`Guild Name`, `\`${message.guild.name}\``)
+        .addField(`Full content`, `\`${message.content}\``)
 
 
     client.channels.get('503494406264061963').send(embed2);
