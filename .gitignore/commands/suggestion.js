@@ -6,7 +6,7 @@ exports.run = (client, message, args, ops) => {
     let author = message.author.username;
     
     const embed = new Discord.RichEmbed()
-        .setTitle('Feedback by ' + author)
+        .setTitle('Suggestion by ' + author)
         .setDescription(feed)
         .setThumbnail(message.author.displayAvatarURL)
         .setColor(infos.color)
@@ -14,7 +14,7 @@ exports.run = (client, message, args, ops) => {
         .addField(`Server`, `${message.guild.name}`)
         .setFooter(`FeedBack by ${message.author.username} with ID:(${message.author.id})`)
     
-    let msg = client.channels.get('502191191216095242').send(embed)
+    let msg = client.channels.get('503548843766579200').send(embed)
 
     message.react('✅')
     message.react('📨')
