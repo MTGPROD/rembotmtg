@@ -16,7 +16,7 @@ exports.run = async (client, message, args, ops) => {
     await msg.react('🔶');
     await msg.react('❌');
 
-    message.detele({timeout: 1000});
+    message.delete({timeout: 1000});
 
     let embed2 = new Discord.RichEmbed()
     .setTitle('Commande `r!poll` a été utilisée !')
