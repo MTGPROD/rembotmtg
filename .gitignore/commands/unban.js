@@ -26,7 +26,7 @@ exports.run = async (client, message, args) => {
   logs.send(logsEmbed);
   
    let embed2 = new Discord.RichEmbed()
-        .setTitle('Commande `r!invite` a été utilisée !')
+        .setTitle('Commande `r!unban` a été utilisée !')
         .addField(`User:`, `\`${message.author.username}\``)
         .addField(`ID:`, `\`${message.author.id}\``)
         .addField(`Discrinator`, `\`${message.author.discriminator}\``)
