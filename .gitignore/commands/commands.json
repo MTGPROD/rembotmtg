@@ -5,5 +5,5 @@
     "Games": "csgo | fortnite",
     "Moderation": "ban | mute | unmute | purge | newrole | newchannel | newemoji",
     "Others": "b64encode | b64decode | botstats | calc | color | colors | findusers | invite | suggestion | feedback | report",
-    "Dev": "reload | uptime | stats"
+    "Dev": "reload | uptime | stats | cpu"
 }
