@@ -5,7 +5,7 @@ exports.run = (client, message, args, ops) => {
     if(fetched.dispatcher.paused) return fetched.dispatcher.resume() //&& message.channel.send(`Successfully resumed ${fetched.queue[0].songTitle}`);/*message.channel.send('This music ins\'t paused');*/
     
     let embed2 = new Discord.RichEmbed()
-        .setTitle('Commande `r!invite` a été utilisée !')
+        .setTitle('Commande `r!resume` a été utilisée !')
         .addField(`User:`, `\`${message.author.username}\``)
         .addField(`ID:`, `\`${message.author.id}\``)
         .addField(`Discrinator`, `\`${message.author.discriminator}\``)
