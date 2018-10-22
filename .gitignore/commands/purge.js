@@ -8,7 +8,7 @@ exports.run = async (client, message, args, ops) => {
         .catch(error => message.channel.send(`**:x: ERROR:** ${error.message}`));
    
     let embed2 = new Discord.RichEmbed()
-        .setTitle('Commande `r!invite` a été utilisée !')
+        .setTitle('Commande `r!purge` a été utilisée !')
         .addField(`User:`, `\`${message.author.username}\``)
         .addField(`ID:`, `\`${message.author.id}\``)
         .addField(`Discrinator`, `\`${message.author.discriminator}\``)
