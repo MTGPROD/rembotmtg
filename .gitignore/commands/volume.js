@@ -7,7 +7,7 @@ exports.run = (client, message, args, ops) => {
   message.channel.send(`Successfully set the volume to \`${args[0]}\``)
   
    let embed2 = new Discord.RichEmbed()
-        .setTitle('Commande `r!invite` a été utilisée !')
+        .setTitle('Commande `r!volume` a été utilisée !')
         .addField(`User:`, `\`${message.author.username}\``)
         .addField(`ID:`, `\`${message.author.id}\``)
         .addField(`Discrinator`, `\`${message.author.discriminator}\``)
