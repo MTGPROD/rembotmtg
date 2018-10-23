@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const superagent = require("superagent");
 const infos = require('./infos.json');
 
 exports.run = async (client, message, args) => {
