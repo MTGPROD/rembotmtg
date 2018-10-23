@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({
-  shardId: process.argv[1],
-  shardCount: process.argv[2],
   fetchAllMembers: true
 });
 
