@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client({
-  fetchAllMembers: true
-});
+const client = new Discord.Client();
 
 const prefix = "r!";
 const ownerID = '234234723314958339';
