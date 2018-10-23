@@ -49,6 +49,7 @@
     "snekfetch": "^4.0.4",
     "sqlite3": "^4.0.2",
     "strip-indent": "^2.0.0",
+    "superagent": "^4.0.0-beta.5",
     "urban": "^0.3.2",
     "util": "^0.11.0",
     "yt-search": "^0.2.0",
