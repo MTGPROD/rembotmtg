@@ -1,9 +1,9 @@
 const { ShardingManager } = require('discord.js');
-const shard = new ShardingManager('./server.js', {
+const manager = new ShardingManager('./server.js', {
   token: process.env.TOKEN,
   autoSpawn: true
 });
 
-shard.spawn(2);
+manager.spawn(2);
 
-shard.on('launch', shard => console.log(`[SHARD] Shard ${shard.id}/${shard.totalShards}`));
+manager.on('launch', shard => console.log(`[SHARD] Shard ${shard.id}/${manager.totalShards}`));
