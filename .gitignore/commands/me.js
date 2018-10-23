@@ -4,7 +4,7 @@ const infos = require('./infos.json');
 exports.run = async (client, message, args) => {
     let target = message.author;
     
-    const embed = Discord.RichEmbed()
+    const embed = new Discord.RichEmbed()
         .setTitle(`Profile of ${target}`)
         .addField(`Name`, `${target.username}`)
 
