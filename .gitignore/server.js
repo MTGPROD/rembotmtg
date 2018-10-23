@@ -1,5 +1,9 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({
+  shardId: process.argv[1],
+  shardCount: process.argv[2],
+  fetchAllMembers: true
+});
 
 const prefix = "r!";
 const ownerID = '234234723314958339';
