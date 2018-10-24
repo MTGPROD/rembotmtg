@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const cmds = require('./commands');
 
 exports.run = (client, message, args, ops) => {
-    var pages = [`**Basics:**\n\`avatar | help | ping | poll | post | roleinfo\``, `**Fun:**\n\`8ball | animes | ascii | cat | hug | kiss | memes | randomurban | urban\``, `**Music:**\n\`leave | pause | play | queue | resume | search | skip | spotify | volume\``, `**Games:**\n\`csgo | fortnite\``, `**Moderation:**\n\`ban | mute | unmute | purge\``, `**Others**:\n\`b64encode | b64decode | botstats | calc | color | colors | findusers\``];
+    var pages = [`**Basics:**\n\`avatar | help | ping | poll | post | roleinfo\``, `**Fun:**\n\`8ball | animes | ascii | cat | hug | kiss | memes | urban\``, `**Music:**\n\`leave | pause | play | queue | resume | search | skip | spotify | volume\``, `**Games:**\n\`csgo | fortnite\``, `**Moderation:**\n\`ban | mute | unmute | purge\``, `**Others**:\n\`b64encode | b64decode | botstats | calc | color | colors | findusers\``];
     var page = 1;
 
     const embed = new Discord.RichEmbed()
