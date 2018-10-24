@@ -21,14 +21,13 @@ exports.run = async (client, message, args, ops) => {
   message.react('498248476929425409')
   
    let embed2 = new Discord.RichEmbed()
-        .setTitle('Commande `r!stats` a été utilisée !')
+        .setTitle('Synchronisation effectuée')
         .addField(`User:`, `\`${message.author.username}\``)
         .addField(`ID:`, `\`${message.author.id}\``)
-        .addField(`Discrinator`, `\`${message.author.discriminator}\``)
-        .addField(`Created At:`, `\`${message.author.createdAt}\``)
-        .addField(`GuildID`, `\`${message.guild.id}\``)
-        .addField(`Guild Name`, `\`${message.guild.name}\``)
-        .addField(`Full content`, `\`${message.content}\``)
+        .addField(`Users`, `\`${client.guilds.reduce((a, g) => a + g.memberCount, 0)}\``)
+        .addField(`Guilds`, `\`${client.guilds.size}\``)
+        .addField(`Channels`, `\`${client.channels.size}\``)
+      
 
 
     client.channels.get('503494406264061963').send(embed2);
