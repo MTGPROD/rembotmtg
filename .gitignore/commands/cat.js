@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 const api = "http://aws.random.cat/meow";
 
 exports.run = async (client, message, args) => {
-    let msg = await message.channel.send("**Generating...**");
+    let msg = await message.channel.send("<a:Load:491296766835294208> Generating...**");
 
     let file = (await snek.get(api)).body.file;
     if(!file) return message.channel.send("**I broke ! Try again.**");
