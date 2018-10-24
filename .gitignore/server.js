@@ -20,10 +20,10 @@ const botStats = {
 
 client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`My prefix is ${prefix}`, 'Rem > Emilia', `r!help | serving ${client.guilds.size} guilds`]
+    let statuses = [`My prefix is ${prefix}`, `Killing Emilia`, `r!help | serving ${client.guilds.size} guilds`]
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
-  }, 15000)
+  }, 30000)
 })
 
 client.on('message', message => {
@@ -61,7 +61,7 @@ client.on('guildCreate', guild => {
 })
 
 client.on('ready', () => console.log('My body is ready'));
-/*
+
 client.on('guildMemberAdd', member => {
   if(member.guild.id !== serverStats.guildID) return;
   client.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
@@ -86,6 +86,6 @@ client.on('guildDelete', guild => {
   client.channels.get(botStats.totalGuildsID).setName(`Total Guilds : ${client.guilds.size}`);
   client.channels.get(botStats.totalUsersID).setName(`Total Users : ${client.guilds.reduce((a, g) => a + g.memberCount, 0)}`);
   client.channels.get(botStats.totalChannelsID).setName(`Total Channels : ${client.channels.size}`);
-})*/
+})
 
 client.login(process.env.TOKEN)
