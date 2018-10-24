@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
       .addField('Aired', data.aired, true)
       .addField(':star: Score', data.score, true)
       .addField('Score Stats', data.scoreStats, true)
-      .addField('Synopsis', data.synopsis)
+
       .addField('Link', data.url)
       .setThumbnail(data.picture)
       .setFooter(infos.version, client.user.displayAvatarURL)
