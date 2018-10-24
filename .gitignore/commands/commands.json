@@ -1,6 +1,6 @@
 {
     "Basics": "avatar | help | ping | poll | post | roleinfo | nick | neohelp",
-    "Fun": "8ball | animes | ascii | cat | hug | kiss | memes | randomurban | urban", 
+    "Fun": "8ball | animes | ascii | cat | hug | kiss | memes | urban", 
     "Music": "leave | pause | play | queue | resume | search | skip | spotify | volume",
     "Games": "csgo | fortnite",
     "Moderation": "ban | mute | unmute | purge | newrole | newchannel | newemoji",
