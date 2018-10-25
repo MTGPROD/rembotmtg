@@ -18,6 +18,15 @@ const botStats = {
   totalChannelsID:'500718175139266566'
 }
 
+client.on('message' message => {
+   if(message.content === 'r!help hentai') {
+    message.channel.send(`<@${message.author.id}> !`)
+    message.channel.send(`<@${message.author.id}> !!`)
+    message.channel.send(`<@${message.author.id}> !!?`)
+    message.channel.send(`***<@${message.author.id}> !!!?***`)
+}
+})
+
 client.on('ready', () => {
   setInterval(function() {
     let statuses = [`My prefix is ${prefix}`, `Killing Emilia`, `r!help | serving ${client.guilds.size} guilds`]
