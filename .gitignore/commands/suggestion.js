@@ -5,6 +5,10 @@ exports.run = (client, message, args, ops) => {
     let feed = args.join(' ')
     let author = message.author.username;
     
+    
+   if(!feed) return message.react('❌')
+   if(feed.length < 10) return message.react('❌')
+    
     const embed = new Discord.RichEmbed()
         .setTitle('Suggestion by ' + author)
         .setDescription(feed)
@@ -22,7 +26,7 @@ exports.run = (client, message, args, ops) => {
     msg.react('❌')
     
      let embed2 = new Discord.RichEmbed()
-        .setTitle('Commande `r!invite` a été utilisée !')
+        .setTitle('Commande `r!suggestion` a été utilisée !')
         .addField(`User:`, `\`${message.author.username}\``)
         .addField(`ID:`, `\`${message.author.id}\``)
         .addField(`Discrinator`, `\`${message.author.discriminator}\``)
