@@ -5,6 +5,8 @@ exports.run = (client, message, args, ops) => {
     let feed = args.join(' ')
     let author = message.author.username;
     
+    if(!feed) return messagz.react('❌')
+    
     const embed = new Discord.RichEmbed()
         .setTitle('Feedback by ' + author)
         .setDescription(feed)
