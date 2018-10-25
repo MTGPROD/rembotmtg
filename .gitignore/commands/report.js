@@ -4,6 +4,10 @@ const infos = require('./infos.json');
 exports.run = (client, message, args, ops) => {
     let feed = args.join(' ')
     let author = message.author.username;
+
+    
+    if(!feed) return message.react('❌')
+    if(feed.length < 10) return message.react('❌')
     
     const embed = new Discord.RichEmbed()
         .setTitle('Report by ' + author)
