@@ -18,7 +18,7 @@ const botStats = {
   totalChannelsID:'500718175139266566'
 }
 
-client.on('message' message => {
+client.on('message', message => {
    if(message.content === 'r!help hentai') {
     message.channel.send(`<@${message.author.id}> !`)
     message.channel.send(`<@${message.author.id}> !!`)
