@@ -3,7 +3,7 @@
     "Fun": "8ball | animes | ascii | cat | hug | kiss | memes | urban", 
     "Music": "leave | pause | play | queue | resume | search | skip | spotify | volume",
     "Games": "csgo | fortnite",
-    "Moderation": "ban | mute | unmute | purge | newrole | newchannel | newemoji",
+    "Moderation": "ban | mute | unmute | purge | newrole | newchannel | newemoji | guildname",
     "Others": "b64encode | b64decode | botstats | calc | color | colors | findusers | invite | suggestion | feedback | report",
-    "Dev": "reload | uptime | stats | cpu"
+    "Dev": "reload | sync | cpu | reboot | setgame | destruction"
 }
