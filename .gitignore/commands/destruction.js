@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 exports.run = (client, message, args, ops) => {
    var Owner = '❌';  
      
-     if(message.author.id === OwnerID) {
+     if(message.author.id === '234234723314958339') {
           Owner = '✅'
      } else {
           Owner = '❌';
