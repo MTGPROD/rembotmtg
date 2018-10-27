@@ -3,7 +3,7 @@ const infos = require('./infos.json');
 const cmds = require('./commands.json');
 
 exports.run = (client, message, args, ops) => {
-    if(message.author.id === infos.owners.MTG || infos.owners.Xeno) {
+    if(message.author.id === infos.owners.MTG) {
         const ownerembed = new Discord.RichEmbed()
         .setTitle(`Help requested by **${message.author.username}**`)
         .setURL('https://google.com/')
@@ -45,6 +45,7 @@ let embed2 = new Discord.RichEmbed()
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
     .addField(`GuildID`, `\`${message.guild.id}\``)
     .addField(`Guild Name`, `\`${message.guild.name}\``)
+    .addField(`Channel`, `#${message.channel.name} (${message.channel.id})`)
     .addField(`Full content`, `\`${message.content}\``) 
   
   client.channels.get('503494406264061963').send(embed2);
