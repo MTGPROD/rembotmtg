@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 exports.run = (client, message, args, ops) => {
      name = args.join(' ')
      
-  guild.edit({
+  message.guild.edit({
   name: name,
 
 })
