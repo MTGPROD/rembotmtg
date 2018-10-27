@@ -5,7 +5,7 @@ const client = new Discord.Client()
 exports.run = (client, message, args, ops) => {
     const embed = new Discord.RichEmbed()
         .addField('Invite me:', '[Invitation](https://discordapp.com/oauth2/authorize?client_id=488734399509168148&scope=bot&permissions=2146958847)')
-        .addField('My server:', "[MTG's dev](https://discord.gg/RRcaDWW)")
+        .addField('My server:', "[MTG's dev](https://discord.gg/2qJjJcs)")
         .setThumbnail(client.user.displayAvatarURL)
         .setTimestamp()
         .setFooter(infos.version, client.user.displayAvatarURL);
