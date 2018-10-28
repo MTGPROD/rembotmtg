@@ -5,13 +5,13 @@ exports.run = async (client, message, args, tools) => {
     
     // Array of responses
     let responses = [
-        'Agreed!',
-        'Of Course!',
+        'Agreed !',
+        'Of Course !',
         'Nope.',
         'No',
         'Maybe',
         'One day...',
-        'Don\'t see that happening!',
+        'Don\'t see that happening !',
         'I have no idea'
     ]
     
@@ -30,13 +30,14 @@ exports.run = async (client, message, args, tools) => {
     .setTitle('Commande `r!8ball` a été utilisée !')
     .addField(`User:`, `\`${message.author.username}\``)
     .addField(`ID:`, `\`${message.author.id}\``)
-    .addField(`Discrinator`, `\`${message.author.discriminator}\``)
+    .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
-    .addField(`GuildID`, `\`${message.guild.id}\``)
-    .addField(`Guild Name`, `\`${message.guild.name}\``)
-    .addField(`Full content`, `\`${message.content}\``)
-    .addField(`Responce`, `\`${fetched}\``)
-    .addField(`Channel`, `\`#${message.channel.name} (${message.channel.id})\``)
+    .addField(`GuildID:`, `\`${message.guild.id}\``)
+    .addField(`Guild Name:`, `\`${message.guild.name}\``)
+    .addField(`Full content:`, `\`${message.content}\``)
+    .addField(`Responce:`, `\`${fetched}\``)
+    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\` <#${message.channel.id}>`)
+    .setThumbnail(message.author.id)
 
 
 
