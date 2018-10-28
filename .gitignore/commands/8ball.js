@@ -36,8 +36,8 @@ exports.run = async (client, message, args, tools) => {
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
     .addField(`Full content:`, `\`${message.content}\``)
     .addField(`Responce:`, `\`${fetched}\``)
-    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\` <#${message.channel.id}>`)
-    .setThumbnail(message.author.id)
+    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
+    .setThumbnail(message.author.avatarURL)
 
 
 
