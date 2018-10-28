@@ -27,12 +27,16 @@ client.on('message', message => {
 }
 })
 
-client.on('ready', () => {
+/*client.on('ready', () => {
   setInterval(function() {
     let statuses = [`My prefix is ${prefix}`, `Killing Emilia`, `r!help | serving ${client.guilds.size} guilds`]
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
   }, 30000)
+})*/
+
+client.on('ready', () => {
+client.user.setStatus('Maintenance', "dnd")
 })
 
 client.on('message', message => {
