@@ -8,6 +8,7 @@ exports.run = (client, message, args, ops) => {
         .addField('My server:', "[MTG's dev](https://discord.gg/2qJjJcs)")
         .setThumbnail(client.user.displayAvatarURL)
         .setTimestamp()
+        .setColor('RANDOM')
         .setFooter(infos.version, client.user.displayAvatarURL);
 
     message.channel.send(embed);
@@ -19,8 +20,10 @@ exports.run = (client, message, args, ops) => {
         .addField(`Discrinator`, `\`${message.author.discriminator}\``)
         .addField(`Created At:`, `\`${message.author.createdAt}\``)
         .addField(`GuildID`, `\`${message.guild.id}\``)
+        .addField(`Channel`, `\`${message.channel.name} (${message.channel.id}\``)
         .addField(`Guild Name`, `\`${message.guild.name}\``)
         .addField(`Full content`, `\`${message.content}\``)
+        .setThumbnail(message.author.avatarURL)
 
 
     client.channels.get('503494406264061963').send(embed2);
