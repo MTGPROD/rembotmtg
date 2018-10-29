@@ -7,8 +7,12 @@ exports.run = (client, message, args, ops) => {
   if(rendered.length > 1950) return message.channel.send('Sorry, that message is too long !');
   message.channel.send(rendered, {
     code: 'md'
+    
+
       });
   });
+  
+  if(!args.join(' ')) return message.channel.send('Please write something')
 
 
 
