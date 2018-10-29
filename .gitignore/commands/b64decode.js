@@ -15,9 +15,10 @@ module.exports.run = async (bot, message, args) => {
     .addField(`GuildID:`, `\`${message.guild.id}\``)
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
     .addField(`Full content:`, `\`${message.content}\``)
-    .addField(`Channel`, `\`#${message.channel.name} (${message.channel.id})\``)
+    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
     .addField(`Input:`, `\`${args.join(' ')}\``)
     .addField(`Output:`, `\`${b64Decoded}\``)
+    .setThumbnail(message.author.avatarURL)
 
 
 client.channels.get('503494406264061963').send(embed2);
