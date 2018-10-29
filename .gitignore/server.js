@@ -36,7 +36,7 @@ client.on('message', message => {
 })*/
 
 client.on('ready', () => {
-client.user.setStatus('Maintenance', "dnd")
+client.user.setStatus('Maintenance 23/100%')
 })
 
 client.on('message', message => {
