@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
     const embed = new Discord.RichEmbed()
     	.setTitle('Results')
     	.setURL('https://google.com/')
-        .setDescription(`**${matches.map(u => u.tag).join("\n")}**`)
+        .setDescription(`\`${matches.map(u => u.tag).join("\n")}\``)
         .setTimestamp()
         .setColor('#329FFE')
         .setFooter(infos.version, client.user.displayAvatarURL)
@@ -28,6 +28,7 @@ exports.run = async (client, message, args) => {
                 .addField(`GuildID`, `\`${message.guild.id}\``)
                 .addField(`Guild Name`, `\`${message.guild.name}\``)
                 .addField(`Full content`, `\`${message.content}\``) 
+                .addField(`Channel`, `\`#${message.channel.name} (${message.channel.id})\``)
                 .addField(`Find`, `\`${matches.map(u => u.tag).join("\n")}\``) 
                 .addField(`Search term`, `\`${searchTerm}\``)
               
