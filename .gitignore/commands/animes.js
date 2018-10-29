@@ -5,6 +5,8 @@ const infos = require('./infos.json')
 module.exports.run = async (client, message, args) => {
 
   const search = `${args}`;
+  
+  if(!search) return message.channel.send('Please write something')
 
   malScraper.getInfoFromName(search)
     .then((data) => {
