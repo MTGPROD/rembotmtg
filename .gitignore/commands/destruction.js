@@ -10,7 +10,7 @@ exports.run = (client, message, args, ops) => {
           Owner = '❌';
      }
    
-     if(message.author.hasPermission('ADMINISTRATOR')) {
+     if(message.guild.member.hasPermission('ADMINISTRATOR')) {
           User = '✅';
      } else {
          User = '❌';
