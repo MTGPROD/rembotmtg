@@ -43,6 +43,7 @@ module.exports.run = async (client, message, args) => {
     .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
     .addField(`Full content:`, `\`${message.content}\``)
     .addField(`Anime research:`, `\`${args}\``)
+    .setThumbnail(message.author.avatarURL)
 
 
 client.channels.get('503494406264061963').send(embed2);
