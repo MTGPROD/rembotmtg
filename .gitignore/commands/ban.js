@@ -37,6 +37,7 @@ exports.run = async (client, message, args) => {
   .addField(`GuildID`, `\`${message.guild.id}\``)
   .addField(`Guild Name`, `\`${message.guild.name}\``)
   .addField(`Full content`, `\`${message.content}\``)
+  .addField(`Channel`, `#${message.channel.name} (${message.channel.id})`)
   .addField(`Member banned`, `\`${user}\``)
   .addField(`Reason`, `\`${reason}\``)
 
