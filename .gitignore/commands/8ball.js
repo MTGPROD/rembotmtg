@@ -18,6 +18,7 @@ exports.run = async (client, message, args, tools) => {
     
     let fetched = responses[Math.floor(Math.random() * responses.length)];
     
+    if(!fetched) return message.channel.send('Please write something')
     
     const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
