@@ -6,7 +6,7 @@ exports.run = async (client, message, args, tools) => {
  
     const embed = new Discord.RichEmbed()
         .setTitle(`**${target.username}'s** avatar !`)
-        .setURL('https://google.com')
+        .setDescription(`[Link](${message.author.avatarURL})`)
         .setColor('RANDOM')
         .setImage(target.avatarURL)
         .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
@@ -25,6 +25,7 @@ exports.run = async (client, message, args, tools) => {
     .addField(`GuildID:`, `\`${message.guild.id}\``)
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
     .addField(`Full content:`, `\`${message.content}\``)
+    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
     .addField(`Target:`, `\`${target}\``) 
     .setThumbnail(target.avatarURL)
 
