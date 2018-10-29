@@ -10,7 +10,7 @@ exports.run = async (client, message, args, ops) => {
     }});
 
     	const embed = new Discord.RichEmbed()
-    		.setTitle("All colors available !")
+    		.setTitle(`All colors available ! ${colors.size} colors`)
     		.setURL('https://google.com')
     		.setDescription(colors.array().join("\n"))
                     .setColor('#d4af37')
@@ -19,7 +19,7 @@ exports.run = async (client, message, args, ops) => {
     		message.channel.send(embed);
               
         const embedwithcolor = new Discord.RichEmbed()
-                .addField('How to give you a color ?', 'To give you a color, type ' +  `${infos.prefix}color colorname`)
+                .addField('How to give you a color ?', 'To give you a color, type ' +  `\`${infos.prefix}color colorname\``)
                 .setColor('#d4af37')
                 .setFooter(infos.version, client.user.displayAvatarURL)
 
@@ -34,8 +34,10 @@ exports.run = async (client, message, args, ops) => {
                 .addField(`Created At:`, `\`${message.author.createdAt}\``)
                 .addField(`GuildID`, `\`${message.guild.id}\``)
                 .addField(`Guild Name`, `\`${message.guild.name}\``)
+                .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
                 .addField(`Full content`, `\`${message.content}\``) 
                 .addField(`Colors`, `\`${colors.array().join("\n")}\``) 
+                .setThumbnail(message.author.avatarURL)
               
               client.channels.get('503494406264061963').send(embed2);
             
