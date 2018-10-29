@@ -239,6 +239,7 @@ exports.run = async (client, message, args) => {
                 .addField(`Guild Name:`, `\`${message.guild.name}\``)
                 .addField(`Full content:`, `\`${message.content}\``) 
                 .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
+                .setThumbnail(message.author.avatarURL)
               
               client.channels.get('503494406264061963').send(embed2);
 };
