@@ -26,8 +26,10 @@ exports.run = async (client, message, args) => {
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
     .addField(`GuildID`, `\`${message.guild.id}\``)
     .addField(`Guild Name`, `\`${message.guild.name}\``)
+    .addField(`Channel`, `\`${message.channel.name} (${message.channel.id})\``)
     .addField(`Full content`, `\`${message.content}\``)
     .addField(`"Kiss user"`, `\`${hugUser}\``)
+    .setThumbnail(message.author.avatarURL)
 
 
 client.channels.get('503494406264061963').send(embed2);
