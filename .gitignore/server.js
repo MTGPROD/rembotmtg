@@ -29,7 +29,7 @@ client.on('message', message => {
 
 client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`My prefix is ${prefix}`, `2.2.1 Devs update`, `r!help | serving ${client.guilds.size} guilds`]
+    let statuses = [`My prefix is ${prefix}`, `2.2.1 Devs update`, `r!help | serving ${client.guilds.size} guilds`, `${client.guilds.size} GUILDS THANK YOU SO MUCH !!!`]
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
   }, 30000)
