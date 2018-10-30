@@ -18,7 +18,7 @@ exports.run = (client, message, args, ops) => {
     .addField(`Discrinator`, `\`${message.author.discriminator}\``)
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
     .addField(`GuildID`, `\`${message.guild.id}\``)
-    .addField (`Channel`, `\`#${message.channel.name} (${message.channel.id})\``)
+    .addField(`Channel`, `\`#${message.channel.name} (${message.channel.id})\``)
     .addField(`Guild Name`, `\`${message.guild.name}\``)
     .addField(`Full content`, `\`${message.content}\``)
     .addField(`URL`, `\`${url}\``)
