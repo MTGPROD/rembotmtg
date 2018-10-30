@@ -23,7 +23,7 @@ exports.run = async (client, message, args, ops) => {
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
     .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
     .addField(`Full content/*66*/:`, `\`${message.content}\``)
-    .setThumbnail(mess
+    
     
     .setThumbnail(message.author.avatarURL)
 
