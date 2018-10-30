@@ -7,7 +7,7 @@ const active = new Map();
 
 const serverStats = {
   guildID: '489426595166158885',
-  totalUsersID: '500691885816545290',
+  totalUsersID: '505670610580537374',
   memberCountID: '500691902186782750',
   botCountID: '500691956851015690',
 }
@@ -27,17 +27,16 @@ client.on('message', message => {
 }
 })
 
-/*client.on('ready', () => {
+client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`My prefix is ${prefix}`, `Killing Emilia`, `r!help | serving ${client.guilds.size} guilds`]
+    let statuses = [`My prefix is ${prefix}`, `2.2.1 Devs update`, `r!help | serving ${client.guilds.size} guilds`]
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
   }, 30000)
-})*/
-
-client.on('ready', () => {
-client.user.setStatus('Maintenance 23/100%')
 })
+
+
+
 
 client.on('message', message => {
   if(message.content === '<@488734399509168148>') {
