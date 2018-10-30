@@ -5,7 +5,7 @@ exports.run = (client, message, args, ops) => {
     let type = args[1]
 
     if(!name) return message.channel.send('Please input a name')
-    if(!type) return message.channel.send('Please input a type `text/voice`')
+    if(!type) return message.channel.send('Please input a type `text/voice/category`')
 
 
     message.guild.createChannel(name, type)
