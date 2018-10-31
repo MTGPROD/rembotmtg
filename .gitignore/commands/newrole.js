@@ -9,7 +9,7 @@ exports.run = (client, message, args, ops) => {
     let position =  args[4];
 
     if(!name) return message.channel.send('Please input a name/color/mentionable: true/false hoist: true/false position: number')
-    if(!name === isNaN) return message.channel.send(position + ' is not a number')
+    if(!positio, === isNaN) return message.channel.send(position + ' is not a number')
 
     message.guild.createRole({
         name: name,
