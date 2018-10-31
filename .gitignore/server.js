@@ -32,7 +32,7 @@ client.on('ready', () => {
     let statuses = [`DELTARUNE.COM`, `[REDACTED]`, 'Speak with hands', '💔 But.....it refused ❤️']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
-  }, 1500)
+  }, 3700)
 })
 
 
