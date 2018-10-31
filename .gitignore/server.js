@@ -29,7 +29,7 @@ client.on('message', message => {
 
 client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`D`, `DE`, `DEL`, `DELT`, 'DELTA', 'DELTAR', 'DELTARU', 'DELTARUN', 'DELTARUNE']
+    let statuses = [`DELTARUNE.COM`, `[REDACTED]`, 'Speak with hands', '💔 But.....it refused ❤️']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
   }, 1500)
@@ -41,6 +41,7 @@ client.on('ready', () => {
 client.on('message', message => {
   if(message.content === '<@488734399509168148>') {
     message.channel.send('Yes ?\n My prefix is `r!`')
+    message.react('✅')
   }
 })
 
