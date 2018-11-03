@@ -29,7 +29,7 @@ client.on('message', message => {
 
 client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`DELTARUNE.COM`, `[REDACTED]`, 'Speak with hands', '💔 But.....it refused ❤️']
+    let statuses = [`DELTARUNE.COM`, `[REDACTED]`, 'Speak with hands', '💔 But.....it refused ❤️', `SAVE🌟 ${client.guilds.size} guilds and ${member.guild.memberCount} childs`]
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
   }, 3700)
