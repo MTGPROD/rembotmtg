@@ -6,9 +6,22 @@ exports.run = (client, message, args, ops) => {
         if (err) {
             return console.log(err);
         }
+
         const embedStats = new Discord.RichEmbed()
-            .setColor('#507EDC')
-            .addField("|-CPU-|", `\`${percent.toFixed(2)}%\``)  
-        message.channel.send(embedStats)
-    });
+        .setTitle('|-CPU-|')
+        .setColor('#507EDC')
+        .setDescription(`\`${percent.toFixed(2)}%\``)  
+    message.channel.send({embed: embedStats}).then(msg => {
+        setInterval(function() {
+            cpuStat.usagePercent(function(err, percent, seconds) {
+                if (err) {
+                    return console.log(err);
+                }
+                embedStats.setDescription(`\`${percent.toFixed(2)}%\``) 
+                msg.edit({embed: embedStats})
+            });
+        }, 2000)
+    })
+  })
+
 }
