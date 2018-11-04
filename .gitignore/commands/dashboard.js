@@ -10,19 +10,10 @@ const ms = require("ms")
 
 exports.run = (client, message, args) => {
 
-    var cooldown = false
-
-    if(cooldown === true) {
-        message.channel.send('Vous êtes en cooldown')
-    }
-
     cpuStat.usagePercent(function(err, percent, seconds) {
         if (err) {
             return console.log(err);
         }
-
-        cooldown = true
-
     const embed = new Discord.RichEmbed()
         .setTitle('Loading <a:loader:508323902531960872>')
         .setColor('#507EDC')
@@ -46,7 +37,7 @@ exports.run = (client, message, args) => {
                 });
             }, 2000)
             msg.delete(30000)
-            cooldown = false
+            
             
  })       
 })
