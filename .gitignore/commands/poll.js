@@ -22,11 +22,12 @@ exports.run = async (client, message, args, ops) => {
     .setTitle('Commande `r!poll` a été utilisée !')
     .addField(`User:`, `\`${message.author.username}\``)
     .addField(`ID:`, `\`${message.author.id}\``)
-    .addField(`Discrinator`, `\`${message.author.discriminator}\``)
+    .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
-    .addField(`GuildID`, `\`${message.guild.id}\``)
-    .addField(`Guild Name`, `\`${message.guild.name}\``)
-    .addField(`Question`, `\`${args.join(' ')}\``)
+    .addField(`GuildID:`, `\`${message.guild.id}\``)
+    .addField(`Guild Name:`, `\`${message.guild.name}\``)
+    .addField(`Question:`, `\`${args.join(' ')}\``)
+    .setThubnail(message.author.displayAvatarURL)
 
 client.channels.get('503494406264061963').send(embed2)
 }
