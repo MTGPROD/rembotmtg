@@ -13,7 +13,8 @@ exports.run = async (client, message, args, ops) => {
     
     message.channel.send(embed);
 
-     let embed2 = new Discord.RichEmbed()
+        
+ let embed2 = new Discord.RichEmbed()
     .setTitle('Commande `r!me` a été utilisée !')
     .addField(`User:`, `\`${message.author.username}\``)
     .addField(`ID:`, `\`${message.author.id}\``)
@@ -23,6 +24,7 @@ exports.run = async (client, message, args, ops) => {
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
     .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
     .addField(`Full content:`, `\`${message.content}\``)
-    .addField(`"Kiss user":`, `\`${hugUser}\``)
     .setThumbnail(message.author.avatarURL)
+
+client.channels.get('503494406264061963').send(embed2);
 }
