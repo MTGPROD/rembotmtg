@@ -9,7 +9,7 @@ exports.run = (client, message, args, ops) => {
 
 
     message.guild.createEmoji(url, name)
-  .then(emoji => message.channel.send(`Created new emoji :${emoji.name}:`))
+  .then(emoji => message.channel.send(`Created new emoji <a:${emoji.name}:${emoji.id}>`))
   .catch(console.error);
     
         
