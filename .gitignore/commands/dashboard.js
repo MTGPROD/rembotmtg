@@ -9,10 +9,19 @@ let cpuStat = require("cpu-stat")
 const ms = require("ms")
 
 exports.run = (client, message, args) => {
+
+    var cooldown = false
+
+    if(cooldown === true) {
+        message.channel.send('Vous êtes en cooldown')
+    }
+
     cpuStat.usagePercent(function(err, percent, seconds) {
         if (err) {
             return console.log(err);
         }
+
+        cooldown = true
 
     const embed = new Discord.RichEmbed()
         .setTitle('Loading <a:loader:508323902531960872>')
@@ -37,20 +46,9 @@ exports.run = (client, message, args) => {
                 });
             }, 2000)
             msg.delete(30000)
+            cooldown = false
             
  })       
 })
-    let embed2 = new Discord.RichEmbed()
-    .setTitle('Commande `r!dashboard` a été utilisée !')
-    .addField(`User:`, `\`${message.author.username}\``)
-    .addField(`ID:`, `\`${message.author.id}\``)
-    .addField(`Discrinator`, `\`${message.author.discriminator}\``)
-    .addField(`Created At:`, `\`${message.author.createdAt}\``)
-    .addField(`GuildID:`, `\`${message.guild.id}\``)
-    .addField(`Guild Name:`, `\`${message.guild.name}\``)
-    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
-    .addField(`Full content:`, `\`${message.content}\``) 
-    .setThumbnail(message.author.avatarURL)
-  
-  client.channels.get('503494406264061963').send(embed2);
 }
+
