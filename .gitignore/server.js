@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client()
 
 const prefix = "r!";
 const ownerID = '234234723314958339';
@@ -7,7 +7,7 @@ const active = new Map();
 
 const serverStats = {
   guildID: '489426595166158885',
-  totalUsersID: '505670610580537374',
+  totalUsersID: '500691885816545290',
   memberCountID: '500691902186782750',
   botCountID: '500691956851015690',
 }
@@ -18,30 +18,17 @@ const botStats = {
   totalChannelsID:'500718175139266566'
 }
 
-client.on('message', message => {
-   if(message.content === 'r!help hentai') {
-    message.channel.send(`<@${message.author.id}> !`)
-    message.channel.send(`<@${message.author.id}> !!`)
-    message.channel.send(`<@${message.author.id}> !!?`)
-    message.channel.send(`***<@${message.author.id}> !!!?***`)
-}
-})
-
 client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`DELTARUNE.COM`, `[REDACTED]`, 'Speak with hands', '💔 But.....it refused ❤️', `🌟SAVE ${client.guilds.size} guilds`]
+    let statuses = [`J'en peut plus`, 'Rem > Emilia', `r!help | serving ${client.guilds.size} guilds`]
     let status = statuses[Math.floor(Math.random()*statuses.length)];
-    client.user.setGame(status, "https://www.twitch.tv/monstercat");
-  }, 3700)
+    client.user.setGame(`r!help | serving ${client.guilds.size} guilds`, "https://www.twitch.tv/monstercat");
+  }, 15000)
 })
-
-
-
 
 client.on('message', message => {
   if(message.content === '<@488734399509168148>') {
     message.channel.send('Yes ?\nMy prefix is `r!`')
-    message.react('✅')
   }
 })
 
@@ -64,6 +51,7 @@ client.on('message', message => {
         commandFile.run(client, message, args, ops);
     } catch (e) {
         console.log(e.stack)
+        message.channel.send(`I don\'t find the command`)
     }
 });
 
@@ -119,5 +107,6 @@ client.on('message', message => {
   
     message.channel.send({embed: avatar});
   }
+})
 
 client.login(process.env.TOKEN)
