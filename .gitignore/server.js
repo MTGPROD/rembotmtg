@@ -18,15 +18,15 @@ const botStats = {
   totalChannelsID:'500718175139266566'
 }
 
-/*client.on('ready', () => {
+client.on('ready', () => {
   setInterval(function() {
     let statuses = [`Speak with hands`, 'SAVE ${client.guilds.size}', `[REDACTED]`, 'DELTARUNE.com']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(`r!help | serving ${client.guilds.size} guilds`, "https://www.twitch.tv/monstercat");
   }, 15000)
-})*/
+})
 
-client.on('ready', () => {
+/*client.on('ready', () => {
     client.user.setPresence('Stopped')
     client.user.setStatus('dnd')
 })
@@ -35,7 +35,7 @@ client.on('message', message => {
   if(message.content === '<@488734399509168148>') {
     message.channel.send('Yes ?\nMy prefix is `r!`')
   }
-})
+})*/
 
 client.on('message', message => {
     let args = message.content.slice(prefix.length).trim().split(' ');
