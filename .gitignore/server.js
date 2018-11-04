@@ -20,7 +20,7 @@ const botStats = {
 
 client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`J'en peut plus`, 'Rem > Emilia', `r!help | serving ${client.guilds.size} guilds`]
+    let statuses = [`Speak with hands`, 'SAVE ${client.guilds.size}', `[REDACTED]`]
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(`r!help | serving ${client.guilds.size} guilds`, "https://www.twitch.tv/monstercat");
   }, 15000)
