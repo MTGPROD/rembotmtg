@@ -21,6 +21,7 @@ exports.run = (client, message, args, ops) => {
                 msg.edit({embed: embedStats})
             });
         }, 2000)
+        msg.delete(60000)
     })
   })
 
