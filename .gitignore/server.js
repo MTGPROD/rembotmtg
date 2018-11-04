@@ -101,4 +101,23 @@ client.on('guildDelete', guild => {
   client.channels.get(botStats.totalChannelsID).setName(`Total Channels : ${client.channels.size}`);
 })
 
+client.on('message', message => {
+  if(message.content === 'r!docu avatar') {
+    const avatar = new Discord.RichEmbed()
+        .setAuthor('Help for [r!avatar]')
+        .setImage('https://cdn.discordapp.com/attachments/493102411603247105/508371158958211096/unknown.png')
+        .setDescription('To display your avatar type `r!avatar`\nTo view a member avatar type `r!avatar @user`\nYou have the avatar link to download it if you want\nEX: [Link](https://cdn.discordapp.com/avatars/378879176515780619/81a52be119f615d2653c1c403b19096d.png?size=2048)')
+  
+    message.channel.send({embed: avatar});
+  }
+
+  if(message.content === 'r!docu poll') {
+    const avatar = new Discord.RichEmbed()
+        .setAuthor('Help for [r!poll]')
+        .setImage('https://cdn.discordapp.com/attachments/493102411603247105/508371158958211096/unknown.png')
+        .setDescription('To display your avatar type `r!avatar`\nTo view a member avatar type `r!avatar @user`\nYou have the avatar link to download it if you want\nEX: [Link](https://cdn.discordapp.com/avatars/378879176515780619/81a52be119f615d2653c1c403b19096d.png?size=2048)')
+  
+    message.channel.send({embed: avatar});
+  }
+
 client.login(process.env.TOKEN)
