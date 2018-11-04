@@ -18,17 +18,16 @@ exports.run = async (client, message, args, ops) => {
   client.channels.get(botStats.totalUsersID).setName(`Total Users : ${client.guilds.reduce((a, g) => a + g.memberCount, 0)}`);
   client.channels.get(botStats.totalChannelsID).setName(`Total Channels : ${client.channels.size}`);
   
-  message.react('498248476929425409')
+  message.react('508323953979162653')
   
    let embed2 = new Discord.RichEmbed()
         .setTitle('Synchronisation effectuée')
         .addField(`User:`, `\`${message.author.username}\``)
         .addField(`ID:`, `\`${message.author.id}\``)
-        .addField(`Users`, `\`${client.guilds.reduce((a, g) => a + g.memberCount, 0)}\``)
-        .addField(`Guilds`, `\`${client.guilds.size}\``)
-        .addField(`Channels`, `\`${client.channels.size}\``)
+        .addField(`Users:`, `\`${client.guilds.reduce((a, g) => a + g.memberCount, 0)}\``)
+        .addField(`Guilds:`, `\`${client.guilds.size}\``)
+        .addField(`Channels:`, `\`${client.channels.size}\``)
+        .setThumbnail(message.author.displayAvatarURL)
       
-
-
-    client.channels.get('503494406264061963').send(embed2);
+    client.channels.get('503494406264061963').send({embed: embed2});
 }
