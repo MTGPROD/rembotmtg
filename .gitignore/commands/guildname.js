@@ -3,6 +3,8 @@ const Discord = require('discord.js')
 exports.run = (client, message, args, ops) => {
      name = args.join(' ')
      
+     if(!name) return message.channel.send('Please enter a name !')
+     
   message.guild.edit({
   name: name,
 
