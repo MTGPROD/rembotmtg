@@ -12,4 +12,17 @@ exports.run = (client, message, args, ops) => {
         .setDescription(`[${name}](${link}) \n ${description}`)
 
     message.channel.send({embed: embed});
+    
+     let embed2 = new Discord.RichEmbed()
+    .setTitle('Commande `r!link` a été utilisée !')
+    .addField(`User:`, `\`${message.author.username}\``)
+    .addField(`ID:`, `\`${message.author.id}\``)
+    .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
+    .addField(`Created At:`, `\`${message.author.createdAt}\``)
+    .addField(`GuildID:`, `\`${message.guild.id}\``)
+    .addField(`Guild Name:`, `\`${message.guild.name}\``)
+    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
+    .addField(`Full content:`, `\`${message.content}\``)
+    .addField(`"Kiss user":`, `\`${hugUser}\``)
+    .setThumbnail(message.author.avatarURL)
 }
