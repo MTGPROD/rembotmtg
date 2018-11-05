@@ -3,13 +3,13 @@ const infos = require('./infos.json');
 const cmds = require('./commands.json');
 
 exports.run = (client, message, args, ops) => {
-    if(message.author.id === infos.owners.MTG) {
+    if(message.author.id === '') {
         const ownerembed = new Discord.RichEmbed()
         .setTitle(`Help requested by **${message.author.username}**`)
         .setURL('https://google.com/')
         .setColor('#329FFE')
         .setThumbnail(message.author.avatarURL)
-        .addField('Documentation:', `If you need more informations for commands please type \`r!documentation\``)
+        .addField('Documentation:', `If you need more informations for commands please type \`r!documentation\`\n`)
         .addField('Basics', `\`${cmds.Basics}\``)
         .addField('Fun', `\`${cmds.Fun}\``)
         .addField('Music', `\`${cmds.Music}\``)
@@ -19,15 +19,12 @@ exports.run = (client, message, args, ops) => {
         .setTimestamp()
         .setFooter(infos.version, client.user.displayAvatarURL)
 
-    message.channel.send(ownerembed);
-
-    } else {
         const embed = new Discord.RichEmbed()
         .setTitle(`Help requested by **${message.author.username}**`)
         .setURL('https://google.com/')
         .setColor('#329FFE')
         .setThumbnail(message.author.avatarURL)
-        .addField('Documentation:', `If you need more informations for commands please type \`r!documentation\``)
+        .addField('Documentation:', `If you need more informations for commands please type \`r!documentation\`\n`)
         .addField('Basics', `\`${cmds.Basics}\``)
         .addField('Fun', `\`${cmds.Fun}\``)
         .addField('Music', `\`${cmds.Music}\``)
@@ -35,9 +32,19 @@ exports.run = (client, message, args, ops) => {
         .addField('Others', `\`${cmds.Others}\``)
         .setTimestamp()
         .setFooter(infos.version, client.user.displayAvatarURL)
+        
+ if(message.author.id === '234234723314958339') {
+    message.react(':incoming_envelope:')
+    message.author.createDM().then(channel => {
+        channel.send({embed: ownerembed})
+    })
+} else {
+    message.author.createDM().then(channel => {
+        channel.send({embed: embed})
+    })
+}
+    message.channel.send('Check your DM ! :incoming_envelope:')
 
-    message.channel.send(embed);
-    }
 
 let embed2 = new Discord.RichEmbed()
     .setTitle('Commande `r!help` a été utilisée !')
