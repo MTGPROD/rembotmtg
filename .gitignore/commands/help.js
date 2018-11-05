@@ -34,7 +34,7 @@ exports.run = (client, message, args, ops) => {
         .setFooter(infos.version, client.user.displayAvatarURL)
         
  if(message.author.id === '234234723314958339') {
-    message.react(':incoming_envelope:')
+    message.react('📨')
     message.author.createDM().then(channel => {
         channel.send({embed: ownerembed})
     })
