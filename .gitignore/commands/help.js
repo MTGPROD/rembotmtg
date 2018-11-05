@@ -3,7 +3,6 @@ const infos = require('./infos.json');
 const cmds = require('./commands.json');
 
 exports.run = (client, message, args, ops) => {
-    if(message.author.id === '') {
         const ownerembed = new Discord.RichEmbed()
         .setTitle(`Help requested by **${message.author.username}**`)
         .setURL('https://google.com/')
