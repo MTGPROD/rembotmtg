@@ -86,7 +86,7 @@ function end(client, ops, dispatcher) {
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
     .addField(`GuildID:`, `\`${message.guild.id}\``)
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
-    .addField(`Full content`:, `\`${message.content}\``)
+    .addField(`Full content:`, `\`${message.content}\``)
     .addField(`Queue:`, `\`${queue}\``)
     .setThumbnail(message.author.displayAvatarURL)
 
