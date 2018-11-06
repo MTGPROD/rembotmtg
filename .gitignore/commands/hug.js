@@ -10,7 +10,7 @@ exports.run = async (client, message, args) => {
     const {body} = await superagent
     .get(`https://nekos.life/api/v2/img/hug`);
     
-    if(message.author === hugUser) {
+    if(message.author.id === hugUser.id) {
         message.channel.send('You are so alone...')
     }
 
