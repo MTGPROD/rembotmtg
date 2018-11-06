@@ -10,9 +10,7 @@ exports.run = async (client, message, args) => {
     const {body} = await superagent
     .get(`https://nekos.life/api/v2/img/kiss`);
     
-    if(message.author.id === hugUser.id) {
-       message.channel.send('You are so alone...')
-    }
+     if(!message.author.id != hugUser.id) return message.channel.send('You are so alone...')
 
     let hugEmbed = new Discord.RichEmbed()
     .setDescription(`\`${message.author.username}\` kissed \`${message.mentions.users.first().username}\` !`)
