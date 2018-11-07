@@ -8,9 +8,12 @@ exports.run = async (client, message, args) => {
     let file = (await snek.get(api)).body.file;
     if(!file) return message.channel.send("**I broke ! Try again.**");
 
-    const embed = new Discord.RichEmbed()
-        .setImage(file)
-    message.channel.send(embed)
+    await message.channel.send({files: [
+        {
+            attachment: file,
+            name: file.split("/").pop()
+        }   
+    ]});
 
     msg.delete();
 
