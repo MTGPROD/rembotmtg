@@ -16,7 +16,7 @@ exports.run = (client, message, args, ops) => {
         .setColor(infos.color)
         .addField(`Channel`, `#${message.channel.name} ID:(${message.channel.id})`)
         .addField(`Server`, `${message.guild.name}`)
-        .setFooter(`FeedBack by ${message.author.username} with ID:(${message.author.id})`)
+        .setFooter(`Suggestion by ${message.author.username} with ID:(${message.author.id})`)
     
     let msg = client.channels.get('503548843766579200').send(embed).then(msg => {
         msg.react('✅')
