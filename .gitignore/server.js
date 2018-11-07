@@ -19,8 +19,8 @@ const botStats = {
 }
 
 client.on('ready', () => {
-  client.user.setGame(status, "https://www.twitch.tv/monstercat");
-  /*setInterval(function() {
+  /*client.user.setGame(status, "https://www.twitch.tv/monstercat");
+  setInterval(function() {
     let statuses = [`Speak with hands`, 'SAVE ${client.guilds.size}', `[REDACTED]`, 'DELTARUNE.com']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
