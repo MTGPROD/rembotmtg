@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args, tools) => {
-    let target = message.mentions.users.first() || message.author;
+    let target = message.mentions.users.first() || message.guild.members.get(args[0])
  
     const embed = new Discord.RichEmbed()
         .setTitle(`**${target.username}'s** avatar !`)
@@ -14,9 +14,9 @@ exports.run = async (client, message, args, tools) => {
         let target = message.mentions.users.first() || message.author;
         
         setTimeout(function() {
-            embed.setURL('https://google.com')
+         embed.setURL('https://google.com')
          embed.setColor('RANDOM')
-         embed.setImage(target.avatarURL)
+         embed.setImage(target.avatarURL || message.author.avatarURL)
          msg.edit({embed: embed})
 
         }, 1500)
@@ -34,6 +34,7 @@ exports.run = async (client, message, args, tools) => {
     .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
     .addField(`Full content:`, `\`${message.content}\``)
     .addField(`Target:`, `\`${target}\``) 
+    .setThumbnail(target.avatarURL)
 
 
 client.channels.get('503494406264061963').send(embed2);
