@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const infos = require('./infos.json');
 
 exports.run = (client, message, args, ops) => {
-    let feed = args.join(' ')
+    let feed = args.join(" ")
     let author = message.author.username;
     
     
