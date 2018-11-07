@@ -19,23 +19,24 @@ const botStats = {
 }
 
 client.on('ready', () => {
-  setInterval(function() {
+  client.user.setGame(status, "https://www.twitch.tv/monstercat");
+  /*setInterval(function() {
     let statuses = [`Speak with hands`, 'SAVE ${client.guilds.size}', `[REDACTED]`, 'DELTARUNE.com']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
-    client.user.setGame(`r!help | serving ${client.guilds.size} guilds`, "https://www.twitch.tv/monstercat");
-  }, 15000)
+    client.user.setGame(status, "https://www.twitch.tv/monstercat");
+  }, 15000)*/
 })
 
-/*client.on('ready', () => {
-    client.user.setPresence('Stopped')
-    client.user.setStatus('dnd')
+client.on('ready', () => {
+    client.user.setPresence('Maintenance: see you in 2h')
+    client.user.setStatus('idle')
 })
 
 client.on('message', message => {
   if(message.content === '<@488734399509168148>') {
     message.channel.send('Yes ?\nMy prefix is `r!`')
   }
-})*/
+})
 
 client.on('message', message => {
     let args = message.content.slice(prefix.length).trim().split(' ');
