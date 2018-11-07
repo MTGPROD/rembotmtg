@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args, tools) => {
-    let target = message.mentions.users.first() || message.guild.members.get(args[0])
+    let target = message.mentions.users.first() || message.guild.members.get(args[0]) || message.author;
  
     const embed = new Discord.RichEmbed()
         .setTitle(`**${target.username}'s** avatar !`)
@@ -16,7 +16,7 @@ exports.run = async (client, message, args, tools) => {
         setTimeout(function() {
          embed.setURL('https://google.com')
          embed.setColor('RANDOM')
-         embed.setImage(target.avatarURL || message.author.avatarURL)
+         embed.setImage(target.avatarURL)
          msg.edit({embed: embed})
 
         }, 1500)
