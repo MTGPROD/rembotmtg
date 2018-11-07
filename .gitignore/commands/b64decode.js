@@ -9,6 +9,7 @@ module.exports.run = async (bot, message, args) => {
     
     let embed2 = new Discord.RichEmbed()
     .setTitle('Commande `r!b64decode` a été utilisée !')
+    .setColor('#36393F')
     .addField(`User:`, `\`${message.author.username}\``)
     .addField(`ID:`, `\`${message.author.id}\``)
     .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
