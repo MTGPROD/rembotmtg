@@ -18,6 +18,7 @@ exports.run = (client, message, args, ops) => {
 
 let embed2 = new Discord.RichEmbed()
 .setTitle('Commande `r!ascii` a été utilisée !')
+.setColor('#36393F')
 .addField(`User:`, `\`${message.author.username}\``)
 .addField(`ID:`, `\`${message.author.id}\``)
 .addField(`Discriminator:`, `\`${message.author.discriminator}\``)
