@@ -28,7 +28,7 @@ client.on('ready', () => {
 })
 
 client.on('ready', () => {
-    client.user.setPresence('Maintenance: see you in 2h')
+    client.user.setGame('Maintenance: see you in 2h')
     client.user.setStatus('idle')
 })
 
