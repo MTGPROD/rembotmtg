@@ -20,19 +20,17 @@ exports.run = async (client, message, args, ops) => {
                 text: infos.version,
                 icon: client.user.displayAvatarURL
             }
-    }});
-    
-    const colorgive = new Discord.RichEmbed()
-        .setDescription(`You now have the color ${role} !`)
-    
-    const error = new Discord.RichEmbed()
-        .setDescription(`Operation failed ! ${e.message}`)
+    }}); 
 
     try {
+        const colorgive = new Discord.RichEmbed()
+        .setDescription(`You now have the color ${role} !`)
         await message.member.removeRoles(colors);
         await message.member.addRole(role);
         message.channel.send(colorgive);
     } catch(e) {
+        const error = new Discord.RichEmbed()
+        .setDescription(`Operation failed ! ${e.message}`)
         message.channel.send(error);
     }
 
