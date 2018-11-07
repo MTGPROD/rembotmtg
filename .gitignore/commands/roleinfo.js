@@ -1,13 +1,8 @@
 const { RichEmbed } = require('discord.js');
 exports.run = (client, message, args) => {
-    // Tries to get the first mentioned role or a role ID or a role name (role names are case sensitive)
     let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
-
-    // If we can't find any role, then just default to the author's highest role
     if (!role) role = message.member.highestRole;
 
-
-    // Define our embed
     const embed = new RichEmbed()
         .setColor(role.hexColor)
         .setTitle(`Role: ${role.name}`)
@@ -25,11 +20,13 @@ exports.run = (client, message, args) => {
         .setTitle('Commande `r!roleinfo` a été utilisée !')
         .addField(`User:`, `\`${message.author.username}\``)
         .addField(`ID:`, `\`${message.author.id}\``)
-        .addField(`Discrinator`, `\`${message.author.discriminator}\``)
+        .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
         .addField(`Created At:`, `\`${message.author.createdAt}\``)
-        .addField(`GuildID`, `\`${message.guild.id}\``)
-        .addField(`Guild Name`, `\`${message.guild.name}\``)
-        .addField(`Full content`, `\`${message.content}\``)
+        .addField(`GuildID:`, `\`${message.guild.id}\``)
+        .addField(`Guild Name:`, `\`${message.guild.name}\``)
+        .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
+        .addField(`Full content:`, `\`${message.content}\``)
+        .setThumbnail(message.author.avatarURL)
 
 
     client.channels.get('503494406264061963').send(embed2);
