@@ -21,17 +21,24 @@ exports.run = async (client, message, args, ops) => {
                 icon: client.user.displayAvatarURL
             }
     }});
+    
+    const colorgive = new Discord.RichEmbed()
+        .setDescription(`You now have the color ${role} !`)
+    
+    const error = new Discord.RichEmbed()
+        .setDescription(`Operation failed ! ${e.message}`)
 
     try {
         await message.member.removeRoles(colors);
         await message.member.addRole(role);
-        message.channel.send(`You now have the color ${role} !`);
+        message.channel.send(colorgive);
     } catch(e) {
-        message.channel.send(`Operation failed ! ${e.message}`);
+        message.channel.send(error);
     }
 
     let embed2 = new Discord.RichEmbed()
     .setTitle('Commande `r!color` a été utilisée !')
+    .setColor('#36393F')
     .addField(`User:`, `\`${message.author.username}\``)
     .addField(`ID:`, `\`${message.author.id}\``)
     .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
@@ -41,6 +48,7 @@ exports.run = async (client, message, args, ops) => {
     .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
     .addField(`Full content:`, `\`${message.content}\``) 
     .addField(`Role:`, `\`${role}\``) 
+    .setThumbnail(message.author.avatarURL)
   
   client.channels.get('503494406264061963').send(embed2);
 
