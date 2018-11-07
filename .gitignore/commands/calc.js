@@ -12,7 +12,7 @@ exports.run = async (client, message, args, tools) => {
     }
 
     const embed = new Discord.RichEmbed()
-        .setColor('#3395F7')
+        .setColor('#36393F')
         .setTitle('Math Calculation')
         .addField('Input', `\`\`\`JS\n${args.join(' ')}\`\`\``)
         .addField('Output', `\`\`\`JS\n${resp}\`\`\``)
