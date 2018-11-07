@@ -5,7 +5,7 @@ exports.run = (client, message, args, ops) => {
     let nick = args.join(' ')
 
     if(!nick) return message.channel.send('Please type the nickname.\nEx: r!nick nickname')
-    if(!message.guild.client.hasPermissions("MANAGE_NICKNAMES")) return message.channel.send("I don't have the permission to manage nicknames")
+    if(!client.user.hasPermission("MANAGE_NICKNAMES")) return message.channel.send("I don't have the permission to manage nicknames")
 
     message.member.setNickname(nick)
     
