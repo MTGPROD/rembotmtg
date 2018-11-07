@@ -10,6 +10,7 @@ exports.run = async (client, message, args) => {
 
     const embed = new Discord.RichEmbed()
         .setImage(file)
+    message.channel.send(embed)
 
     msg.delete();
 
