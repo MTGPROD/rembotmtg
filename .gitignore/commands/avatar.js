@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args, tools) => {
-    let target = message.mentions.users.first() || message.guild.members.get(args[0]) || message.author;
+    let target = message.mentions.users.first() || message.author;
  
     const embed = new Discord.RichEmbed()
         .setTitle(`**${target.username}'s** avatar !`)
@@ -11,7 +11,7 @@ exports.run = async (client, message, args, tools) => {
         .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
 
     await message.channel.send({embed: embed}).then(msg => {
-        let target = message.mentions.users.first() || message.guild.members.get(args[0]) || message.author;
+        let target = message.mentions.users.first() || message.author;
         
         setTimeout(function() {
          embed.setURL('https://google.com')
