@@ -18,12 +18,14 @@ exports.run = (client, message, args, ops) => {
         .addField(`Server`, `${message.guild.name}`)
         .setFooter(`FeedBack by ${message.author.username} with ID:(${message.author.id})`)
     
-    let msg = client.channels.get('503548843766579200').send(embed)
+    let msg = client.channels.get('503548843766579200').send(embed).then(msg => {
+        msg.react('✅')
+        msg.react('❌')
+    })
 
     message.react('✅')
     message.react('📨')
-    msg.react('✅')
-    msg.react('❌')
+   
     
      let embed2 = new Discord.RichEmbed()
         .setTitle('Commande `r!suggestion` a été utilisée !')
