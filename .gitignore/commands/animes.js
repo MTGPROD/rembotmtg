@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
     const malEmbed = new Discord.RichEmbed()
       .setAuthor(`My Anime List search result for ${args}`.split(',').join(' '))
       //.setThumbnail(data.picture)
-      .setColor('#ffc1cc') //I personally use bubblegum pink!
+      .setColor('#36393F') //I personally use bubblegum pink!
       .addField('English Title', data.englishTitle, true)
       .addField('Japanese Title', data.japaneseTitle, true)
       .addField('Type', data.type, true)
@@ -38,6 +38,7 @@ module.exports.run = async (client, message, args) => {
     .setTitle('Commande `r!animes` a été utilisée !')
     .addField(`User:`, `\`${message.author.username}\``)
     .addField(`ID:`, `\`${message.author.id}\``)
+    .setColor('#36393F')
     .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
     .addField(`GuildID:`, `\`${message.guild.id}\``)
