@@ -57,7 +57,6 @@ client.on('message', message => {
         commandFile.run(client, message, args, ops);
     } catch (e) {
         console.log(e.stack)
-        message.channel.send(`I don\'t find the command`)
     }
 });
 
