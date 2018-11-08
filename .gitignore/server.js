@@ -60,7 +60,7 @@ client.on('message', message => {
     }
 });
 
-client.on('message', messag => {
+client.on('message', message => {
     const hello = new Discord.RichEmbed()
      .setAuthor(`${message.guild.name}`, message.author.displayAvatarURL)
      .setDescription('Thanks to add me to your server')
