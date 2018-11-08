@@ -19,7 +19,6 @@ const botStats = {
 }
 
 client.on('ready', () => {
-  client.user.setGame(status, "https://www.twitch.tv/monstercat");
   setInterval(function() {
     let statuses = [`Speak with hands`, 'SAVE ${client.guilds.size}', `[REDACTED]`, 'DELTARUNE.com']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
@@ -61,9 +60,12 @@ client.on('message', message => {
     }
 });
 
-const hello = new Discord.RichEmbed()
+client.on('message', messag => {
+    const hello = new Discord.RichEmbed()
      .setAuthor(`${message.guild.name}`, message.author.displayAvatarURL)
      .setDescription('Thanks to add me to your server')
+})
+
 client.on('guildCreate', guild => {
   let hi = guild.channels.first()
   hi.send(`Hello i am rem thank you to add me to your server !\n for start, type \`r!help\` :smile:`);
