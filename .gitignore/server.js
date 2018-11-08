@@ -27,6 +27,7 @@ client.on('ready', () => {
   }, 2500)
 })
 
+
 /*client.on('ready', () => {
     client.user.setGame('Maintenance: see you in 2h')
     client.user.setStatus('idle')
@@ -60,6 +61,9 @@ client.on('message', message => {
     }
 });
 
+const hello = new Discord.RichEmbed()
+     .setAuthor(`${message.guild.name}`, message.author.displayAvatarURL)
+     .setDescription('Thanks to add me to your server')
 client.on('guildCreate', guild => {
   let hi = guild.channels.first()
   hi.send(`Hello i am rem thank you to add me to your server !\n for start, type \`r!help\` :smile:`);
