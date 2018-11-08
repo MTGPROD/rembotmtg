@@ -26,6 +26,7 @@ exports.run = async (client, message, args, ops) => {
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
     .addField(`GuildID:`, `\`${message.guild.id}\``)
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
+    .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
     .addField(`Question:`, `\`${args.join(' ')}\``)
     .setThubnail(message.author.displayAvatarURL)
 
