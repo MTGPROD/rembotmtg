@@ -4,13 +4,13 @@ const infos = require('./infos.json');
 
 exports.run = async (client, message, args) => {
 
-    let hugUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!hugUser) return message.channel.send("You are so alone...");
+    let kissUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    if(!kissUser) return message.channel.send("You are so alone...");
 
     const {body} = await superagent
     .get(`https://nekos.life/api/v2/img/kiss`);
     
-     if(!message.author.id != hugUser.id) return message.channel.send('You are so alone...')
+     if(message.author.id === kissUser.id) return message.channel.send('You are so alone...')
 
     let hugEmbed = new Discord.RichEmbed()
     .setDescription(`\`${message.author.username}\` kissed \`${message.mentions.users.first().username}\` !`)
@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
     .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
     .addField(`Full content:`, `\`${message.content}\``)
-    .addField(`"Kiss user":`, `\`${hugUser}\``)
+    .addField(`Kiss user:`, `\`${kissUser}\``)
     .setThumbnail(message.author.avatarURL)
 
 
