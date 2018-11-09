@@ -18,19 +18,19 @@ const botStats = {
   totalChannelsID:'500718175139266566'
 }
 
-client.on('ready', () => {
+/*client.on('ready', () => {
   setInterval(function() {
     let statuses = [`Speak with hands`, `SAVE ${client.guilds.size}`, `[REDACTED]`, 'DELTARUNE.com']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
   }, 2500)
-})
-
-
-/*client.on('ready', () => {
-    client.user.setGame('Maintenance: see you in 2h')
-    client.user.setStatus('idle')
 })*/
+
+
+client.on('ready', () => {
+    client.user.setGame('The last maintenance for a long time')
+    client.user.setStatus('dnd')
+})
 
 client.on('message', message => {
   if(message.content === '<@488734399509168148>') {
