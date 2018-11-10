@@ -37,7 +37,12 @@ exports.run = (client, message, args, ops) => {
     message.author.createDM().then(channel => {
         channel.send({embed: ownerembed})
     })
-} 
+} else {
+    message.react('📨')
+    message.author.createDM().then(channel => {
+        channel.send({embed: embed})
+    })
+}
 
 
 let embed2 = new Discord.RichEmbed()
