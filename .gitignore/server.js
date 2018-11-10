@@ -96,7 +96,7 @@ client.on('guildCreate', guild => {
 
 client.on('ready', () => console.log('My body is ready'));
 
-client.on('guildMemberAdd', member => {
+/*client.on('guildMemberAdd', member => {
   if(member.guild.id !== serverStats.guildID) return;
   client.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
   client.channels.get(serverStats.memberCountID).setName(`Member Count: ${member.guild.members.filter(m => !m.user.bot).size}`);
@@ -139,7 +139,7 @@ client.on('message', message => {
         .setDescription('To display your avatar type `r!avatar`\nTo view a member avatar type `r!avatar @user`\nYou have the avatar link to download it if you want\nEX: [Link](https://cdn.discordapp.com/avatars/378879176515780619/81a52be119f615d2653c1c403b19096d.png?size=2048)')
   
     message.channel.send({embed: avatar});
-  }
+  }*/
 })
 
 client.login(process.env.TOKEN)
