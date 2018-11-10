@@ -3,8 +3,6 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args, ops) => {
     var text = args.join(` `)
 
-    if(!text) return message.channel.send('Please write something')
-
     message.delete()
     message.channel.send(text)
 }
