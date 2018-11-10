@@ -15,7 +15,7 @@ exports.run = async (client, message, args, tools) => {
         'I have no idea'
     ]
     
-    if(!args.join(' ')) return message.channel.send('Please write something')
+    if(!args.join(` `)) return message.channel.send('Please write something')
     
     
     let fetched = responses[Math.floor(Math.random() * responses.length)];
@@ -43,6 +43,6 @@ exports.run = async (client, message, args, tools) => {
 
 
 
-client.channels.get('503494406264061963').send(embed2);
+client.channels.get('503494406264061963').send({embed: embed2});
     
 }
