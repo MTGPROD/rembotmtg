@@ -5,6 +5,19 @@ const prefix = "r!";
 const ownerID = '234234723314958339';
 const active = new Map();
 
+const DBL = require("dblapi.js");
+const dbl = new DBL(process.env.DBAPI, client);
+
+client.on('ready', () => {
+  setInterval(() => {
+      dbl.postStats(client.guilds.size);
+  }, 1800000);
+});
+
+dbl.client.on('vote', vote => {
+  console.log(`User with ID ${vote.user} thank you for your upvote !`);
+});
+
 const serverStats = {
   guildID: '489426595166158885',
   totalUsersID: '500691885816545290',
@@ -28,8 +41,18 @@ const botStats = {
 
 
 client.on('ready', () => {
-    client.user.setGame('The last maintenance for a long time')
-    client.user.setStatus('dnd')
+    client.user.setGame('Updating to => 2.5.3')
+    setInterval(function() {
+      client.user.setStatus('online')
+    }, 2000)
+  
+   setInterval(function() {
+      client.user.setStatus('idle')
+    }, 2500)
+  
+  setInterval(function() {
+      client.user.setStatus('dnd')
+    }, 3000)
 })
 
 client.on('message', message => {
@@ -62,7 +85,6 @@ client.on('message', message => {
 
 client.on('message', message => {
     const hello = new Discord.RichEmbed()
-     .setAuthor(`${message.guild.name}`, message.author.displayAvatarURL)
      .setDescription('Thanks to add me to your server')
 })
 
