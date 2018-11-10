@@ -35,7 +35,7 @@ client.on('ready', () => {
   setInterval(function() {
     let statuses = [`r!help | with ${client.guilds.size} guilds`, `SAVE ${client.guilds.size} guilds`, `Vote for me !!`, 'v2.5.3b']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
-    client.user.setActivity(status, "https://www.twitch.tv/monstercat");
+    client.user.setGame(status, "https://www.twitch.tv/monstercat");
   }, 5000)
 })
 
