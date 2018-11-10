@@ -15,7 +15,7 @@ client.on('ready', () => {
 });
 
 dbl.client.on('vote', vote => {
-  console.log(`User with ID ${vote.user} thank you for your upvote !`);
+  client.channels.get('510821298486640670').send(`User with ID ${vote.user} thank you for your upvote !`);
 });
 
 const serverStats = {
@@ -31,16 +31,16 @@ const botStats = {
   totalChannelsID:'500718175139266566'
 }
 
-/*client.on('ready', () => {
+client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`Speak with hands`, `SAVE ${client.guilds.size}`, `[REDACTED]`, 'DELTARUNE.com']
+    let statuses = [`r!help | with ${client.guilds.size} guilds`, `SAVE ${client.members.size} souls`, `Vote for me !!`, 'v2.5.3b']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setActivity(status, "https://www.twitch.tv/monstercat");
-  }, 2500)
-})*/
+  }, 5000)
+})
 
 
-client.on('ready', () => {
+/*client.on('ready', () => {
     client.user.setGame('Updating to => 2.5.3')
     setInterval(function() {
       client.user.setStatus('online')
@@ -53,7 +53,7 @@ client.on('ready', () => {
   setInterval(function() {
       client.user.setStatus('dnd')
     }, 3000)
-})
+})*/
 
 client.on('message', message => {
   if(message.content === '<@488734399509168148>') {
