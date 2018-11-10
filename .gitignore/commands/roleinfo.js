@@ -12,9 +12,7 @@ exports.run = (client, message, args) => {
         .addField('Editable', role.editable.toString(), true)
         .addField('Managed', role.managed.toString(), true)
         .addField('ID', role.id, true);
-    return message.channel.send({
-        embed: embed
-    });
+    message.channel.send({embed: embed});
     
      let embed2 = new Discord.RichEmbed()
         .setTitle('Commande `r!roleinfo` a été utilisée !')

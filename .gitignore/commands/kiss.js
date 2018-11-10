@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
     let hugEmbed = new Discord.RichEmbed()
     .setDescription(`\`${message.author.username}\` kissed \`${message.mentions.users.first().username}\` !`)
     .setImage(body.url)
-    .setColor("RANDOM")
+    .setColor("#36393F")
     .setFooter(infos.version, client.user.displayAvatarURL);
 
     message.channel.send(hugEmbed)
@@ -34,6 +34,6 @@ exports.run = async (client, message, args) => {
     .setThumbnail(message.author.avatarURL)
 
 
-client.channels.get('503494406264061963').send(embed2);
+client.channels.get('503494406264061963').send({embed: embed2});
 
 }

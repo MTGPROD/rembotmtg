@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 exports.run = (client, message, args, ops) => {
     
-    if(!args.join(' ')) return message.channel.send('Please provide a search term !')
+    if(!args.join(` `)) return message.channel.send('Please provide a search term !')
 
     message.delete()
     const embed = new Discord.RichEmbed()
@@ -23,5 +23,5 @@ exports.run = (client, message, args, ops) => {
     .addField(`Search:`, `\`${message.content}\``)
     .setThumbnail(message.author.avatarURL)
   
-  client.channels.get('503494406264061963').send(embed2);
+  client.channels.get('503494406264061963').send({embed: embed2});
 }

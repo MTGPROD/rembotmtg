@@ -6,7 +6,7 @@ exports.run = (client, message, args, ops) => {
   if(message.member.voiceChannel !== message.guild.me.voiceChannel) return message.channel.send("Sorry, you aren't in the same channel as the music bot.");
   if(fetched.dispatcher.paused) return message.chanel.send('This music is already paused.');
   fetched.dispatcher.pause();
-  message.channel.send(`Successfully paused ${fetched.queue[0].songTitle}`);
+  message.channel.send(`**${message.author.username}** paused the song !`);
 
   let embed2 = new Discord.RichEmbed()
     .setTitle('Commande `r!pause` a été utilisée !')
@@ -16,12 +16,13 @@ exports.run = (client, message, args, ops) => {
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
     .addField(`GuildID:`, `\`${message.guild.id}\``)
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
-    .addField(`Full content`:, `\`${message.content}\``)
+    .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
+    .addField(`Full content:`, `\`${message.content}\``)
     .addField(`Song:`, `\`${fetched.queue[0].songTitle}\``)
     .addField(`Duration (sec):`, `\`${fetched.queue[0].songDuration}\``)
     .addField(`fetched:`, `\`${fetched}\``)
     .setThumbnail(message.author.displayAvatarURL)
 
 
-client.channels.get('503494406264061963').send(embed2);
+client.channels.get('503494406264061963').send({embed: embed2});
 }

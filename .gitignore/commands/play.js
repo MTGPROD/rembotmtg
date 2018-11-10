@@ -40,11 +40,12 @@ if(!data.dispatcher) playStream(client, ops, data);
 else {
   const embed = new Discord.RichEmbed()
       .setTitle('**Added To Queue:**')
+      .setColor('#36393F')
       .setDescription(`${info.title}\n**Requested By:** ${message.author.username}\nDuration: ${time(info.length_seconds)}`)
       .setTimestamp()
       .setFooter(infos.version, client.user.displayAvatarURL)
 
-  message.channel.send(embed)
+  message.channel.send({embed: embed})
 }
 
 ops.active.set(message.guild.id, data);
@@ -86,6 +87,7 @@ function end(client, ops, dispatcher) {
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
     .addField(`GuildID:`, `\`${message.guild.id}\``)
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
+    .addField(`Channel:`, `#\`${message.channel.name} (${message.channel.id})\``)
     .addField(`Full content:`, `\`${message.content}\``)
     .addField(`Queue:`, `\`${queue}\``)
     .setThumbnail(message.author.displayAvatarURL)

@@ -7,10 +7,14 @@ exports.run = (client, message, args, ops) => {
     if(!name) return message.channel.send('Please input a name')
     if(!type) return message.channel.send('Please input a type `text/voice/category`')
 
+    if(!type === 'text') return message.channel.send('Please input a type `text/voice/category`')
+    if(!type === 'voice') return message.channel.send('Please input a type `text/voice/category`')
+    if(!type === 'category') return message.channel.send('Please input a type `text/voice/category`')
 
-    message.guild.createChannel(name, type)
 
-    message.channel.send('Channel created')
+    message.guild.createChannel(name, type).then(channel => {
+        channel.send(`[${channel.name}] Channel created`)
+    })
    
         
  let embed2 = new Discord.RichEmbed()
@@ -25,5 +29,5 @@ exports.run = (client, message, args, ops) => {
     .addField(`Full content:`, `\`${message.content}\``)
     .setThumbnail(message.author.avatarURL)
 
-client.channels.get('503494406264061963').send(embed2);
+client.channels.get('503494406264061963').send({embed: embed2});
 }

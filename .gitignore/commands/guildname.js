@@ -4,6 +4,7 @@ exports.run = (client, message, args, ops) => {
      name = args.join(' ')
      
      if(!name) return message.channel.send('Please enter a name !')
+     if(client.user.hasPermissions("MANAGE_GUILD")) return message.channel.send(`I don't have the permission "MANAGE_GUILD"`)
      
   message.guild.edit({
   name: name,
@@ -21,10 +22,10 @@ exports.run = (client, message, args, ops) => {
                 .addField(`GuildID:`, `\`${message.guild.id}\``)
                 .addField(`Guild Name:`, `\`${message.guild.name}\``)
                 .addField(`Full content:`, `\`${message.content}\``) 
-                .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
+                .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
                 .setThumbnail(message.author.avatarURL)
               
-              client.channels.get('503494406264061963').send(embed2);
+              client.channels.get('503494406264061963').send({embed: embed2});
 
 
 }

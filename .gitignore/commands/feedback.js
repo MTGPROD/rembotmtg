@@ -9,7 +9,7 @@ exports.run = (client, message, args, ops) => {
     if(feed.length < 4) return message.react('❌')
     
     const embed = new Discord.RichEmbed()
-        .setTitle('Feedback by ' + author)
+        .setTitle(`Feedback by ${message.author.username}`)
         .setDescription(feed)
         .setThumbnail(message.author.displayAvatarURL)
         .setColor(infos.color)

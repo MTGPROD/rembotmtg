@@ -15,8 +15,8 @@ exports.run = async (client, message, args) => {
         let embed = new Discord.RichEmbed()
             .setAuthor(entry.title)
             .setDescription(entry.body)
-            .addField("Author ID", entry.userId)
-            .setFooter("Post ID: " + entry.id)
+            .addField(`Author ID: ${entry.userId}`)
+            .setFooter(`Post ID: ${entry.id}`)
 
         message.channel.send({embed: embed});
     });

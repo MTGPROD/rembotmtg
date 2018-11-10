@@ -11,12 +11,13 @@ exports.run = async (client, message, args, ops) => {
         .setTitle('Commande `r!purge` a été utilisée !')
         .addField(`User:`, `\`${message.author.username}\``)
         .addField(`ID:`, `\`${message.author.id}\``)
-        .addField(`Discrinator`, `\`${message.author.discriminator}\``)
+        .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
         .addField(`Created At:`, `\`${message.author.createdAt}\``)
-        .addField(`GuildID`, `\`${message.guild.id}\``)
-        .addField(`Guild Name`, `\`${message.guild.name}\``)
-        .addField(`Full content`, `\`${message.content}\``)
-        .addField(`Messages cleared`, `\`${message.size}\``)
+        .addField(`GuildID:`, `\`${message.guild.id}\``)
+        .addField(`Guild Name:`, `\`${message.guild.name}\``)
+        .addField(`Full content:`, `\`${message.content}\``)
+        .addField(`Messages cleared:`, `\`${args[0]}\``)
+        .setThumbnail(message.author.avatarURL)
 
 
     client.channels.get('503494406264061963').send(embed2);

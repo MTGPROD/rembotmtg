@@ -81,7 +81,7 @@ module.exports.run = async (bot, message, args) => {
                 .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
                 .setThumbnail(message.author.avatarURL)
               
-              client.channels.get('503494406264061963').send(embed2);
+              client.channels.get('503494406264061963').send({embed: embed2});
 
     })
 }

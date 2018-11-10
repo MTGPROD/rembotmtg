@@ -60,6 +60,7 @@ exports.run = (client, message, args, ops) => {
     .addField(`Full content:`, `\`${message.content}\``)
     .setThumbnail(message.author.avatarURL)
 
-client.channels.get('503494406264061963').send(embed2);
+client.channels.get('503494406264061963').send({embed: embed2});
 
 //⏪⏩
+}

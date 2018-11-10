@@ -8,7 +8,7 @@ exports.run = (client, message, args, ops) => {
         .setURL('https://google.com/')
         .setColor('#329FFE')
         .setThumbnail(message.author.avatarURL)
-        .addField('Documentation:', `If you need more informations for commands please type \`r!documentation\`\n`)
+        .addField('Vote:', `If you love Rem, you can support me [here](https://discordbots.org/bot/488734399509168148/vote).`)
         .addField('Basics', `\`${cmds.Basics}\``)
         .addField('Fun', `\`${cmds.Fun}\``)
         .addField('Music', `\`${cmds.Music}\``)
@@ -23,7 +23,7 @@ exports.run = (client, message, args, ops) => {
         .setURL('https://google.com/')
         .setColor('#329FFE')
         .setThumbnail(message.author.avatarURL)
-        .addField('Documentation:', `If you need more informations for commands please type \`r!documentation\`\n`)
+        .addField('Vote:', `If you love Rem, you can support me [here](https://discordbots.org/bot/488734399509168148/vote).`)
         .addField('Basics', `\`${cmds.Basics}\``)
         .addField('Fun', `\`${cmds.Fun}\``)
         .addField('Music', `\`${cmds.Music}\``)
@@ -37,12 +37,7 @@ exports.run = (client, message, args, ops) => {
     message.author.createDM().then(channel => {
         channel.send({embed: ownerembed})
     })
-} else {
-    message.author.createDM().then(channel => {
-        channel.send({embed: embed})
-    })
-}
-    message.channel.send('Check your DM ! :incoming_envelope:')
+} 
 
 
 let embed2 = new Discord.RichEmbed()
@@ -57,5 +52,5 @@ let embed2 = new Discord.RichEmbed()
     .addField(`Full content:`, `\`${message.content}\``) 
     .setThumbnail(message.author.avatarURL)
   
-  client.channels.get('503494406264061963').send(embed2);
+  client.channels.get('503494406264061963').send({embed: embed2});
 }

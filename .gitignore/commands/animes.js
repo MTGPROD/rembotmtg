@@ -12,8 +12,8 @@ module.exports.run = async (client, message, args) => {
     .then((data) => {
     const malEmbed = new Discord.RichEmbed()
       .setAuthor(`My Anime List search result for ${args}`.split(',').join(' '))
-      //.setThumbnail(data.picture)
-      .setColor('#36393F') //I personally use bubblegum pink!
+      .setThumbnail(data.picture)
+      .setColor('#36393F')
       .addField('English Title', data.englishTitle, true)
       .addField('Japanese Title', data.japaneseTitle, true)
       .addField('Type', data.type, true)
@@ -22,9 +22,7 @@ module.exports.run = async (client, message, args) => {
       .addField('Aired', data.aired, true)
       .addField(':star: Score', data.score, true)
       .addField('Score Stats', data.scoreStats, true)
-
       .addField('Link', data.url)
-      .setThumbnail(data.picture)
       .setFooter(infos.version, client.user.displayAvatarURL)
 
 
@@ -49,6 +47,6 @@ module.exports.run = async (client, message, args) => {
     .setThumbnail(message.author.avatarURL)
 
 
-client.channels.get('503494406264061963').send(embed2);
+client.channels.get('503494406264061963').send({embed: embed2});
 
 }

@@ -5,11 +5,11 @@ const client = new Discord.Client()
 exports.run = (client, message, args, ops) => {
     const embed = new Discord.RichEmbed()
         .addField('Invite me:', '[Invitation](https://discordapp.com/oauth2/authorize?client_id=488734399509168148&scope=bot&permissions=2146958847)')
-        .addField('My server:', "[MTG's dev](https://discord.gg/2qJjJcs)")
+        .addField('My server:', "[MTG's dev](https://discord.gg/2qJjJcs)", true)
         .addField('Patreon', '[Support me](https://www.patreon.com/MTGPROD)', true)
         .setThumbnail(client.user.displayAvatarURL)
         .setTimestamp()
-        .setColor('RANDOM')
+        .setColor('#36393F')
         .setFooter(infos.version, client.user.displayAvatarURL);
 
     message.channel.send(embed);
@@ -21,11 +21,10 @@ exports.run = (client, message, args, ops) => {
         .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
         .addField(`Created At:`, `\`${message.author.createdAt}\``)
         .addField(`GuildID:`, `\`${message.guild.id}\``)
-        .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id}\``)
+        .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id}\``)
         .addField(`Guild Name:`, `\`${message.guild.name}\``)
         .addField(`Full content:`, `\`${message.content}\``)
         .setThumbnail(message.author.avatarURL)
 
-
-    client.channels.get('503494406264061963').send(embed2);
+    client.channels.get('503494406264061963').send({embed: embed2});
 }

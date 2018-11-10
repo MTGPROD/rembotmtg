@@ -44,6 +44,6 @@ exports.run = async (client, message, args) => {
   .setThumbnail(message.author.avatarURL)
 
 
-client.channels.get('503494406264061963').send(embed2);
+client.channels.get('503494406264061963').send({embed: embed2});
   
 }

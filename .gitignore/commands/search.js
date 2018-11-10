@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 exports.run = (client, message, args, ops) => {
   search(args.join(' '), function(err, res) {
     if(err) return message.channel.send('Sorry, something wen wrong.');
-    let videos = res.videos.slice(0, 15);
+    let videos = res.videos.slice(0, 5);
     let resp = '';
     for(var i in videos) {
       resp += `**[${parseInt(i)+1}]:** \`${videos[i].title}\`\n`;
@@ -34,7 +34,9 @@ exports.run = (client, message, args, ops) => {
         .addField(`Created At:`, `\`${message.author.createdAt}\``)
         .addField(`GuildID:`, `\`${message.guild.id}\``)
         .addField(`Guild Name:`, `\`${message.guild.name}\``)
+        .addField(`Channel:`, `#\`${message.channel.name} (${message.channel.id})\``)
         .addField(`Full content:`, `\`${message.content}\``)
+        .setThumbnail(message.author.avatarURL)
 
 
     client.channels.get('503494406264061963').send({embed: embed2});

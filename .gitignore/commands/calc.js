@@ -31,7 +31,7 @@ let embed2 = new Discord.RichEmbed()
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
     .addField(`Full content:`, `\`${message.content}\``)
     .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
-    .addField(`Input:`, `\`${args.join(' ')}\``)
+    .addField(`Input:`, `\`${args.join(` `)}\``)
     .addField(`Output:`, `\`${resp}\``)
     .setThumbnail(message.author.avatarURL)
   

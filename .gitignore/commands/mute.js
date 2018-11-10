@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
         try {
             muterole = await message.guild.createRole({
                 name: "Muted",
-                color: "RANDOM",
+                color: "#36393F",
                 permissions: []
             })
             message.guild.channels.forEach(async (channel, id) => {
@@ -43,7 +43,7 @@ module.exports.run = async (client, message, args) => {
             .addField('User', `<@${user.id}>`)
             .addField('Reason', `${reason}`)
             .addField('Moderator', `${mod}`)
-            .setColor('RANDOM')
+            .setColor('#36393F')
         modlog.send(muteembed)
 
         
@@ -51,6 +51,7 @@ module.exports.run = async (client, message, args) => {
  let embed2 = new Discord.RichEmbed()
     .setTitle('Commande `r!mute` a été utilisée !')
     .addField(`User:`, `\`${message.author.username}\``)
+    .setColor('#36393F')
     .addField(`ID:`, `\`${message.author.id}\``)
     .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
@@ -60,7 +61,7 @@ module.exports.run = async (client, message, args) => {
     .addField(`Full content:`, `\`${message.content}\``)
     .setThumbnail(message.author.avatarURL)
 
-client.channels.get('503494406264061963').send(embed2);
+client.channels.get('503494406264061963').send({embed: embed2});
   
 }
 

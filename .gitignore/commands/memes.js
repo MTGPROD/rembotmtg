@@ -7,7 +7,7 @@ exports.run = (client, message, args, ops) => {
         const embed = new Discord.RichEmbed()
             .setTimestamp()
             .setImage(url)
-            .setColor('RANDOM')
+            .setColor('#36393F')
         message.channel.send(embed);
     });
 
@@ -15,6 +15,7 @@ exports.run = (client, message, args, ops) => {
  let embed2 = new Discord.RichEmbed()
     .setTitle('Commande `r!memes` a été utilisée !')
     .addField(`User:`, `\`${message.author.username}\``)
+    .setColor('#36393F')
     .addField(`ID:`, `\`${message.author.id}\``)
     .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
     .addField(`Created At:`, `\`${message.author.createdAt}\``)

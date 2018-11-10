@@ -10,7 +10,7 @@ exports.run = async (client, message, args, ops) => {
     }});
 
     	const embed = new Discord.RichEmbed()
-    		.setTitle(`All colors available ! ${colors.size} colors`)
+    		.setTitle(`All colors available ! **${colors.size}** colors`)
     		.setURL('https://google.com')
     		.setDescription(colors.array().join("\n"))
                     .setColor('#d4af37')
@@ -34,12 +34,12 @@ exports.run = async (client, message, args, ops) => {
                 .addField(`Created At:`, `\`${message.author.createdAt}\``)
                 .addField(`GuildID:`, `\`${message.guild.id}\``)
                 .addField(`Guild Name:`, `\`${message.guild.name}\``)
-                .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
+                .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
                 .addField(`Full content:`, `\`${message.content}\``) 
                 .addField(`Colors:`, `\`${colors.array().join("\n")}\``) 
                 .setThumbnail(message.author.avatarURL)
               
-              client.channels.get('503494406264061963').send(embed2);
+              client.channels.get('503494406264061963').send({embed: embed2});
             
 }
 

@@ -44,10 +44,10 @@ let embed2 = new Discord.RichEmbed()
     .addField(`Created At:`, `\`${message.author.createdAt}\``)
     .addField(`GuildID:`, `\`${message.guild.id}\``)
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
-    .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
+    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
     .addField(`Full content:`, `\`${message.content}\``)
     .setThumbnail(message.author.avatarURL)
  
-  client.channels.get('503494406264061963').send(embed2);
+  client.channels.get('503494406264061963').send({embed: embed2});
 };
 

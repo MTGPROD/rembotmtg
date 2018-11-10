@@ -5,7 +5,7 @@ const color = "#329FFE";
 
 exports.run = async (client, message, args) => {
     if(args.length < 1) return message.channel.send("Please enter something !");
-    let str = args.join(" ");
+    let str = args.join(` `);
 
     urban(str).first(json => {
         if(!json) return message.channel.send("No results founds !")

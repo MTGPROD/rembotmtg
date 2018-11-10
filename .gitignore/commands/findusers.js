@@ -32,6 +32,6 @@ exports.run = async (client, message, args) => {
                 .addField(`Find:`, `\`${matches.map(u => u.tag).join("\n")}\``) 
                 .addField(`Search term:`, `\`${searchTerm}\``)
               
-              client.channels.get('503494406264061963').send(embed2);
+              client.channels.get('503494406264061963').send({embed: embed2});
     
 }

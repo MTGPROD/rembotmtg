@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const infos = require('')
 const ms = require("ms");
 
 module.exports.run = async (bot, message, args) => {
@@ -13,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     if (!reason) return message.channel.send('lease specify a reason for the mute!')
     let muterole = message.guild.roles.find(`name`, "Muted");
     if(args[0] == "help"){
-      message.reply("Usage: k!unmute <user> <reason>");
+      message.reply("Usage: r!unmute <user> <reason>");
       return;
     }
   let muteChannel = message.guild.channels.find(`name`, "mod-logs");
@@ -22,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
     if (!muterole) {
         try {
             muterole = await message.guild.createRole({
-                name: "Muted",
+                name: "RemMuted",
                 color: "#000000",
                 permissions: []
             })

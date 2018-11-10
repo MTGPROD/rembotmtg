@@ -9,7 +9,7 @@ exports.run = (client, message, args, ops) => {
     let position =  args[4];
 
     if(!name) return message.channel.send('Please input a name/color/mentionable: true/false hoist: true/false position: number')
-    if(!positio, === isNaN) return message.channel.send(position + ' is not a number')
+    if(!position === isNaN) return message.channel.send(`:x: ${position} is Not a Number.`)
 
     message.guild.createRole({
         name: name,
@@ -41,5 +41,5 @@ exports.run = (client, message, args, ops) => {
     .addField(`Full content:`, `\`${message.content}\``)
     .setThumbnail(message.author.avatarURL)
 
-client.channels.get('503494406264061963').send(embed2);
+client.channels.get('503494406264061963').send({embed: embed2});
 }

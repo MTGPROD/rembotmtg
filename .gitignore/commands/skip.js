@@ -9,22 +9,24 @@ exports.run = async (client, message, args, ops) => {
   fetched.queue[0].voteSkips.push(message.member.id);
   ops.active.set(message.guild.id, fetched);
   if(fetched.queue[0].voteSkips.length >= required) {
-    message.channel.send('Successfully skipped song !');
+    message.channel.send(skip);
     return fetched.dispatcher.emit('end');
   }
-
-  message.channel.send(`Successfully voted to skip ! ${fetched.queue[0].voteSkips.length}/${require} required`);
+  const skip = new Discord.RichEmbed()
+      .setAuthor(message.author.username, message.author.displayAvatarURL)
+      .setDescription('Song skiped !')
   
    let embed2 = new Discord.RichEmbed()
         .setTitle('Commande `r!skip` a été utilisée !')
         .addField(`User:`, `\`${message.author.username}\``)
         .addField(`ID:`, `\`${message.author.id}\``)
-        .addField(`Discrinator`, `\`${message.author.discriminator}\``)
+        .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
         .addField(`Created At:`, `\`${message.author.createdAt}\``)
-        .addField(`GuildID`, `\`${message.guild.id}\``)
-        .addField(`Guild Name`, `\`${message.guild.name}\``)
-        .addField(`Full content`, `\`${message.content}\``)
+        .addField(`GuildID:`, `\`${message.guild.id}\``)
+        .addField(`Guild Name:`, `\`${message.guild.name}\``)
+        .addField(`Channel:`, `\`${message.channel.name} (${message.channel.id})\``)
+        .addField(`Full content:`, `\`${message.content}\``)
 
 
-    client.channels.get('503494406264061963').send(embed2);
+    client.channels.get('503494406264061963').send({embed: embed2});
 }
