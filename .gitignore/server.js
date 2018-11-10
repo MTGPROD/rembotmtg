@@ -140,6 +140,6 @@ client.on('message', message => {
   
     message.channel.send({embed: avatar});
   }*/
-})
+
 
 client.login(process.env.TOKEN)
