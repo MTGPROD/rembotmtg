@@ -11,7 +11,7 @@ exports.run = (client, message, args, ops) => {
             message.react('👢')
         } catch(e) {
             console.log(e.stack)
-            message.react('❌')
+            /*message.react('❌')*/
             channel.delete()
         }
     })
