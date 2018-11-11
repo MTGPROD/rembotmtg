@@ -9,7 +9,7 @@ exports.run = async (client, message, args, ops) => {
   fetched.queue[0].voteSkips.push(message.member.id);
   ops.active.set(message.guild.id, fetched);
   if(fetched.queue[0].voteSkips.length >= required) {
-    message.channel.send(skip);
+    message.channel.send({embed: skip});
     return fetched.dispatcher.emit('end');
   }
   const skip = new Discord.RichEmbed()
