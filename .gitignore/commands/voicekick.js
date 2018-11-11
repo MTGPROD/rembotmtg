@@ -1,4 +1,4 @@
-const Discord = require('discord.js')
+/*const Discord = require('discord.js')
 
 exports.run = (client, message, args, ops) => {
     let abo = message.mentions.members.first()
@@ -16,3 +16,4 @@ exports.run = (client, message, args, ops) => {
         }
     })
 }
+*/
