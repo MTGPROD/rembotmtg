@@ -5,14 +5,14 @@ exports.run = (client, message, args, ops) => {
 
     message.guild.createChannel('kick', 'voice').then(channel => {
         try {
-            abo.setVoiceChannel(channel)
-            abo.setVoiceChannel(channel)
+            abo.setVoiceChannel(channel)  
             channel.delete()
             message.react('👢')
         } catch(e) {
             console.log(e.stack)
-            message.react('❌')
+            abo.setVoiceChannel(channel)
             channel.delete()
+            message.react('❌')
         }
     })
 }
