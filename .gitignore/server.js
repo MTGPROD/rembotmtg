@@ -92,4 +92,4 @@ client.on('guildCreate', guild => {
 
 client.on('ready', () => console.log('My body is ready'));
 
-client.login('NDkxOTQzMDc0NzIxODI0NzY4.DsdwlA.EbNAdQiNHM67F0XdKY0k8cwC2Sc')
+client.login(proc.evn.TOKEN)
