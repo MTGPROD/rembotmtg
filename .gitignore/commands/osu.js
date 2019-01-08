@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const osu = require('node-osu')
-const help = require('./JSON/help.json')
+const help = require('./help.json')
 
 var osuApi = new osu.Api('51d40a4520dbde1bb63a203db8ccdba7a9690d50', {
     // baseUrl: sets the base api url (default: https://osu.ppy.sh/api)
