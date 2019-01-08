@@ -1,5 +1,5 @@
 
-exports.run = async (client, message, args) => {
+exports.run = async (client, message, args, ops) => {
 
     const clean = text => {
         if (typeof(text) === "string")
