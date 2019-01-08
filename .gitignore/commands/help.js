@@ -11,7 +11,7 @@ exports.run = (client, message, args, ops) => {
         .addField('Vote:', `If you love Rem, you can support me [here](https://discordbots.org/bot/488734399509168148/vote).`)
         .addField('Basics', `\`${cmds.Basics}\``)
         .addField('Fun', `\`${cmds.Fun}\``)
-        .addField('Games', `\`${cmds.Games}`\`)
+        .addField('Games', `\`${cmds.Games}\``)
         .addField('Music', `\`${cmds.Music}\``)
         .addField('Moderation', `\`${cmds.Moderation}\``)
         .addField('Others', `\`${cmds.Others}\``)
