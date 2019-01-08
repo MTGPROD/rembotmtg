@@ -11,14 +11,14 @@ const active = new Map();
   .setImage('https://i.imgur.com/x969x9z.gif')
   .setDescription('Thank you to add me to your server, for start type `r!help`')
   .addField('Links', '[**Patreon**](https://www.patreon.com/MTGPROD)\n[**Github**](https://github.com/MTGPROD/rembotmtg)\n[**MTG\'s Laboratories**](https://discord.gg/AJzEv4t)', true)
-  .addField('Owners', 'MTGPROD#6353 | <@234234723314958339>\nSalut#8156 | <@375630442541481984>', true)
+  .addField('Owners', 'JEVIL#6666 | <@234234723314958339>\nSalut#8156 | <@375630442541481984>', true)
 
-const serverStats = {
-  guildID: '489426595166158885',
-  totalUsersID: '500691885816545290',
-  memberCountID: '500691902186782750',
-  botCountID: '500691956851015690',
-}
+
+  
+  
+  
+  
+
 
 const botStats = {
   totalGuildsID: '500718077391011840',
@@ -36,13 +36,13 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-  if(message.content === `<@${client.user.id}>`) {
+  if(message.content.includes(`<@${client.user.id}>`)) {
     message.channel.send('Yes ?\nMy prefix is `r!`')
   }
 })
 
 client.on('message', message => {
-  if(message.content === `<@!${client.user.id}>`) {
+  if(message.content.includes(`<@!${client.user.id}>`)) {
     message.channel.send('Yes ?\nMy prefix is `r!`')
   }
 })
@@ -71,17 +71,19 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
-    if(message.channel.type === 'dm') {
-      const embedDM = new Discord.RichEmbed()
-      .setTitle(`${message.author.username}#${message.author.discriminator}`, message.author.displayAvatarURL)
-      .setDescription(message.content)
-      client.channels.get('519276932215603211').send(embedDM)
-    } else {
-      return;
-    }
 
-})
+   
+     
+       
+      
+    
+    
+     
+
+   
+    
+
+
 
 
 client.on('guildCreate', guild => {
