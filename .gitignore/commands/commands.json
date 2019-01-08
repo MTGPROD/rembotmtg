@@ -2,8 +2,8 @@
     "Basics": "avatar | help | ping | poll | post | roleinfo | nick | neohelp | me",
     "Fun": "8ball | animes | ascii | cat | hug | kiss | memes | urban | link | google | say", 
     "Music": "leave | pause | play | queue | resume | search | skip | spotify | volume",
-    "Games": "csgo | fortnite",
+    "Games": "csgo, fortnite, osu",
     "Moderation": "ban | mute | unmute | purge | newrole | newchannel | newemoji | guildname | setregion",
-    "Others": "b64encode | b64decode | botstats | calc | color | colors | findusers | invite | suggestion | feedback | report | dashboard",
-    "Dev": "reload | sync | cpu | reboot | setgame"
+    "Others": "b64encode, b64decode, botstats, calc | color | colors | findusers | invite | suggestion | feedback | report | dashboard",
+    "Dev": "reload, sync, cpu, reboot, setgame"
 }
