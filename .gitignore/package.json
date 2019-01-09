@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/MTGPROD/rembotmtg#readme",
   "dependencies": {
-     "arcadia-module": "^0.1.1",
+     "arcadia.js-dev": "^0.0.4-beta",
     "ascii-art": "^1.4.4",
     "canvas": "^2.2.0",
     "canvas-constructor": "^2.0.1",
