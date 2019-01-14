@@ -6,7 +6,7 @@ const cmds = require('./commands.json');
 exports.run = (client, message, args, ops) => {
     const avatar = new Discord.RichEmbed()
     .setTitle("Help for [Avatar]")
-    .setDescription(`Usage: r!avatar @user\nExample: r!avatar <@${message.guild.ownerID}>\n\nRem will display you the avatar that matches, either yours or the mentioned member`)
+    .setDescription(`Usage: r!avatar @user\nExample: r!avatar <@${client.user.avatarURL}>\n\nRem will display you the avatar that matches, either yours or the mentioned member`)
     
     const r8ball = new Discord.RichEmbed()
     .setTitle("Help for [8ball]")
