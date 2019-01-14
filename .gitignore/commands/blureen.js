@@ -1,5 +1,5 @@
 const ARCAPI = require("arcadia.js-dev");
-const arcapi = new ARCAPI(process.evn.ARCATOKEN); //Replace xxx to your arcadia's token
+const arcapi = new ARCAPI(process.env.ARCATOKEN); //Replace xxx to your arcadia's token
 exports.run = (client, message, args, ops) => {
 let endpoint = "blureen"; //Name of an endpoint
 let parameter = "url"; //First parameter of the endpoint (URL/TEXT)
