@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const help = require('./JSON/help.json')
+const help = require('./help.json')
 
 exports.run = (client, message, args, ops) => {
     let target = message.mentions.members.first()
