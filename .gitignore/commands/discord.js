@@ -1,7 +1,7 @@
 const ARCAPI = require("arcadia.js-dev");
 const arcapi = new ARCAPI("a91e3faa988edd95a3a36e83575d7eb349be42049408f1bf1be9986d626d9cfd"); //Replace xxx to your arcadia's token
 exports.run = (client, message, args, ops) => {
-let endpoint = "discord"; //Name of an endpoint
+let endpoint = "discordlogo"; //Name of an endpoint
 let parameter = "url"; //First parameter of the endpoint (URL/TEXT)
 let url = message.author.avatarURL; //URL of the image
  
