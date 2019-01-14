@@ -1,11 +1,11 @@
 {
     "Basics": "**`avatar`, `help`, `ping`, `poll`, `post`, `roleinfo`, `nick`, `neohelp`, `me`, `vote`, `guildinfo`**",
-    "Fun": "**`8ball`, `animeprotest`, `angry`, `animes`, `ascii`, `memes`, `urban`, `google`, `say`, `beautiful`, `blood`, `bloodhelp`, `blur`, `blurple`, `bob`, `brazzers`, `discord`, `discordlogo`, `displace`, `distortion`, `fire`, `french`, `gay`, `ghost`, `glitch`, `grayscale`, `green`, `illuminati`, `implode`, `invert`, `jackolantern`, `magik`, `matrix`, `orangly`, `pixelate`, `postrize`, `presidentext`, `rainbow`, `red`, `reddit`, `sepia`, `spotify`, `steam`, `time`, `tobecontinued`, `triggered`, `triggeredinvert`, `twitch`, `twitter`, `wasted`, `youporn`**", 
+    "Fun": "**`8ball`, `animeprotest`, `angry`, `animes`, `ascii`, `memes`, `urban`, `google`, `say`, `beautiful`, `blood`, `bloodhelp`, `blur`, `blurblack`, `bluely`,`blurple`, `bob`, `brazzers`, `discord`, `discordlogo`, `displace`, `distortion`, `fire`, `french`, `gay`, `ghost`, `glitch`, `grayscale`, `green`, `illuminati`, `implode`, `invert`, `jackolantern`, `magik`, `matrix`, `orangly`, `pixelate`, `postrize`, `presidentext`, `rainbow`, `red`, `reddit`, `sepia`, `spotify`, `steam`, `time`, `tobecontinued`, `triggered`, `triggeredinvert`, `twitch`, `twitter`, `wasted`, `youporn`**", 
     "Music": "**`leave`, `pause`, `play`, `queue`, `resume`, `search`, `skip`, `volume`, `voicekick`**",
-    "Games": "**`csgo`, `fortnite`, `osu (pre)`**",
+    "Games": "**`csgo`, `fortnite`, `osu`**",
     "Moderation": "**`ban`, `mute`, `unmute`, `purge`, `newrole`, `newchannel`, `newemoji`, `guildname`, `setregion`, `topic`, `unban`**",
     "RandomImages": "**`bear`, `space`, `cat`, `dog`**",
-    "Social": "**`kiss`, `hug`, `snipe`, `cookie`, `cry (beta)`**",
+    "Social": "**`kiss`, `hug`, `snipe`, `cookie`**",
     "Others": "**`b64encode`, `b64decode`, `botstats`, `calc`, `color`, `colors`, `findusers`, `invite`, `inv`, `suggestion`, `feedback`, `bugreport`, `dashboard`, `owner`**",
     "Dev": "**`reload`, `sync`, `cpu`, `reboot`, `setgame`, `status`, `eval`, `reload`**"
 }
