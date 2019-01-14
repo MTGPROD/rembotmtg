@@ -1,28 +1,20 @@
-const Discord = require('discord.js')
-
+const ARCAPI = require("arcadia.js-dev");
+const arcapi = new ARCAPI(process.evn.ARCATOKEN); //Replace xxx to your arcadia's token
 exports.run = (client, message, args, ops) => {
-    var name = args[0]
-    var link = args[1]
-    var description = args[2]
-
-    if(!name) return message.channel.send(`Please input a name !`)
-    if(!link) return message.channel.send(`Please input a link !`)
-
-    const embed = new Discord.RichEmbed()
-        .setDescription(`[${name}](${link}) \n ${description}`)
-
-    message.channel.send({embed: embed});
+let endpoint = "link"; //Name of an endpoint
+let parameter = "url"; //First parameter of the endpoint (URL/TEXT)
+let url = message.author.avatarURL; //URL of the image
+ 
+arcapi.getImage(endpoint, parameter, url).then((buffer) => {
     
-     let embed2 = new Discord.RichEmbed()
-    .setTitle('Commande `r!link` a été utilisée !')
-    .addField(`User:`, `\`${message.author.username}\``)
-    .addField(`ID:`, `\`${message.author.id}\``)
-    .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
-    .addField(`Created At:`, `\`${message.author.createdAt}\``)
-    .addField(`GuildID:`, `\`${message.guild.id}\``)
-    .addField(`Guild Name:`, `\`${message.guild.name}\``)
-    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
-    .addField(`Full content:`, `\`${message.content}\``)
-    .addField(`"Kiss user":`, `\`${hugUser}\``)
-    .setThumbnail(message.author.avatarURL)
+        message.channel.send({
+  files: [{
+    attachment: buffer,
+    name: `link-${message.author.username}.gif`
+  }]
+})
+  .then(console.log)
+  .catch(console.error);
+
+});
 }
