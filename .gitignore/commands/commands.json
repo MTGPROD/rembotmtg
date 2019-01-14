@@ -6,6 +6,6 @@
     "Moderation": "**`ban`, `mute`, `unmute`, `purge`, `newrole`, `newchannel`, `newemoji`, `guildname`, `setregion`, `topic`, `unban`**",
     "RandomImages": "**`bear`, `space`, `cat`, `dog`**",
     "Social": "**`kiss`, `hug`, `snipe`, `cookie`**",
-    "Others": "**`b64encode`, `b64decode`, `botstats`, `calc`, `color`, `colors`, `findusers`, `invite`, `inv`, `suggestion`, `feedback`, `bugreport`, `dashboard`, `owner`**",
+    "Others": "**`b64encode`, `b64decode`, `botstats`, `calc`, `color`, `colors`, `findusers`, `invite`, `inv`, `suggestion`, `feedback`, `bugreport`**",
     "Dev": "**`reload`, `sync`, `cpu`, `reboot`, `setgame`, `status`, `eval`, `reload`**"
 }
