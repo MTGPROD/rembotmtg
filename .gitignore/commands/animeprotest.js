@@ -1,5 +1,5 @@
 const ARCAPI = require("arcadia.js-dev");
-const arcapi = new ARCAPI("a91e3faa988edd95a3a36e83575d7eb349be42049408f1bf1be9986d626d9cfd"); //Replace xxx to your arcadia's token
+const arcapi = new ARCAPI(process.evn.ARCATOKEN); //Replace xxx to your arcadia's token
 exports.run = (client, message, args, ops) => {
 let endpoint = "animeprotest"; //Name of an endpoint
 let parameter = "url"; //First parameter of the endpoint (URL/TEXT)
