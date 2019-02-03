@@ -6,7 +6,7 @@ exports.run = async (client, message, args, tools) => {
  
     const embed = new Discord.RichEmbed()
         .setTitle(`**${target.username}'s** avatar !`)
-        .setDescription(`[**Link**](${message.author.avatarURL})`)
+        .setDescription(`[**Link**](${target.avatarURL})`)
         .setImage('https://cdn.discordapp.com/attachments/503494406264061963/508315779993829427/Double_Ring-1s-200px.gif')
         .setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL)
 
