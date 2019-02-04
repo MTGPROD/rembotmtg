@@ -16,6 +16,19 @@ exports.run = (client, message, args) => {
         .setThumbnail('https://cdn.discordapp.com/avatars/185476724627210241/6bfdcdeae0765c7065d3a68b67411b20.png?size=1024') 
         .addField(':star: 9.33/10', '"Complete bot well done but, Ayana PRO has been abused. "') 
         .setColor('#ed3468') 
+    
+    const Amigo = new Discord.RichEmbed() 
+
+        .setTitle('Bot: Amigo#8120 Author: jac.k12#9409')
+
+        .setThumbnail('') 
+
+        .addField(':star: 6.90/10', '"A promising bot that needs to be improved."')
+
+
+                              
+
+        .setColor('#ce8c35') 
      
      if(args[0] === 'watora') {
           message.delete()
@@ -25,6 +38,15 @@ exports.run = (client, message, args) => {
      if(args[0] === 'ayana') {
           message.delete()
           message.channel.send(Ayana)
+     } 
+     
+     if(args[0] === 'amigo') {
+
+          message.delete()
+
+          message.channel.send(Amigo) 
+                              
+
      } 
      
      
