@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
 
         .setTitle('Bot: Amigo#8120 Author: jac.k12#9409')
 
-        .setThumbnail('') 
+        .setThumbnail('https://cdn.discordapp.com/avatars/464551154114756609/fdb1af90a6d8b93445356ef1cf1d37f1.png?size=2048') 
 
         .addField(':star: 6.90/10', '"A promising bot that needs to be improved."')
 
