@@ -32,7 +32,7 @@ exports.run = (client, message, args) => {
     
     const Tohsaka = new Discord.RichEmbed() 
 
-        .setTitle('Bot: Rin Tohsaka#9095 Author: ᴛ͇ɪ͇ʏ͇ᴀ͇ᴢ͇⏣͇⛡͇͇#8143) 
+        .setTitle('Bot: Rin Tohsaka#9095 Author: ᴛ͇ɪ͇ʏ͇ᴀ͇ᴢ͇⏣͇⛡͇͇#8143' ) 
                
 
         .setThumbnail('https://cdn.discordapp.com/avatars/524108359624818708/80dfe14030d535238c1d6f5ed3ca96b0.png?size=1024') 
