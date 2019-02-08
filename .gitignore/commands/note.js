@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
 
         .setTitle('Bot: Amigo#8120 Author: jac.k12#9409')
 
-        .setThumbnail('https://cdn.discordapp.com/avatars/464551154114756609/fdb1af90a6d8b93445356ef1cf1d37f1.png?size=2048') 
+        .setThumbnail('https://cdn.discordapp.com/avatars/464551154114756609/fdb1af90a6d8b93445356ef1cf1d37f1.png?size=1024') 
 
         .addField(':star: 6.90/10', '"A promising bot that needs to be improved."')
 
@@ -29,6 +29,36 @@ exports.run = (client, message, args) => {
                               
 
         .setColor('#ce8c35') 
+    
+    const Tohsaka = new Discord.RichEmbed() 
+
+        .setTitle('Bot: Rin Tohsaka#9095 Author: ᴛ͇ɪ͇ʏ͇ᴀ͇ᴢ͇⏣͇⛡͇͇#8143) 
+               
+
+        .setThumbnail('https://cdn.discordapp.com/avatars/524108359624818708/80dfe14030d535238c1d6f5ed3ca96b0.png?size=1024') 
+
+        .addField(':star: 7.25/10', `"Nothing to say, it's a good bot."`)
+        .setColor('#c99c4e') 
+               
+     if(args[0] === 'tohsaka') {
+
+          message.delete()
+
+          message.channel.send(Tohsaka) 
+                              
+                              
+                              
+
+     } 
+
+     
+
+
+
+
+
+    
+
      
      if(args[0] === 'watora') {
           message.delete()
