@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
           .setURL('https://reddit.com/r/5050pics')
           .setColor('#FF5700')
           .setDescription(`test`)
-          
+          .addImage(Fetched)
           .setFooter('From Reddit')
      message.channel.send(mainEmbed) 
 } 
