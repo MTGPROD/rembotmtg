@@ -78,7 +78,7 @@ exports.run = (client, message, args) => {
      } 
      
      
-     if(args[0] === 'dank memer') {
+     if(args[0] === 'memer') {
           message.delete()
           message.channel.send(memer)
      } 
