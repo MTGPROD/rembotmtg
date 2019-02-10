@@ -39,6 +39,18 @@ exports.run = (client, message, args) => {
 
         .addField(':star: 7.25/10', `"Nothing to say, it's a good bot."`)
         .setColor('#c99c4e') 
+    
+    const memer = new Discord.RichEmbed() 
+
+        .setTitle('Bot: Dank Memer#6539 Author: Melmsie#0001') 
+
+               
+
+        .setThumbnail('https://cdn.discordapp.com/avatars/270904126974590976/c9146cbc884d792c843529fcf1aec4dc.webp?size=1024') 
+
+        .addField(':star: 7.27/10', `"Very good bot for create your memes."`)
+
+        .setColor('#4baa33') 
                
      if(args[0] === 'tohsaka') {
 
@@ -63,6 +75,12 @@ exports.run = (client, message, args) => {
      if(args[0] === 'watora') {
           message.delete()
           message.channel.send(Watora)
+     } 
+     
+     
+     if(args[0] === 'dank memer') {
+          message.delete()
+          message.channel.send(memer)
      } 
      
      if(args[0] === 'ayana') {
