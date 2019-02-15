@@ -4,6 +4,11 @@ const color = "#329FFE";
 
 
 exports.run = async (client, message, args) => {
+    
+    if(message.channel.nsfw = false) {
+        message.channel.send('Sorry man this command is "nsfw" lmao') 
+    } 
+    
     if(args.length < 1) return message.channel.send("Please enter something !");
     let str = args.join(` `);
 
