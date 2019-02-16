@@ -13,8 +13,8 @@ exports.run = (client, message, args) => {
           .setTitle('**50/50 Challenge**')
           .setURL('https://reddit.com/r/FiftyFifty')
           .setColor('#FF5700')
-          .setDescription(API)
-          .addImage(Fetched)
+          .setDescription(fetched)
+          
           .setFooter('From Reddit')
      message.channel.send(mainEmbed) 
 } 
