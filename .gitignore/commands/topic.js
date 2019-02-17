@@ -9,9 +9,11 @@ exports.run = (client, message, args, ops) => {
 message.channel.edit({ topic: topik })
     
 const pik = new Discord.RichEmbed()
-    .setTitle(`Topic of the channel: #${message.channel.name}`)
-    .addField(`Before`, `**${prepik}**`, true)
-    .addField(`After`, `**${topik}**`, true)
+    .setTitle(`Topic of the channel: **#${message.channel.name}**`)
+    .addField(`__Before__`, `${prepik}`, true)
+    .addField(`__After__`, `${topik}`, true)
+    .setTimestamp()
+    .setColor('RANDOM')
     .setFooter(client.user.username, client.user.displayAvatarURL)
 message.channel.send(pik)
 
