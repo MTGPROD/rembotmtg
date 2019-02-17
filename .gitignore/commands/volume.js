@@ -4,7 +4,10 @@ exports.run = (client, message, args, ops) => {
   if(message.member.voiceChannel !== message.guild.me.voiceChannel) return message.chanel.send("Sorry, you currently aren't in the same channel as the bot.")
   if(isNaN(args[0]) || args[0] > 1000 || args[0] < 0) return message.channel.send('Please input a number between `0-1000`');
   fetched.dispatcher.setVolume(args[0]/1000);
-  message.channel.send(`Succesfuly set the volume to \`${args[0]}\``)
+  const skip = new Discord.RichEmbed()
+       .setTitle('Volume')
+       .setDescription(`:speaker: ${args[0]}%`)
+ message.channel.send(skip)
   
    let embed2 = new Discord.RichEmbed()
         .setTitle('Commande `r!volume` a été utilisée !')
