@@ -1,6 +1,6 @@
 {
     "Basics": "**`avatar`, `help`, `ping`, `poll`, `post`, `roleinfo`, `nick`, `neohelp`, `me`, `vote`, `guildinfo`**",
-    "Fun": "**`8ball`, `animes`, `ascii`, `memes`, `urban`, `google`, `link`**", 
+    "Fun": "**`8ball`, `animes`, `ascii`, `memes`, `urban`, `google`**", 
     "Music": "**`leave`, `pause`, `play`, `queue`, `resume`, `search`, `skip`, `volume`, `voicekick`**",
     "Games": "**`csgo`, `fortnite`, `osu`**",
     "Moderation": "**`ban`, `mute`, `unmute`, `purge`, `newrole`, `newchannel`, `newemoji`, `guildname`, `setregion`, `topic`, `unban`**",
