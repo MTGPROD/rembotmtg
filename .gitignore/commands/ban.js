@@ -3,20 +3,20 @@ const infos = require('./infos.json');
 
 exports.run = async (client, message, args) => { 
 
-  let logs = message.guild.channels.find("name", "logs");
-  if(!logs) return message.channel.send("Could not find a logs channel.");
+  
+  
 
   let user = message.mentions.users.first();
   if(!user) return message.reply("Please mention a user");
 
   let reason = args.join(" ");
-  if(!reason) reason = "No reason given";
+  if(!reason) reason = `${message.author.username}#${message.author.discriminator} ban ${user.username}#${user.discriminator}`;
 
   message.guild.member(user).ban(reason);
 
   let logsEmbed = new Discord.RichEmbed() 
   .setTitle("User Banned")
-  .setFooter(`${infos.version} User Ban Logs`, user.displayAvatarURL)
+  .setFooter(`${infos.version}`, user.displayAvatarURL)
   .setColor("#ff0000")
   .setTimestamp()
   .addField("Banned User:", `${user}, ID: ${user.id}`)
@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
   .addField("Time:", message.createdAt)
   .addField("Channel:", message.channel)
 
-  logs.send(logsEmbed);
+  message.channel.send(logsEmbed);
 
   
   let embed2 = new Discord.RichEmbed()
