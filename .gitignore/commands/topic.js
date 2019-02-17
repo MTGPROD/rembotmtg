@@ -12,6 +12,7 @@ const pik = new Discord.RichEmbed()
     .setTitle(`Topic of the channel: #${message.channel.name}`)
     .addField(`Before`, `**${prepik}**`, true)
     .addField(`After`, `**${topik}**`, true)
-message.channel.send(`The topic of this channel is **${topik}**`)
+    .setFooter(client.user.username, client.user.displayAvatarURL)
+message.channel.send(pik)
 
 }
