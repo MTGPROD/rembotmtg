@@ -1,3 +1,6 @@
+const Discord = require('discord.js')
+
+
 exports.run = (client, message, args, ops) => {
   let fetched = ops.active.get(message.guild.id);
   if(!fetched) return message.channel.send("There currently ins't any music playing in this guild !");
