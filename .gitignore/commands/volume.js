@@ -9,7 +9,7 @@ exports.run = (client, message, args, ops) => {
        .setTitle('Volume')
        .setDescription(`:speaker: ${args[0]}%`)
        .setFooter('You can put the volume between 0-1000')
-  if(isNaN(args[0]) || args[0] > 1000 || args[0] < 0) return message.channel.send(skip)
+  if(isNaN(args[0]) || args[0] > 1000 || args[0] < 0) return message.channel.send('Usage: `r!volume <number>`')
   fetched.dispatcher.setVolume(args[0]/1000);
  
  message.channel.send(skip)
