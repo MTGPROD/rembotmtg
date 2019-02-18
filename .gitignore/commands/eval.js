@@ -8,7 +8,7 @@ exports.run = async (client, message, args, ops) => {
             return text;
       }
 
-      if(message.author.id !== "234234723314958339") return;
+      if(message.author.id !== "511959387028586508") return;
       try {
         const code = args.join(" ");
         let evaled = eval(code);
