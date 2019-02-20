@@ -96,5 +96,6 @@ client.on('guildCreate', guild => {
 })
 
 client.on('ready', () => console.log('My body is ready'));
+client.on('ready', () => client.channels.get(508326997059960848).send(`Im ready for a match: ${client.ping}ms`));
 
 client.login(process.env.TOKEN)
