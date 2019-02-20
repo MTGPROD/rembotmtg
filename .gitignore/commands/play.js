@@ -41,7 +41,7 @@ else {
   const embed = new Discord.RichEmbed()
       .setTitle('**Added To Queue:**')
       .setColor('#36393F')
-      .setDescription(`${info.title}\n**Requested By:** ${message.author.username}\nDuration: ${time(info.length_seconds)}`)
+      .setDescription(`${info.title}\n**Requested By:** ${message.author.username}#${message.author.discriminator}\nDuration: ${time(info.length_seconds)}`)
       .setTimestamp()
       .setFooter(infos.version, client.user.displayAvatarURL)
 
