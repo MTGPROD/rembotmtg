@@ -5,7 +5,7 @@ exports.run = async (client, message, args, ops) => {
   if(!fetched) return message.channel.send('There currently isn\'t any music playing in this guild !');
   let queue = fetched.queue;
   let nowPlaying = queue[0];
-  let resp = `__**Now Playing**__\n[**${nowPlaying.songTitle}**](${nowPlaying.url}) - **Requested By:** *${nowPlaying.requester}*\n\n__**Queue**__\n`;
+  let resp = `__**Now Playing**__\n[**${nowPlaying.songTitle}**](https://youtube.com${nowPlaying.url}) - **Requested By:** *${nowPlaying.requester}*\n\n__**Queue**__\n`;
   let respp = ''
   for(var i = 1; i < queue.length; i++) {
     respp += `${i}. [**${queue[i].songTitle}**](${queue[i].url}) - **Requested By:** *${queue[i].requester}*\n`;
