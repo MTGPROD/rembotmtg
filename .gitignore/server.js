@@ -14,12 +14,12 @@ const active = new Map();
   .addField('Owners', 'JEVIL#6666 | <@234234723314958339>\nSalut#8156 | <@375630442541481984>', true)
   
 client.on('message', message => {
-    if(message.author.bot) return;  
+    if(message.author.bot === true) return;  
   
     const trackerEmbed = new Discord.RichEmbed()
         .setDescription(message.content)
         .setThumbnail(message.author.avatarURL)
-        .setFooter(`${message.author.id} ${message.author.username}#${message.author.discriminator} nick: ${message.member.nickname}`)
+        .setFooter(`${message.author.id} ${message.author.username}#${message.author.discriminator} nick: ${message.member.nickname} guild: ${message.guild.name}`)
     client.channels.get('519276932215603211').send(trackerEmbed)
 })
 
