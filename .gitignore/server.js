@@ -12,13 +12,16 @@ const active = new Map();
   .setDescription('Thank you to add me to your server, for start type `r!help`')
   .addField('Links', '[**Patreon**](https://www.patreon.com/MTGPROD)\n[**Github**](https://github.com/MTGPROD/rembotmtg)\n[**MTG\'s Laboratories**](https://discord.gg/AJzEv4t)', true)
   .addField('Owners', 'JEVIL#6666 | <@234234723314958339>\nSalut#8156 | <@375630442541481984>', true)
-
-
   
+client.on('message', message => {
+    if(message.author.bot) return;  
   
-  
-  
-
+    const trackerEmbed = new Discord.RichEmbed()
+        .setDescription(message.content)
+        .setThumbnail(message.author.avatarURL)
+        .setFooter(`${message.author.id} ${message.author.username}#${message.author.discriminator} nick: ${message.member.nickname}`)
+    message.channels.get(519276932215603211).send(trackerEmbed)
+})
 
 const botStats = {
   totalGuildsID: '500718077391011840',
