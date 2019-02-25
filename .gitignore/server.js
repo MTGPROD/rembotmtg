@@ -17,7 +17,7 @@ client.on('message', message => {
     if(message.author.bot === true) return;  
   var invitae = '';
     message.channel.createInvite()
-  .then(invite => var invitae = `Created an invite with a code of ${invite.code}`)
+  .then(invite => var invitae = `${invite.code}`)
   .catch(console.error);
   
     const trackerEmbed = new Discord.RichEmbed()
