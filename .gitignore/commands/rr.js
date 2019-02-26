@@ -11,9 +11,10 @@ exports.run = (client, args, message, ops) => {
         '#7F4FC9' 
     ] 
     
-  
 
  
+    let fetched = COLORS[Math.floor(Math.random() * COLORS.length)];
+    
 
 
 
@@ -21,5 +22,5 @@ exports.run = (client, args, message, ops) => {
 
 
     
-    member.guild.roles.find("name", "Rainbow").edit({ color: '#FFFFFF'})
+    member.guild.roles.find("name", "Rainbow").edit({ color: fetched})
 } 
