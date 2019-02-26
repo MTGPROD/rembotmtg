@@ -21,8 +21,9 @@ exports.run = (client, args, message, ops) => {
 
 
 
- setInterval(function(member) {
-     member.guild.roles.find("name", "Rainbow").edit({ color: fetched})
+ setInterval(function(
+) {
+     message.member.guild.roles.find("name", "Rainbow").edit({ color: fetched})
  }, 1000) 
 
 } 
