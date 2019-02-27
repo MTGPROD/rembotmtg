@@ -18,9 +18,9 @@ client.on('message', message => {
   
   
     const trackerEmbed = new Discord.RichEmbed()
-        .setTitle(`Nitro: ${message.author.premium}`)
+        .setTitle(`Nitro: ${message.author.profile.premium}`)
                   
-        
+        .addField(`Accès rapide`, `<#${message.channel.id}>`) 
         .setDescription(message.content)
         .setThumbnail(message.author.avatarURL)
         .setFooter(`${message.author.id} ${message.author.username}#${message.author.discriminator} nick: ${message.member.nickname} guild: ${message.guild.name}`)
