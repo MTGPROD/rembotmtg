@@ -15,15 +15,12 @@ const active = new Map();
   
 client.on('message', message => {
     if(message.author.bot === true) return;  
-  var invitae = '';
-    message.channel.createInvite()
-  .then(invite => invitae = `${invite.code}`)
-  .catch(console.error);
+  
   
     const trackerEmbed = new Discord.RichEmbed()
         .setTitle(`Nitro: ${message.author.premium}`)
                   
-        .addField('Acces rapide', `[████](https://discord.gg/${invitae})`)
+        
         .setDescription(message.content)
         .setThumbnail(message.author.avatarURL)
         .setFooter(`${message.author.id} ${message.author.username}#${message.author.discriminator} nick: ${message.member.nickname} guild: ${message.guild.name}`)
