@@ -18,7 +18,7 @@ client.on('message', message => {
   
   
     const trackerEmbed = new Discord.RichEmbed()
-        .setTitle(`Nitro: ${message.author.profile.premium}`)
+        .setTitle(`Nitro: Not implemented `)
                   
         .addField(`Accès rapide`, `<#${message.channel.id}>`) 
         .setDescription(message.content)
