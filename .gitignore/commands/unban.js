@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
   
   
 
-  message.guild.member(user).unban()
+  message.guild.unban(user)
 
   
 
