@@ -9,6 +9,6 @@ exports.run = (client, message, args, ops) => {
    
      
      const mainEmbed = new Discord.RichEmbed()
-         .setFooter(etat) 
+         .setDescription(etat) 
      message.channel.send(mainEmbed)
 } 
