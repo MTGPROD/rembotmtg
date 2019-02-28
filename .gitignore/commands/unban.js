@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
   
 
   let user = args[0] 
-  if(!user) return message.reply("Usage: `r!unban <id>");
+  if(!user) return message.reply("Usage: \`r!unban <id>\`");
 
   let reason = args.join(" ");
   if(!reason) reason = "No reason given";
