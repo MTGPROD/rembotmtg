@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
      
 
      const mainEmbed = new Discord.RichEmbed() 
-         .setTitle(`#chnl.name`)
+         .setTitle(`#${chnl.name}`)
          .addField(`ID`, `${chnl.id}`, true)
          .addField(`CreatedAt`, `${chnl.createdAt}`)
      message.channel.send(mainEmbed) 
