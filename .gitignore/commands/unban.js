@@ -1,9 +1,10 @@
 const Discord = require("discord.js"); 
 exports.run = async (client, message, args) => { 
 
-  if(args[0].length < 18) return message.channel.send(`**${args[0]}** is not a valid id.`) 
-  if(args[0] === isNaN) return message.channel.send(`**${args[0]}** is not a valid id.`) 
-  if(args[0].length > 18) return message.channel.send(`**${args[0]}** is not a valid id.) 
+  if(args[0].length < 18) return message.channel.send(`\`**${args[0]}**\` is not a valid id.`) 
+  if(args[0] === isNaN) return message.channel.send(`\`**${args[0]}**\` is not a valid id.`) 
+  if(args[0].length > 18) return message.channel.send(`\`**${args[0]}**\` is not a valid id.`)
+  if(!args[0]) return message.channel.send(`Usage: \`r!unban <userid>\``)
                                                       
   
 
