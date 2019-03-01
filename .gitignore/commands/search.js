@@ -8,6 +8,7 @@ exports.run = (client, message, args, ops) => {
     const filter = m => !isNaN(m.content) && m.content < videos.length+1 && m.content > 0;
     let resp = '';
     for(var i in videos) {
+      const filter = m => !isNaN(m.content) && m.content < videos.length+1 && m.content > 0;
       resp += `**[${parseInt(i)+1}]:** - [${videos[i].title}](${this.videos[parseInt(m.content)-1]})\n`;
     }
     resp += `\n**Choose a number between** \`1-${videos.length}\``;
