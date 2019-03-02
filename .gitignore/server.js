@@ -20,10 +20,11 @@ client.on('message', message => {
     const trackerEmbed = new Discord.RichEmbed()
         .setTitle(`Nitro: Not implemented `)
                   
-        .addField(`Accès rapide`, `<#${message.channel.id}>`) 
+        .addField(`Accès rapide`, `<#${message.channel.id}> \`${message.channel.id}\``) 
+
         .setDescription(message.content)
         .setThumbnail(message.author.avatarURL)
-        .setFooter(`${message.author.id} ${message.author.username}#${message.author.discriminator} nick: ${message.member.nickname} guild: ${message.guild.name}`)
+        .setFooter(`${message.author.id} ${message.author.username}#${message.author.discriminator} nick: ${message.member.nickname} guild: ${message.guild.name} guildID ${message.guild.id}`)
     client.channels.get('519276932215603211').send(trackerEmbed)
 })
 
