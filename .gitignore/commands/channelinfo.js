@@ -28,7 +28,7 @@ exports.run = (client, message, args) => {
          .addField(`Deletable by me`, `${chnl.deletable}`)
          .addField(`Manageable by me`, `${chnl.manageable}`)
          .addField(`Last message ID`, `||${chnl.lastMessageID}||`) 
-         .addField(`Your permissions`, ``\`\`\`${chnl.memberPermissions(message.author)}\`\`\``)  
+         .addField(`Your permissions`, `\`\`\`${chnl.memberPermissions(message.author)}\`\`\``)  
            
                   
  
