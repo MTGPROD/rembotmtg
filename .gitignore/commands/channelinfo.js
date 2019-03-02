@@ -14,6 +14,8 @@ exports.run = (client, message, args) => {
          .addField(`Mention`, `<#${chnl.id}>`, true) 
          .addField(`Creation date`, chnl.createdAt) 
          .addField(`Not Safe For Work ?`, `${notSafe}`)     
-         .addField(`CreatedAt`, `${chnl.createdAt}`)
+         .addField(`Category/Parent`, `${chnl.parent} ||${chnl.parentID}||`)
+         .addField(`Topic`, `**${chnl.topic}**`)
+         .addField(``, ``)
      message.channel.send(mainEmbed) 
 } 
