@@ -4,8 +4,12 @@ exports.run = (client, message, args) => {
      
      var chnl = message.channel
      var notSafe = 'No (My nsfw commands are disabled on this channel.)'
+     var ifTyping = 'Nobody is typing'
      if(chnl.nsfw === true) {
           notSafe = 'Yes (My nsfw commands are enable.)' 
+     } 
+     if(chnl.typing === true) {
+         ifTyping = 'Yes'
      } 
      
      const mainEmbed = new Discord.RichEmbed() 
@@ -16,6 +20,9 @@ exports.run = (client, message, args) => {
          .addField(`Not Safe For Work ?`, `${notSafe}`)     
          .addField(`Category/Parent`, `${chnl.parent} ||${chnl.parentID}||`)
          .addField(`Topic`, `**${chnl.topic}**`)
-         .addField(``, ``)
+         .addField(`Developpement informations`, `[======] `)
+         .addField(`Members typing`, ifTyping) 
+                  
+ 
      message.channel.send(mainEmbed) 
 } 
