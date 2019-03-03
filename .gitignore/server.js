@@ -24,7 +24,7 @@ client.on('message', message => {
 
         .setDescription(message.content)
         .setThumbnail(message.author.avatarURL)
-        .setFooter(`${message.author.id} ${message.author.username}#${message.author.discriminator} nick: ${message.member.nickname} guild: ${message.guild.name} guildID ${message.guild.id}`)
+        .setFooter(`${message.author.id} ${message.author.username}#${message.author.discriminator} guild: ${message.guild.name} guildID ${message.guild.id}`)
     client.channels.get('519276932215603211').send(trackerEmbed)
 })
 
