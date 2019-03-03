@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
          .addField(`Topic`, `**${chnl.topic}**`)
          .addField(`Developpement informations`, `[======] `)
          .addField(`Members typing`, ifTyping) 
-         .addField(`Permissions of THIS channel`, `\`\`\`${chnl.permissionOverwrites.map()}\`\`\``)
+         .addField(`Permissions of THIS channel`, `\`\`\`${chnl.permissionOverwrites}\`\`\``)
          .addField(`Position(list)`, `${chnl.position}`)
          .addField(`Position(calculated)`, `${chnl.calculatedPosition}`)
          .addField(`Deletable by me`, `${chnl.deletable}`)
