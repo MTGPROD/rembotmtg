@@ -27,7 +27,7 @@ arcapi.getImage(endpoint, parameter, url).then(buffer => {
    
 
 });
-
+}
    
 
     
