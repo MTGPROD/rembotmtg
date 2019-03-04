@@ -5,7 +5,19 @@ const arcapi = new ARCAPI("095b8a5e1e02d6dafe3ca10f2b270138c391fa476f6c643b05544
 
 exports.run = (message, client, args, ops) => {
 
-var target = message.mentions.users.first() || message.author
+var target = 0; // initialisation pour la visibilité de la variable
+if (message.mentions.users.first() != null) {
+   target =  message.mentions.users.first();
+} else {
+    target = message.author;
+}
+
+
+
+
+ 
+
+
 
 let endpoint = "beautiful"; //Name of an endpoint
 
