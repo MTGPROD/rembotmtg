@@ -15,7 +15,7 @@ exports.run = (message, client, args, ops) => {
 
 
 
- console.log(message.mentions.users.first()) 
+
 
 
 
