@@ -23,7 +23,7 @@ let endpoint = "beautiful"; //Name of an endpoint
 
 let parameter = "url"; //First parameter of the endpoint (URL/TEXT)
 
-let url a targzr.vatarURL //URL of the image
+let url = target.vatarURL //URL of the image
 
 arcapi.getImage(endpoint, parameter, url).then(buffer => {
 
