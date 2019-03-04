@@ -15,12 +15,17 @@ let url = target.avatarURL //URL of the image
 arcapi.getImage(endpoint, parameter, url).then((buffer) => {
 
    message.channel.send({
-       file: {
-           attachement: buffer,
-           name: `${target.username}-beautiful`
-       } 
-   }); 
-}) 
+      files: [{
+    attachment: buffer,
+    name: `${target.username}-beautiful`
+  }]
+})
+       
+
+           
+       
+   
+
 });
     
 
