@@ -19,7 +19,7 @@ arcapi.getImage(endpoint, parameter, url).then((buffer) => {
            attachement: buffer,
            name: `${target.username}-beautiful`
        } 
-   }); //Buffer
+   }); 
 
 });
     
