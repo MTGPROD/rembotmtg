@@ -12,7 +12,7 @@ let parameter = "url"; //First parameter of the endpoint (URL/TEXT)
 
 let url = target.avatarURL //URL of the image
 
-arcapi.getImage(endpoint, parameter, url).then((buffer) => {
+arcapi.getImage(endpoint, parameter, url).then(buffer => {
 
    message.channel.send({
       files: [{
@@ -27,5 +27,8 @@ arcapi.getImage(endpoint, parameter, url).then((buffer) => {
    
 
 });
+
+   
+
     
 
