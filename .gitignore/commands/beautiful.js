@@ -20,7 +20,7 @@ arcapi.getImage(endpoint, parameter, url).then((buffer) => {
            name: `${target.username}-beautiful`
        } 
    }); 
-
+}) 
 });
     
 
