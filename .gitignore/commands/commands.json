@@ -3,9 +3,9 @@
     "Fun": "**`8ball`, `animes`, `ascii`, `memes`, `urban`, `google`**", 
     "Music": "**`leave`, `pause`, `play`, `queue`, `resume`, `search`, `skip`, `volume`, `voicekick`**",
     "Games": "**`csgo`, `fortnite`, `osu`**",
-    "Moderation": "**`ban`, `mute`, `unmute`, `purge`, `newrole`, `newchannel`, `newemoji`, `guildname`, `setregion`, `topic`, `unban`**",
+    "Moderation": "**`ban`, `mute`, `unmute`, `purge`, `newrole`, `newchannel`, `newemoji`, `guildname`, `setregion`, `settopic`, `unban`, `channelinfo`**",
     "RandomImages": "**`bear`, `space`, `cat`, `dog`**",
     "Social": "**`kiss`, `hug`, `snipe`, `cookie`**",
-    "Others": "**`b64encode`, `b64decode`, `botstats`, `calc`, `color`, `colors`, `findusers`, `invite`, `inv`, `suggestion`, `feedback`, `bugreport`**",
+    "Others": "**`b64encode`, `b64decode`, `botstats`, `calc`, `color`, `colors`, `findusers`, `invite`, `inv`, `suggestion`, `feedback`, `bugreport`, `check`**",
     "Dev": "**`reload`, `sync`, `cpu`, `reboot`, `setgame`, `status`, `eval`, `reload`**"
 }
