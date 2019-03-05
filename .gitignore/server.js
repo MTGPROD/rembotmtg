@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client()
 
 const prefix = "r!";
+const mentionPrefix = "<@488734399509168148>" 
 const ownerID = '234234723314958339';
 const active = new Map();
 
@@ -63,16 +64,18 @@ client.on('message', message => {
 
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
+    if(!message.content.startsWith(mentionPrefix)) return 
+                                  
 
     try {
-        delete require.cache[require.resolve(`./commands/${cmd}.js`)]
+        delete require.cache[require.resolve(`./commands/${}.js`)]
 
         let ops = {
             ownerID: ownerID,
             active: active
         }
 
-        let commandFile = require(`./commands/${cmd}.js`)
+        let commandFile = require(`./commands/${cmd ||}.js`)
         commandFile.run(client, message, args, ops);
     } catch (e) {
         console.log(e.stack)
