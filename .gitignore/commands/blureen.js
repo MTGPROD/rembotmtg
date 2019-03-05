@@ -26,7 +26,7 @@ if(args[0]) {
 
 } 
 
-let endpoint = "beautiful"; //Name of an endpoint
+let endpoint = "blureen" ; //Name of an endpoint
 
 let parameter = "url"; //First parameter of the endpoint (URL/TEXT)
 
@@ -40,7 +40,7 @@ arcapi.getImage(endpoint, parameter, url).then(buffer => {
 
     attachment: buffer,
 
-    name: `${message.author.username}-beautiful.jpeg`
+    name: `${message.author.username}-blureen.jpeg`
 
   }]
 
