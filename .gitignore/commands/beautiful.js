@@ -9,28 +9,36 @@ exports.run = (client, message, args) => {
 
 
 
-const target = message.mentions.users.first() || message.author 
 
 
 
 
 
+var finish = 'https://cdn.discordapp.com/attachments/552283011765501975/552300869685608452/1551749175196644556292.jpg' 
 
+if(!args[0]) {
+     finish = message.author.avatarURL
+} 
 
-
+if(args[0]) { 
+     if(!args[0].includes('https://')) return message.channel.send('Use a valid URL/LINK') 
+        
+            
+    
+} 
 
 let endpoint = "beautiful"; //Name of an endpoint
 
 let parameter = "url"; //First parameter of the endpoint (URL/TEXT)
 
-let url = target.vatarURL //URL of the image
+let url = finish //URL of the image
 
 arcapi.getImage(endpoint, parameter, url).then(buffer => {
 
    message.channel.send({
       files: [{
     attachment: buffer,
-    name: `${target.username}-beautiful`
+    name: `${message.author.username}-beautiful`
   }]
 })
        
