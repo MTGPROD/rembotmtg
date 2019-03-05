@@ -40,7 +40,7 @@ arcapi.getImage(endpoint, parameter, url).then(buffer => {
 
     attachment: buffer,
 
-    name: `${message.author.username}-triggeredinvert.jpeg`
+    name: `${message.author.username}-triggeredinvert.gif`
 
   }]
 
