@@ -26,7 +26,7 @@ if(args[0]) {
 
 } 
 
-let endpoint = "beautiful"; //Name of an endpoint
+let endpoint = "rainbow"; //Name of an endpoint
 
 let parameter = "url"; //First parameter of the endpoint (URL/TEXT)
 
