@@ -17,7 +17,7 @@ exports.run = async (client, message, args, ops) => {
     .addField(`GuildID:`, `\`${message.guild.id}\``)
     .addField(`Guild Name:`, `\`${message.guild.name}\``)
     .addField(`Full content:`, `\`${message.content}\``)
-    .addField(`Channel:`, `#\`${message.channel.name} (${message.channel.id})\``)
+    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
     .addField(`Output:`, `${text}`)
     .setThumbnail(message.author.avatarURL)
 
