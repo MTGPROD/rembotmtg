@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
          .setTitle('Images generation help menu.')
          .setDescription('Thanks to the Arcadia API')
          .addField(`Filter`, `Nope`)
-         .addField(`Generation`, '`beautiful`, `rainbow`, `discordlogo`, `gay`') 
+         .addField(`Generation`, '`beautiful`, `rainbow`, `discordlogo`, `gay`, `triggered`, `triggeredinvert`') 
          .addField('Text', 'Nope')
          .setFooter('Powered by Arcadia API')
      message.channel.send(mainEmbed)
