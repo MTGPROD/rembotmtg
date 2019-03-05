@@ -2,8 +2,9 @@ const Discord = require('discord.js');
 
 exports.run = async (client, message, args, ops) => {
     var text = args.join(` `)
-
-    if(!text) return message.channel.send('Please write something')
+    
+    if(message.author.id === '424906340167843850') return message.react('💔')
+    if(!text) return message.channel.send('`Usage: r!say <text>`')
 
     message.delete()
     message.channel.send(text)
