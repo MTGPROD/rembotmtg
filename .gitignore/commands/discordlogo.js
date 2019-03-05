@@ -40,7 +40,7 @@ arcapi.getImage(endpoint, parameter, url).then(buffer => {
 
     attachment: buffer,
 
-    name: `${message.author.username}-discordlogo.jpeg`
+    name: `${message.author.username}-discordlogo.png`
 
   }]
 
