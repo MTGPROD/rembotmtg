@@ -59,12 +59,12 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    let args = message.content.slice(prefix.length).trim().split(' ');
+    let args = message.content.slice(prefix.length || mentionPrefix.length).trim().split(' ');
     let cmd = args.shift().toLowerCase();
 
     if(message.author.bot) return;
-    if(!message.content.startsWith(prefix)) return;
-    if(!message.content.startsWith(mentionPrefix)) return 
+    if(!message.content.startsWith(prefix || mentionPrefix)) return;
+    
                                   
 
     try {
@@ -75,7 +75,7 @@ client.on('message', message => {
             active: active
         }
 
-        let commandFile = require(`./commands/${cmd ||}.js`)
+        let commandFile = require(`./commands/${cmd}.js`)
         commandFile.run(client, message, args, ops);
     } catch (e) {
         console.log(e.stack)
