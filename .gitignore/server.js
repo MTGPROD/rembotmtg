@@ -68,7 +68,7 @@ client.on('message', message => {
                                   
 
     try {
-        delete require.cache[require.resolve(`./commands/${}.js`)]
+        delete require.cache[require.resolve(`./commands/${cmd}.js`)]
 
         let ops = {
             ownerID: ownerID,
