@@ -38,7 +38,7 @@ arcapi.getImage(endpoint, parameter, url).then(buffer => {
    message.channel.send({
       files: [{
     attachment: buffer,
-    name: `${message.author.username}-beautiful`
+    name: `${message.author.username}-beautiful.jpeg`
   }]
 })
        
