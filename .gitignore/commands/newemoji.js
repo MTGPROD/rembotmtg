@@ -4,12 +4,12 @@ exports.run = (client, message, args, ops) => {
     let url = args[0]
     let name = args[1]
 
-    if(!url) return message.channel.send('Please input a URL.')
-    if(!name) return message.channel.send('Please input a name.')
+    if(!url) return message.channel.send('`Usage: r!newemoji <URL> <name>')
+    if(!name) return message.channel.send('`Usage: r!newemoji <URL> <name>')
 
 
     message.guild.createEmoji(url, name)
-  .then(emoji => message.channel.send(`Created new emoji <:${emoji.name}:${emoji.id}>`))
+  .then(emoji => message.channel.send(`Created new emoji <a:${emoji.name}:${emoji.id}>`))
   .catch(console.error);
     
         
