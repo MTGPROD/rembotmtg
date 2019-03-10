@@ -18,6 +18,25 @@ exports.run = async (client, message, args, ops) => {
   client.channels.get(botStats.totalUsersID).setName(`Total Users : ${client.guilds.reduce((a, g) => a + g.memberCount, 0)}`);
   client.channels.get(botStats.totalChannelsID).setName(`Total Channels : ${client.channels.size}`);
   
+
+
+const DBL = require("dblapi.js");
+const dbl = new DBL(process.env.DBAPI, client);
+
+
+
+        dbl.postStats(client.guilds.size, '1');
+    
+
+
+dbl.on('posted', () => {
+  message.channel.send('Nombre de serveurs posté (**${client.guilds.size}**)');
+})
+
+dbl.on('error', e => {
+ message.channel.send(`Oops! ${e}`);
+})
+  
   message.react('508323953979162653')
   
    let embed2 = new Discord.RichEmbed()
