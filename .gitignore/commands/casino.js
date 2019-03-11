@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
      let slot2 = Machine[Math.floor(Math.random() * Machine.length)];
      let slot3 = Machine[Math.floor(Math.random() * Machine.length)];
 var result = 'You lose!' 
-if(slot1 === slot2 === slot3) {
+if(slot1 === slot2 && slot2 === slot3) {
      result = 'You have win!' 
 } 
 
