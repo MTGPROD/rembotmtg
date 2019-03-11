@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 
 exports.run = (client, message, args) => {
-     let Machine = [':gem:', ':dvd:', ':pound:', ':cd:', ':moneybag:', ':credit_card:']
+     let Machine = [':gem:', ':dvd:', ':pound:', ':cd:', ':moneybag:', ':credit_card:,' ':gear:']
 
      let slot1 = Machine[Math.floor(Math.random() * Machine.length)];
      let slot2 = Machine[Math.floor(Math.random() * Machine.length)];
