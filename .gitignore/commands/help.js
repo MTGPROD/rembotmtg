@@ -337,9 +337,9 @@ exports.run = (client, message, args, ops) => {
     
 } else {
     message.react('📨')
-    message.author.createDM().then(channel => {
-        channel.send({embed: embed})
-    })
+
+        message.channel.send({embed: embed})
+   
 }
 
 
