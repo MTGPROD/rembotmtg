@@ -8,12 +8,33 @@ exports.run = (client, message, args) => {
      let slot3 = Machine[Math.floor(Math.random() * Machine.length)];
      let slot4 = Machine[Math.floor(Math.random() * Machine.length)];
      let slot5 = Machine[Math.floor(Math.random() * Machine.length)];
+     let slot6 = Machine[Math.floor(Math.random() * Machine.length)];
+     let slot7 = Machine[Math.floor(Math.random() * Machine.length)];
+     let slot8 = Machine[Math.floor(Math.random() * Machine.length)];
+     let slot9 = Machine[Math.floor(Math.random() * Machine.length)];
+     let slot10 = Machine[Math.floor(Math.random() * Machine.length)];
+
+     
+    
+
+     
+     
+     
+     
      
 var result = 'You lose!' 
 var resultx5 = 'You lose!' 
-if(slot1 === slot2 && slot2 === slot3) {
+if(slot1 === slot2 && slot2 === slot3 && slot3 === slot1) {
      result = 'You have win!' 
 } 
+     
+const ultimaEmbed = new Discord.RichEmbed()
+    .setTitle('Ultima Casino')
+    .setDescription(`${slot1} | ${slot2} | ${slot3} | ${slot4} | ${slot5} | ${slot6} | ${slot7} | ${slot8} | ${slot9} | ${slot10}`)
+if(args[0] === 'ultima') return message.channel.send(ultimaEmbed)
+
+
+
 if(args[0] === 'x5') {
    
    if(slot1 === slot2 && slot2 === slot3 && slot4 === slot5) {
