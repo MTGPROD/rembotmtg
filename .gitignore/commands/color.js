@@ -3,16 +3,35 @@ const infos = require('./infos.json')
 
 exports.run = async (client, message, args, ops) => {
     if(args[0] === 'setup') {
-        var msg = message.channel.send('I setup the colors')
-          message.guild.createRole({ name: '#red', color: '#D40C00', })
-          msg.edit('Finished, you use `r!colors`')
+        message.channel.send('I setup the colors, use `r!colors`')
+          message.guild.createRole({ name: '#Red', color: '#D40C00', })
+          message.guild.createRole({name: '#Light Red', color: '#FF9A00'})
+          message.guild.createRole({name: '#Deep orange', color: '#FF5500'})
+          message.guild.createRole({name: '#Orange', color: '#ffa202'})
+          message.guild.createRole({name: '#Amber', color: '#FFCD00'})  
+          message.guild.createRole({name: '#Yellow', color: '#FFEF00'})
+          message.guild.createRole({name: '#Lime', color: '#CDE000'})
+          message.guild.createRole({name: '#Light Green', color: '#87C735'})
+          message.guild.createRole({name: '#Green', color: '#32C12C'})  
+          message.guild.createRole({name: '#Teal', color: '#009888'})
+          message.guild.createRole({name: '#Blue', color: '#526EFF'})
+          message.guild.createRole({name: '#Light Blue', color: '#00A5F9'})
+          message.guild.createRole({name: '#Cyan', color: '#00BCD9'})
+          message.guild.createRole({name: '#Indigo', color: '#3E49BB'})
+          message.guild.createRole({name: '#Purple', color: '#7F4FC9'})
+          message.guild.createRole({name: '#Deep Purple', color: '#682CBF'})
+          message.guild.createRole({name: '#Brown', color: '#7C5547'})
+          message.guild.createRole({name: '#Deep Brown', color: '#50342C'})
+          message.guild.createRole({name: '#Grey', color: '#9E9E9E9'})
+          message.guild.createRole({name: '#Blue Grey', color: '#5F7D8E'})
+        
     } else {
     
     let colors = message.guild.roles.filter(role => role.name.startsWith("#"));
     if(colors.size < 1) return message.channel.send({embed: {
             color: 3447003,
             title: ':x: **Error:** No colors',
-            description: "There are no color roles in this server, you can create color yourself ou use `r!color setup`",
+            description: "There are no color roles in this server, you can create colors yourself or use `r!color setup`",
     }});   
 
     let str = args.join(" ");
