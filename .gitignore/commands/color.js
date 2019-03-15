@@ -2,12 +2,13 @@ const Discord = require('discord.js');
 const infos = require('./infos.json')
 
 exports.run = async (client, message, args, ops) => {
-    if(args[0] === 'setup') {
+    
         if(args[0] === 'delete') {
             message.guild.roles.find("name", "#red").delete()
             message.guild.roles.find("name","#Light Red").delete()
             message.channel.send('Succès') 
         } 
+        if(args[0] === 'setup') {
         message.channel.send('I setup the colors, use `r!colors`')
           message.guild.createRole({ name: '#Red', color: '#D40C00', })
           message.guild.createRole({name: '#Light Red', color: '#FF9A00'})
