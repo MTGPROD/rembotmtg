@@ -2,11 +2,17 @@ const Discord = require('discord.js');
 const infos = require('./infos.json')
 
 exports.run = async (client, message, args, ops) => {
+    if(args[0] === 'setup') {
+        var msg = message.channel.send('I setup the colors')
+          message.guild.createRole({ name: '#red', color: '#D40C00', })
+          msg.edit('Finished, you use `r!colors`')
+    } else {
+    
     let colors = message.guild.roles.filter(role => role.name.startsWith("#"));
     if(colors.size < 1) return message.channel.send({embed: {
             color: 3447003,
             title: ':x: **Error:** No colors',
-            description: "There are no colors in this server. It's so sad ! 😭",
+            description: "There are no color roles in this server, you can create color yourself ou use `r!color setup`",
     }});   
 
     let str = args.join(" ");
@@ -30,9 +36,10 @@ exports.run = async (client, message, args, ops) => {
         message.channel.send(colorgive);
     } catch(e) {
         const error = new Discord.RichEmbed()
-        .setDescription(`Operation failed ! ${e.message}`)
+        .setDescription(`Operation failed ! ${e.message}, if you have missing permissions, pls give me the \`MANAGE_ROLES\` permission and try again.`)
         message.channel.send(error);
     }
+    } 
 
     let embed2 = new Discord.RichEmbed()
     .setTitle('Commande `r!color` a été utilisée !')
