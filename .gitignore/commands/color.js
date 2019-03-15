@@ -4,7 +4,8 @@ const infos = require('./infos.json')
 exports.run = async (client, message, args, ops) => {
     if(args[0] === 'setup') {
         if(args[0] === 'delete') {
-            message.guild.roles.find("name", "#red").delete
+            message.guild.roles.find("name", "#red").delete()
+            message.guild.roles.find("name","#Light Red").delete()
             message.channel.send('Succès') 
         } 
         message.channel.send('I setup the colors, use `r!colors`')
