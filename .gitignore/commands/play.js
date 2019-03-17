@@ -5,7 +5,7 @@ const infos = require('./infos.json');
  function time(timesec){
       let upTimeOutput = "";
       if (timesec<60) {
-          upTimeOutput = `${timesec}s`;
+          upTimeOutput = `0:${timesec}`;
       } else if (timesec<3600) {
           upTimeOutput = `${Math.floor(timesec/60)}:${timesec%60}`;
       } else if (timesec<86400) {
