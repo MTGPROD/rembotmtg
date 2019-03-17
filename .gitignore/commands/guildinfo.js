@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 
 exports.run = async (client, message, args, ops) => {
     let roles = message.guild.roles
-    let role = roles.array().join(',')
+    let role = roles.array().join('|')
     let emojis = message.guild.emojis;
     let emoji = emojis.array().join(" ")
     let verif = message.guild.verified; 
@@ -70,7 +70,7 @@ exports.run = async (client, message, args, ops) => {
         role = 'Too many roles'
     }
 
-    if(emojis.size > 54) {
+    if(emojis.size > 35) {
         emoji = 'Too many emojis'
     }
 
@@ -93,7 +93,7 @@ exports.run = async (client, message, args, ops) => {
         .addField(`ID`, `${message.guild.id}`, true)
         .addField('Region', region, true)
         .addField('Verified', textverif, true)
-        .addField('Notification', textnotif, true)
+        .addField('Notification', notif, true)
         .addField('Members', message.guild.memberCount + ' Members', true)
         .addField('Roles', message.guild.roles.size, true)
         .addField('Emojis', message.guild.emojis.size, true)
@@ -101,13 +101,16 @@ exports.run = async (client, message, args, ops) => {
         .addField(`Content filter level`, `${contentIDtext} (${message.guild.explicitContentFilter})`, true)
         .addField('Created At', joinedAt, true)
         .addField('AFK channel', AFK, true)
-        .addField('2FA level', auth)
+        .addField('2FA', auth)
         .addField('Large', Large, true)
         .addField('Roles display', role)
         .addField('Emojis display', emoji)
         .addField('Text channels display', textchannels.array().join(' '), true)
         .addField('Vocal channels display', vocalchannels.array().join(' '), true)
         .addField('Parent(category) channels display', parentchannels.array().join(' '), true)
+        .setThumbnail(message.guild.iconURL) 
+                     
+          
 
 
     message.channel.send(embed1)
