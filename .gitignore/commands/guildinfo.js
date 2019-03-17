@@ -70,7 +70,7 @@ exports.run = async (client, message, args, ops) => {
         role = 'Too many roles'
     }
 
-    if(emojis.size > 30) {
+    if(emojis.size > 54) {
         emoji = 'Too many emojis'
     }
 
