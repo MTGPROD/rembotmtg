@@ -19,6 +19,15 @@ exports.run = async (client, message, args, ops) => {
     let vocalchannels = message.guild.channels.filter(m => m.type === 'voice')
     let parentchannels = message.guild.channels.filter(m => m.type === 'category')
     let Large = message.guild.large;
+    let textRegion = "";
+    
+    if(region === 'eu-central') {
+        textRegion = ":flag_eu:" 
+    }
+    
+    if(region === 'japan') {
+        textRegion = ":flag_jp:" 
+    } 
     
     if(Large === false) {
         Large = 'No (There are less than 250 members on your server)'
