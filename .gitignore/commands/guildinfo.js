@@ -101,7 +101,7 @@ exports.run = async (client, message, args, ops) => {
         .addField(`IconURL`, `[IconURL](${message.guild.iconURL})`, true)
         .addField(`ID`, `${message.guild.id}`, true)
         .addField('Owner', `<@${message.guild.ownerID}> (${message.guild.ownerID}) `) 
-        .addField('Region', texrRegion, true)
+        .addField('Region', textRegion, true)
         .addField('Verified', textverif, true)
         .addField('Notification', textnotif, true)
         .addField('Members', message.guild.memberCount + ' Members', true)
