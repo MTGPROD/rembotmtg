@@ -16,13 +16,7 @@ if(!args[0]) {
 
 if(args[0]) { 
 
-     if(!args[0].includes('https://')) return message.channel.send('Use a valid URL/LINK') 
-
-        
-
-            
-
-    
+     if(!args[0].includes('https://')) return message.channel.send('Use a valid URL')   
 
 } 
 
