@@ -1,13 +1,21 @@
 const Discord = require('discord.js');
 const client = new Discord.Client()
+const DBL = require("dblapi.js");
+const dbl = new DBL(process.env.DBAPI, client);
+
 
 const prefix = "r!";
-const mentionPrefix = "<@488734399509168148>" 
+
 const ownerID = '234234723314958339';
 const active = new Map();
 
+client.on('ready', () => {
+    setInterval(() => {
+        dbl.postStats(client.guilds.size, client.user.id, 1);
+    }, 1800000);
+});
 
-  const embed55 = new Discord.RichEmbed()
+  const JoinEmbed = new Discord.RichEmbed()
 
   .setImage('https://i.imgur.com/x969x9z.gif')
   .setDescription('Thank you to add me to your server, for start type `r!help`')
@@ -59,11 +67,11 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    let args = message.content.slice(prefix.length || mentionPrefix.length).trim().split(' ');
+    let args = message.content.slice(prefix.length).trim().split(' ');
     let cmd = args.shift().toLowerCase();
 
     if(message.author.bot) return;
-    if(!message.content.startsWith(prefix || mentionPrefix)) return;
+    if(!message.content.startsWith(prefix)) return;
     
                                   
 
