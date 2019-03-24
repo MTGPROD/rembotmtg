@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args, ops) => {
-    if(message.author.id != '234234723314958339') return message.channel.send('Command deactivated temporary')
+    if(message.author.id != '234234723314958339' || '552098991073001502') return message.channel.send('Command deactivated temporary')
     
     var text = args.join(` `)
     
