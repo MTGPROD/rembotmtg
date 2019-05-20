@@ -7,7 +7,8 @@ exports.run = async (client, message, args, ops) => {
     
     var text = args.join(` `)
     
-    if(message.author.id === '424906340167843850') return message.react('💔')
+    if(text.includes('merde')) return message.channel.send('Insult') 
+    if(message.author.id === '452105869635878921') return message.react('💔')
     if(!text) return message.channel.send('`Usage: r!say <text>`')
 
     message.delete()
