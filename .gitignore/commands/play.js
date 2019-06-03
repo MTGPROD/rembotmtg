@@ -28,6 +28,7 @@ String.prototype.toDDHHMMSS = function () {
     return days+':'+hours+':'+minutes+':'+seconds;
 }
 exports.run = async (bot, message, args, ops) => {
+    return message.channel.send('This module is broken if you can't wait the next major update (v4), you can join the support server and ask for invite alpha version in your server. or DM MTG#8211 directly.') 
     if(!message.member.voiceChannel) return message.channel.send('Please connect to a voice channel.');
     if(!args[0]) return message.channel.send('Sorry, please input a url following the command.')
     let validate = await oldytdl.validateURL(args[0]);
