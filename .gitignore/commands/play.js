@@ -56,11 +56,11 @@ async function playStream(client, ops, data) {
     description: `${data.queue[0].songTitle}\nRequested By: **${data.queue[0].requester}**\nDuration: ${time(info.length_seconds)}`,
 }});   
 
-  data.dispatcher = await data.connection.playStream(ytdl(data.queue[0].url, { filter: 'audioonly' }));
+  data.dispatcher = await data.connection.playStream(ytdl(data.queue[0].url));
   data.dispatcher.guildID = data.guildID;
-  data.dispatcher.once('end', function() {
+  /*data.dispatcher.once('end', function() {
     end(client, ops, this);
-  });
+  });*/
 }
 
 function end(client, ops, dispatcher) {
