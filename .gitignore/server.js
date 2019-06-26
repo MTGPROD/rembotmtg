@@ -45,7 +45,7 @@ const botStats = {
 
 client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`Speak with hands`, `SAVE ${client.guilds.size} Guilds`, `[REDACTED]`, 'DELTARUNE.com']
+    let statuses = [`Vote for Rem N°1`, `Chill with${client.guilds.size} Guilds`, `Watch out here i come.`, '私の名前はRem']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
   }, 2500)
@@ -53,13 +53,13 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-  if(message.content.includes(`<@${client.user.id}>`)) {
+  if(message.content === (`<@${client.user.id}>`)) {
     message.channel.send('Yes ?\nMy prefix is `r!`')
   }
 })
 
 client.on('message', message => {
-  if(message.content.includes(`<@!${client.user.id}>`)) {
+  if(message.content === (`<@!${client.user.id}>`)) {
     message.channel.send('Yes ?\nMy prefix is `r!`')
   }
 })
