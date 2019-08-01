@@ -47,7 +47,8 @@ client.on('ready', () => {
   setInterval(function() {
     let statuses = [`Vote for Rem N°1`, `Chill with ${client.guilds.size} Guilds`, `Watch out here i come.`, '私の名前はRem']
     let status = statuses[Math.floor(Math.random()*statuses.length)];
-    client.user.setGame(status, "https://www.twitch.tv/monstercat");
+    client.user.setGame("Maintenance" /*"https://www.twitch.tv/monstercat"*/);
+    client.user.setStatus("idle")  
   }, 5 * 1000)
 })
 
