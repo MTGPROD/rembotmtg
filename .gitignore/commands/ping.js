@@ -12,9 +12,9 @@ exports.run = async (bot, message, args) => {
 
     let pingembed = new Discord.RichEmbed()
         .setColor("RANDOM")
-        .addField(':heartbeat: API Ping : ', Math.floor(bot.ping) + 'ms')
-        .addField(':robot: Bot Ping : ', Math.floor(botping) + 'ms')
-        .addField(':envelope: Message Ping : ', '~' + Math.round(msgping2) + 'ms')
+        .addField(':heartbeat: API', Math.floor(bot.ping) + 'ms')
+        .addField(':robot: Bot', Math.floor(botping) + 'ms')
+        .addField(':envelope: Message', '~' + Math.round(msgping2) + 'ms')
         .setTimestamp(new Date())
         .setFooter(`requested by ${message.author.tag}`);
 
