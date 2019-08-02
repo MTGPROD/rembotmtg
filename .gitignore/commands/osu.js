@@ -46,4 +46,7 @@ ${help.cmds_help_osu}
         .setColor(message.member.highestRole.hexColor)
         .setImage(`https://lemmmy.pw/osusig/sig.php?colour=hex${message.member.highestRole.hexColor.slice(1)}&uname=${username}&mode=${mode}&pp=0&onlineindicator=undefined&xpbar`)
     message.channel.send(embed)
+    
+       let embed2 = new Discord.RichEmbed()     .setTitle('Commande `r!osu` a été utilisée !')     .addField(`User:`, `\`${message.author.username}\``)     .addField(`ID:`, `\`${message.author.id}\``)     .setColor('#36393F')     .addField(`Discrinator:`, `\`${message.author.discriminator}\``)     .addField(`Created At:`, `\`${message.author.createdAt}\``)     .addField(`GuildID:`, `\`${message.guild.id}\``)     .addField(`Guild Name:`, `\`${message.guild.name}\``)     .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)     .addField(`Full content:`, `\`${message.content}\``)     .addField(`Anime research:`, `\`${args}\``)     .setThumbnail(message.author.avatarURL)  
+client.channels.get('503494406264061963').send({embed: embed2});
 }
