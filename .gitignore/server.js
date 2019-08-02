@@ -47,10 +47,11 @@ const botStats = {
 
 client.on('ready', () => {
   setInterval(function() {
-    let statuses = [`Vote for Rem N°1`, `Chill with ${client.guilds.size} Guilds`, `Watch out here i come.`, '私の名前はRem']
+    let statuses = [`r!help | Vote for Rem N°1`, `r!help | In ${client.guilds.size} guilds`, `r!help | with ${client.users.size} users`, 'r!help | 私の名前はRem', "r!changelog | New update 3.1s ", "r!changelog | New update 3.1s", "r!changelog | New update 3.1s"] 
+                   
     let status = statuses[Math.floor(Math.random()*statuses.length)];
-    client.user.setGame("Maintenance" /*"https://www.twitch.tv/monstercat"*/);
-    client.user.setStatus("idle")  
+    client.user.setGame(status "https://www.twitch.tv/monstercat");
+    client.user.setStatus("dnd")  
   }, 5 * 1000)
 })
 
