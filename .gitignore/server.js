@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const info = require('commands/infos.json') 
 const client = new Discord.Client()
 const DBL = require("dblapi.js");
 const dbl = new DBL(process.env.DBAPI, client);
@@ -73,7 +74,10 @@ client.on('message', message => {
 
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
-    if(message.guild.id === '420201635810377729') return message.channel.send("Sorry but, this guild is blacklisted i can't run your order. If you don't know why it blacklisted you can contact the developer `MTG#8211`or join support server.") 
+    if(message.guild.id === '420201635810377729') return message.channel.send("Sorry but, this guild is blacklisted i can't run your order. If you don't know why it blacklisted you can contact the developer `MTG#8211`or join support server.")
+    if(info.maintenance === true) {
+       if(message.author.id === "234234723314958339") {console.log('mom')} else {return message.channel.send("I'm in maintenance, commands are blocked actually. Retry later.") } 
+    } 
     //if(message.guild.id === '489426595166158885') return message.channel.send('OK')                            
 
     try {
