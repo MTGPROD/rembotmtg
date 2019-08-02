@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const info = require('commands/infos.json') 
+const info = require('./commands/infos.json') 
 const client = new Discord.Client()
 const DBL = require("dblapi.js");
 const dbl = new DBL(process.env.DBAPI, client);
