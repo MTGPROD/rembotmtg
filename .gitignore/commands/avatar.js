@@ -14,7 +14,7 @@ exports.run = async (client, message, args, tools) => {
         let target = message.mentions.users.first() || message.author;
         
         setTimeout(function() {
-         embed.setURL('https://google.com')
+
          embed.setColor('RANDOM')
          embed.setImage(target.avatarURL)
          msg.edit({embed: embed})
