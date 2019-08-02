@@ -7,8 +7,11 @@ exports.run = async (client, message, args) => {
   
 
   let user = message.mentions.users.first();
-  if(!user) return message.reply("Please mention a user");
+  if(!user) return message.channel.send("Please mention a user");
 
+  if(!message.member.permissions.has('BAN_MEMBERS')) return message.channel.send("You can't ban members you haven't the `BAN_MEMBERS` permission.") 
+  if(message.guild.me.permissions.has('BAN_MEMBERS')) return message.channel.send("I can't ban members (i lack the `BAN_MEMBERS` permission)")
+  
   let reason = args.join(" ");
   if(!reason) reason = `${message.author.username}#${message.author.discriminator} ban ${user.username}#${user.discriminator}`;
 
