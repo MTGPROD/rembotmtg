@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args, ops) => {
-    if(!message.member.roles.find(r => r.name === 'Poll')) return message.channel.send(`This requires the role: \`Poll\``);
+   // if(!message.member.roles.find(r => r.name === 'Poll')) return message.channel.send(`This requires the role: \`Poll\``);
    // if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('This requires the permission: ADMIN');
     var question = args.join(' ')
     if(!args.join(' ')) return message.channel.send('Usage: `r!poll <question> <name>`');
