@@ -2,6 +2,7 @@ const ascii = require('ascii-art');
 const Discord = require('discord.js');
 
 exports.run = (client, message, args, ops) => {
+  if(!args.join(' ')) return message.channel.send("Usage: `r!ascii <text>`") 
   ascii.font(args.join(` `), 'Doom', function(rendered) {
   rendered = rendered.trimRight();
   if(rendered.length > 1950) return message.channel.send('Sorry, that message is too long !');
@@ -12,7 +13,7 @@ exports.run = (client, message, args, ops) => {
       });
   });
   
-  if(!args.join(` `)) return message.channel.send('Please write something')
+
 
 
 
