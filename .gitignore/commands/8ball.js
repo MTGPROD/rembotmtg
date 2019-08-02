@@ -15,7 +15,7 @@ exports.run = async (client, message, args, tools) => {
         'I have no idea'
     ]
     
-    if(!args.join(` `)) return message.channel.send('Please write something')
+    if(!args.join(` `)) return message.channel.send("Usage: `r!8ball <question>`") 
     
     
     let fetched = responses[Math.floor(Math.random() * responses.length)];
