@@ -29,5 +29,6 @@ const changelog = new Discord.RichEmbed()
 * animes: renamed to anime
 \`\`\`
 `
-) 
+)
+message.channel.send(changelog)
 } 
