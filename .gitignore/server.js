@@ -52,7 +52,7 @@ client.on('ready', () => {
     let status = statuses[Math.floor(Math.random()*statuses.length)];
     client.user.setGame(status, "https://www.twitch.tv/monstercat");
     client.user.setStatus("dnd")  
-  }, 5 * 1000)
+  }, 10 * 1000)
 })
 
 
