@@ -318,7 +318,7 @@ exports.run = (client, message, args, ops) => {
         .setAuthor(message.author.username, message.author.displayAvatarURL) 
         .setColor('#329FFE')
         .setThumbnail(message.author.avatarURL)
-        .addField('💵 Support Rem', 'You can support Rem via PayPal [here](https://paypal.me/rembotmtg)')
+        .addField('💵 Support Rem', 'You can support Rem via PayPal [here](https://paypal.me/rembotmtg)\nYou can support Rem via Vote on DBL [here](https://discordbots.org/bot/488734399509168148/vote)\nIf you want to have access to the new features in advance you invite [Rem Alpha here.](https://discordapp.com/oauth2/authorize?client_id=491943074721824768&scope=bot&permissions=2146958847)')
                  
         .addField('📝 Basics', `${cmds.Basics}`)
         .addField('😂 Fun', `${cmds.Fun}`)
