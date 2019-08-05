@@ -31,7 +31,7 @@ if(slot1 === slot2 && slot2 === slot3 && slot3 === slot1) {
 const ultimaEmbed = new Discord.RichEmbed()
     .setTitle('Ultima Casino')
     .setDescription(`${slot1} | ${slot2} | ${slot3} | ${slot4} | ${slot5} | ${slot6} | ${slot7} | ${slot8} | ${slot9} | ${slot10}`)
-if(args[0] === 'ultima') return message.channel.send(ultimaEmbed)
+if(args[0] === 'ultimate') return message.channel.send(ultimaEmbed)
 
 
 
