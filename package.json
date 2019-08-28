@@ -1,0 +1,41 @@
+{
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "rem-bot-mtg",
+  "version": "4.0.0",
+  "description": "A simple Node app built on Express, instantly up and running.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^5.4.2",
+    "dblapi.js": "^2.3.0",
+    "discord.js": "github:discordjs/discord.js",
+    "enmap": "^5.1.0",
+    "express": "^4.16.4",
+    "mal-scraper": "^2.6.3",
+    "random-puppy": "^1.1.0",
+    "simple-youtube-api": "^5.2.1",
+    "superagent": "^5.1.0",
+    "youtube-playlist-info": "^1.1.2",
+    "yt-search": "^0.4.1",
+    "ytdl-core": "^0.29.5",
+    "ytdl-core-discord": "^1.0.3",
+    "snekfetch": "^4.0.4",
+    "node-opus": "^0.3.2"
+  },
+  "engines": {
+    "node": "10.15.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
