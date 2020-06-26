@@ -50,6 +50,10 @@ client.on('message', message => {
   
 })
 
+client.on("ready", () => {
+  console.log("This bot is deprecated")
+})
+
 client.on("guildMemberAdd", member => {
   let key = member.guild.id
   if(!client.autoroles.has(key)) return;
