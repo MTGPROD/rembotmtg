@@ -34,7 +34,7 @@ ${help.cmds_help_8ball}
     
     message.channel.send(embed);
 
-    let embed2 = new Discord.RichEmbed()
+    let embed2 = new Discord.MessageEmbed()
     .setTitle('Commande `r!8ball` a été utilisée !')
     .setColor('#36393F')
     .addField(`User:`, `\`${message.author.username}\``)

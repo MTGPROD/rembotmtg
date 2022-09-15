@@ -1,7 +1,5 @@
 const Discord = require('discord.js')
 const Enmap = require("enmap")
-/*const par = require('../databases/guilds.json') 
-const status = require('../databases/infos.json')*/ 
 const fs = require('fs')
 var active = new Map()
 
@@ -73,6 +71,20 @@ module.exports = {
             } else {
                 try {
                     command.run(client, message, args, ops);
+
+                    let embed2 = new Discord.MessageEmbed()
+                    .setTitle('Commande `r!anime` a été utilisée !')
+                    .addField(`User:`, `\`${message.author.username}\``)
+                    .addField(`ID:`, `\`${message.author.id}\``)
+                    .setColor('BLUE')
+                    .addField(`Discrinator:`, `\`${message.author.discriminator}\``)
+                    .addField(`Created At:`, `\`${message.author.createdAt}\``)
+                    .addField(`GuildID:`, `\`${message.guild.id}\``)
+                    .addField(`Guild Name:`, `\`${message.guild.name}\``)
+                    .addField(`Channel:`, `\`#${message.channel.name} (${message.channel.id})\``)
+                    .addField(`Full content:`, `\`${message.content}\``)
+                    .addField(`Anime research:`, `\`${args}\``)
+                    .setThumbnail(message.author.avatarURL)
                 } catch (err) {
                     if (err) return undefined;
                 }
