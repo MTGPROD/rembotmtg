@@ -10,7 +10,7 @@ exports.run = async (client, message, args) => {
   if(!{body}) return message.channel.send(broke) 
   
   image.setImage(body.file)
-  image.setFooter(client.user.username, client.user.displayAvatarURL)
+  image.setFooter({ text: client.user.username, iconURL: client.user.displayAvatarURL })
   image.setTimestamp()
   image.setColor("BLUE")
   

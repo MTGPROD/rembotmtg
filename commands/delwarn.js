@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
     console.error(e)
   }
   
-  message.channel.send("wwarn deleted")
+  message.channel.send("Warn deleted")
 }
 
 exports.help = {

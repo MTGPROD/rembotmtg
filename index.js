@@ -9,7 +9,6 @@ const utils = require('./global/utils');
 const client = new Discord.Client();
 const DBL = require("dblapi.js")
 const randomPuppy = require("random-puppy")  
-//const dbl = new DBL(process.env.BAPITOKEN, client)
 const fs = require('fs')
 const Enmap = require('enmap')
 const music = require('./global/functions')(client, utils, ytdl, config);
@@ -46,8 +45,6 @@ client.queue = new Enmap({ name: "queue"})
 
 client.on('message', message => {
   if(!message.channel.id === "609365714930892810") return;
-  
-  
 })
 
 client.on("ready", () => {

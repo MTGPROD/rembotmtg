@@ -17,21 +17,51 @@ ${help.cmds_help_anime}
       .setAuthor(`My Anime List search result for ${args}`.split(',').join(' '))
       .setThumbnail(data.picture)
       .setColor('#36393F')
-      .addField(':flag_us: English Title', data.englishTitle+".", true)
-      .addField(':flag_jp: Japanese Title', data.japaneseTitle+".", true)
-      .addField('Type', data.type, true)
-      .addField(':tv: Episodes', data.episodes, true)
-      .addField(':star: Rating', data.rating, true)
-      .addField(':clock: Aired', data.aired, true)
-      .addField(':star: Score', data.score, true)
-      .addField(':one: Score Stats', data.scoreStats, true)
-      .addField(':link: Link', data.url)
-      .setFooter(client.user.username, client.user.displayAvatarURL)
-
+      .addFields([
+        {
+          name: ':flag_us: English Title',
+          value: data.englishTitle+".",
+          inline: true
+        },
+        {
+          name: ':flag_jp: Japanese Title',
+          value: data.japaneseTitle+".",
+          inline: true
+        },
+        {
+          name: 'Type',
+          value: data.type,
+          inline: true
+        },
+        {
+          name: ':star: Rating',
+          value: data.rating,
+          inline: true
+        },
+        {
+          name: ':clock: Aired',
+          value: data.aired,
+          inline: true
+        },
+        {
+          name: ':star: Score',
+          value: data.score,
+          inline: true
+        },
+        {
+          name: ':one: Score',
+          value: data.score,
+          inline: true
+        },
+        {
+          name: ':link: Link',
+          value: data.url,
+          inline: true
+        },
+      ])
+      .setFooter({ text: client.user.username, iconURL: client.user.displayAvatarURL })
 
       message.channel.send(malEmbed);
-
-      console.log(data);
     })
     .catch((err) => message.channel.send(err));
 

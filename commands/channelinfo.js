@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
   .addField("Position", c.position)
   .addField("Created At", c.createdAt)
   .setTimestamp()
-  .setFooter(client.user.username, client.user.displayAvatarURL)
+  .setFooter({ text: client.user.username, iconURL: client.user.displayAvatarURL })
   message.channel.send(embed)
 }
 
