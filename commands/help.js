@@ -1,10 +1,6 @@
 const Discord = require('discord.js')
 
 exports.run = (client, message, args) => {
- /* var color = message.member.filter(r => r.hexColor != "#000000").map(r => r.hexColor)[0]
-  if(!color) {
-    color = "BLUE"
-  }*/
   
   const help = new Discord.MessageEmbed()
   .setAuthor(message.author.tag, message.author.displayAvatarURL)

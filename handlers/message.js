@@ -1,7 +1,7 @@
-const Discord = require('discord.js')
-const Enmap = require("enmap")
-const fs = require('fs')
-var active = new Map()
+const Discord = require('discord.js');
+const Enmap = require("enmap");
+const fs = require('fs');
+var active = new Map();
 
 var ops = {
    active: active 
